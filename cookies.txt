@@ -1,0 +1,7 @@
+# HTTrack Website Copier Cookie File
+# This file format is compatible with Netscape cookies
+wiki.nanotech.ucsb.edu	TRUE	/	FALSE	1999999999	wikidb_session	kb8l1mjuq7mv6j54f69guj8dv5n5sofu
+www.nanotech.ucsb.edu	TRUE	/	FALSE	1999999999	XSRF-TOKEN	1664411224|VUwaOF3if-Rq
+www.nanotech.ucsb.edu	TRUE	/	FALSE	1999999999	SameSite	None
+www.nanotech.ucsb.edu	TRUE	/	FALSE	1999999999	ssr-caching	cache#desc=miss#varnish=miss#dc#desc=ase1
+

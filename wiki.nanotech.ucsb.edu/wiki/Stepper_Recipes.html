@@ -1,0 +1,1151 @@
+
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+
+<!-- Mirrored from wiki.nanotech.ucsb.edu/wiki/Stepper_Recipes by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 28 Sep 2022 20:31:40 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8"/>
+<title>Stepper Recipes - UCSB Nanofab Wiki</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":!1,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"03e112c8d71ab6745002135d","wgCSPNonce":!1,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":!1,"wgNamespaceNumber":0,"wgPageName":"Stepper_Recipes","wgTitle":"Stepper Recipes","wgCurRevisionId":159216,"wgRevisionId":159216,"wgArticleId":825,"wgIsArticle":!0,"wgIsRedirect":!1,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Recipes","Lithography"],"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"Stepper_Recipes","wgRelevantArticleId":825,"wgIsProbablyEditable":!1,"wgRelevantPageIsProbablyEditable":!1,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgVisualEditor":{"pageLanguageCode":"en",
+"pageLanguageDir":"ltr","pageVariantFallbacks":"en"},"wgEditSubmitButtonLabelPublish":!1};RLSTATE={"site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","user.options":"loading","skins.vector.styles.legacy":"ready","mediawiki.toc.styles":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready"};RLPAGEMODULES=["site","mediawiki.page.startup","mediawiki.page.ready","mediawiki.toc","Skins.vector.legacy.html","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.implement("user.options@1hzgi",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});});</script>
+<link rel="stylesheet" href="https://wiki.nanotech.ucsb.edu/w/load.php?lang=en&amp;modules=ext.visualEditor.desktopArticleTarget.noscript%7Cmediawiki.toc.styles%7Cskins.vector.styles.legacy&amp;only=styles&amp;skin=vector"/>
+<script async="" src="https://wiki.nanotech.ucsb.edu/w/load.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=vector"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="https://wiki.nanotech.ucsb.edu/w/load.php?lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector"/>
+<meta name="generator" content="MediaWiki 1.35.4"/>
+<link rel="shortcut icon" href="https://wiki.nanotech.ucsb.edu/favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="https://wiki.nanotech.ucsb.edu/w/opensearch_desc.php" title="UCSB Nanofab Wiki (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://wiki.nanotech.ucsb.edu/w/api.php?action=rsd"/>
+<link rel="alternate" type="application/atom+xml" title="UCSB Nanofab Wiki Atom feed" href="https://wiki.nanotech.ucsb.edu/w/index.php?title=Special:RecentChanges&amp;feed=atom"/>
+<!--[if lt IE 9]><script src="/w/resources/lib/html5shiv/html5shiv.js"></script><![endif]-->
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Stepper_Recipes rootpage-Stepper_Recipes skin-vector action-view skin-vector-legacy">
+<div id="mw-page-base" class="noprint"></div>
+<div id="mw-head-base" class="noprint"></div>
+<div id="content" class="mw-body" role="main">
+	<a id="top"></a>
+	<div id="siteNotice" class="mw-body-content"></div>
+	<div class="mw-indicators mw-body-content">
+	</div>
+	<h1 id="firstHeading" class="firstHeading" lang="en">Stepper Recipes</h1>
+	<div id="bodyContent" class="mw-body-content">
+		<div id="siteSub" class="noprint">From UCSB Nanofab Wiki</div>
+		<div id="contentSub"></div>
+		<div id="contentSub2"></div>
+		
+		<div id="jump-to-nav"></div>
+		<a class="mw-jump-link" href="#mw-head">Jump to navigation</a>
+		<a class="mw-jump-link" href="#searchInput">Jump to search</a>
+		<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output"><p><big>Back to <a href="Lithography_Recipes.html" title="Lithography Recipes">Lithography Recipes</a>.</big>
+</p><p>Below is a listing of stepper lithography recipes. 
+Stepper 1 and Stepper 2 are i-line systems with good piece handling capabilities. &#160;Stepper 3 is a DUV (248nm) system primarily used for full 100mm wafers. &#160;DUV resists do not work for i-line and i-line resists do not work for DUV. &#160;Based on your sample reflectivity, absorption (or whether or not you use an ARC layer), and surface topography, the exposure time / focus offset parameters may vary. 
+</p><p>This listing is a guideline to get you started. For critical lithography steps, you should run your own exposure and/or focus array to determine the proper parameters.
+</p><p>The recipes are tabulated to give you the values of the key parameters you will need to establish your recipe. Underlayers such as LOL2000 or PMGI can be used on the stepper systems. &#160;See the underlayer datasheets for details. &#160; Post develop bakes (not listed) are used to make the resist more etch resistant and depend on subsequent processes. Care should be taken with post development bakes as resist reflow can occur. Unless otherwise noted, all exposures are done on flat, silicon wafers. 
+</p><p>Parameters are indicated in separate tables for each stepper system. 
+</p>
+<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" /><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Stepper_1_.28GCA_6300.29"><span class="tocnumber">1</span> <span class="toctext">Stepper 1 (GCA 6300)</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#Positive_Resist_.28GCA_6300.29"><span class="tocnumber">1.1</span> <span class="toctext">Positive Resist (GCA 6300)</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="#Negative_Resist_.28GCA_6300.29"><span class="tocnumber">1.2</span> <span class="toctext">Negative Resist (GCA 6300)</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-4"><a href="#Stepper_2_.28AutoStep_200.29"><span class="tocnumber">2</span> <span class="toctext">Stepper 2 (AutoStep 200)</span></a>
+<ul>
+<li class="toclevel-2 tocsection-5"><a href="#Positive_Resist_.28AutoStep_200.29"><span class="tocnumber">2.1</span> <span class="toctext">Positive Resist (AutoStep 200)</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#Negative_Resist_.28AutoStep_200.29"><span class="tocnumber">2.2</span> <span class="toctext">Negative Resist (AutoStep 200)</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-7"><a href="#Stepper_3_.28ASML_DUV.29"><span class="tocnumber">3</span> <span class="toctext">Stepper 3 (ASML DUV)</span></a>
+<ul>
+<li class="toclevel-2 tocsection-8"><a href="#Anti-Reflective_Coatings"><span class="tocnumber">3.1</span> <span class="toctext">Anti-Reflective Coatings</span></a>
+<ul>
+<li class="toclevel-3 tocsection-9"><a href="#DUV-42P-6"><span class="tocnumber">3.1.1</span> <span class="toctext"><b>DUV-42P-6</b></span></a></li>
+<li class="toclevel-3 tocsection-10"><a href="#DS-K101-304"><span class="tocnumber">3.1.2</span> <span class="toctext"><b>DS-K101-304</b></span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-11"><a href="#Positive_Resist_.28ASML_DUV.29"><span class="tocnumber">3.2</span> <span class="toctext">Positive Resist (ASML DUV)</span></a></li>
+<li class="toclevel-2 tocsection-12"><a href="#Negative_Resist_.28ASML_DUV.29"><span class="tocnumber">3.3</span> <span class="toctext">Negative Resist (ASML DUV)</span></a></li>
+<li class="toclevel-2 tocsection-13"><a href="#Other_Lithography_Processes_.28ASML_DUV.29"><span class="tocnumber">3.4</span> <span class="toctext">Other Lithography Processes (ASML DUV)</span></a></li>
+</ul>
+</li>
+</ul>
+</div>
+
+<h1><span id="Stepper_1_(GCA_6300)"></span><span class="mw-headline" id="Stepper_1_.28GCA_6300.29"><a href="Stepper_1_(GCA_6300).html" title="Stepper 1 (GCA 6300)">Stepper 1 (GCA 6300)</a></span></h1>
+<p>Multiply the GCA 6300 exposure times by 0.30 to get a starting exposure time for the GCA Autostep200 system. 
+</p>
+<h2><span id="Positive_Resist_(GCA_6300)"></span><span class="mw-headline" id="Positive_Resist_.28GCA_6300.29">Positive Resist (GCA 6300)</span></h2>
+<p>Unless otherwise noted, bakes are on hot plates. For recipes with CEM, the CEM is spun on after the first resist bake, exposure is then done, and the CEM is rinsed off with DI water before the PEB. CEM generally improves resolution and process tolerance at the expense of higher exposure time. 
+</p>
+<table class="wikitable" style="border: 1px solid #D0E7FF; background-color:#ffffff; text-align:center;" border="1">
+
+<tbody><tr bgcolor="#D0E7FF">
+<th width="100">Resist
+</th>
+<th width="100">Spin Cond.
+</th>
+<th width="75">Bake
+</th>
+<th width="75">Thickness
+</th>
+<th width="125">Exposure Time
+</th>
+<th width="100">Focus Offset
+</th>
+<th width="75">PEB
+</th>
+<th width="100">Developer
+</th>
+<th width="125">Developer Time
+</th>
+<th width="300">Comments
+</th></tr>
+<tr>
+<td><a href="https://wiki.nanotech.ucsb.edu/w/images/2/29/SPR955-Positive-Resist-Datasheet.pdf" class="internal" title="SPR955-Positive-Resist-Datasheet.pdf">SPR955CM0.9</a>
+</td>
+<td>3 krpm/30”
+</td>
+<td>95°C/60”
+</td>
+<td>~ 0.9 um
+</td>
+<td>1.2”
+</td>
+<td>0
+</td>
+<td>110°C/60”
+</td>
+<td>AZ300MIF
+</td>
+<td>60"
+</td>
+<td align="left">
+<ul><li>0.5 um isolated lines</li>
+<li><a href="https://wiki.nanotech.ucsb.edu/w/images/3/30/SPR955CMstepperrecipe.pdf" class="internal" title="SPR955CMstepperrecipe.pdf">See SPR955CM data file</a></li></ul>
+</td></tr>
+<tr>
+<td><a href="https://wiki.nanotech.ucsb.edu/w/images/2/29/SPR955-Positive-Resist-Datasheet.pdf" class="internal" title="SPR955-Positive-Resist-Datasheet.pdf">SPR955CM-0.9</a>
+</td>
+<td>3 krpm/30”
+</td>
+<td>95°C/60”
+</td>
+<td>~ 0.9 um
+</td>
+<td>3.0”
+</td>
+<td>4
+</td>
+<td>110°C/60”
+</td>
+<td>AZ300MIF
+</td>
+<td>60"
+</td>
+<td align="left">
+<ul><li>0.5 um holes</li>
+<li>Much longer exposure time for dense isolated holes</li>
+<li><a href="https://wiki.nanotech.ucsb.edu/w/images/3/30/SPR955CMstepperrecipe.pdf" class="internal" title="SPR955CMstepperrecipe.pdf">See SPR955CM data file</a></li></ul>
+</td></tr>
+<tr>
+<td><a href="https://wiki.nanotech.ucsb.edu/w/images/2/29/SPR955-Positive-Resist-Datasheet.pdf" class="internal" title="SPR955-Positive-Resist-Datasheet.pdf">SPR955CM-0.9</a><br />
+<p><a href="https://wiki.nanotech.ucsb.edu/w/images/0/04/CEM365iS-Contrast-Enhancement-Datasheet.pdf" class="internal" title="CEM365iS-Contrast-Enhancement-Datasheet.pdf">CEM365iS</a> 
+</p>
+</td>
+<td>3 krpm/30”<br />
+<p>5 krpm/30” 
+</p>
+</td>
+<td>95°C/90”
+</td>
+<td>~ 0.9 um
+</td>
+<td>2.2”
+</td>
+<td>-10
+</td>
+<td>110°C/60”
+</td>
+<td>AZ300MIF
+</td>
+<td>60"
+</td>
+<td align="left">
+<ul><li>0.35um isolated spaces by SEM measurement.</li>
+<li>Higher exposure time due to CEM</li>
+<li><a href="https://wiki.nanotech.ucsb.edu/w/images/3/30/SPR955CMstepperrecipe.pdf" class="internal" title="SPR955CMstepperrecipe.pdf">See SPR955CM data file</a></li></ul>
+</td></tr>
+<tr>
+<td>SPR950-0.8
+</td>
+<td>4 krpm/30”
+</td>
+<td>95°C/60”
+</td>
+<td>~ 0.8 um
+</td>
+<td>1.0”
+</td>
+<td>0
+</td>
+<td>105°C/60”
+</td>
+<td>AZ300MIF
+</td>
+<td>60"
+</td>
+<td align="left">
+</td></tr>
+<tr>
+<td><a href="https://wiki.nanotech.ucsb.edu/w/images/2/29/SPR955-Positive-Resist-Datasheet.pdf" class="internal" title="SPR955-Positive-Resist-Datasheet.pdf">SPR955CM-1.8</a>
+</td>
+<td>4 krpm/30”
+</td>
+<td>90°C/90”
+</td>
+<td>~ 1.8 um
+</td>
+<td>2.3”
+</td>
+<td>0
+</td>
+<td>110°C/90”
+</td>
+<td>AZ300MIF
+</td>
+<td>60"
+</td>
+<td align="left">
+<ul><li>0.5 um isolated lines</li>
+<li><a href="https://wiki.nanotech.ucsb.edu/w/images/4/42/Spr955_1.8GCA6300.pdf" class="internal" title="Spr955 1.8GCA6300.pdf">See 955CM-1.8 data file</a></li></ul>
+</td></tr>
+<tr>
+<td><a href="https://wiki.nanotech.ucsb.edu/w/images/2/29/SPR955-Positive-Resist-Datasheet.pdf" class="internal" title="SPR955-Positive-Resist-Datasheet.pdf">SPR955CM-1.8</a>
+</td>
+<td>4 krpm/30”
+</td>
+<td>90°C/90”
+</td>
+<td>~ 1.8 um
+</td>
+<td>1.7”
+</td>
+<td>-5
+</td>
+<td>110°C/90”
+</td>
+<td>AZ300MIF
+</td>
+<td>60"
+</td>
+<td align="left">
+<ul><li>1 um isolated posts</li>
+<li><a href="https://wiki.nanotech.ucsb.edu/w/images/4/42/Spr955_1.8GCA6300.pdf" class="internal" title="Spr955 1.8GCA6300.pdf">See 955CM-1.8 data file</a></li></ul>
+</td></tr>
+<tr>
+<td><a href="https://wiki.nanotech.ucsb.edu/w/images/3/3f/SPR220-Positive-Resist-Datasheet.pdf" class="internal" title="SPR220-Positive-Resist-Datasheet.pdf">SPR220-3.0</a>
+</td>
+<td>2.5 krpm/30”
+</td>
+<td>115°C/90”
+</td>
+<td>~ 2.7 um
+</td>
+<td>2.4”
+</td>
+<td>10
+</td>
+<td>115°C/90”
+</td>
+<td>AZ300MIF
+</td>
+<td>60"
+</td>
+<td align="left">
+<ul><li>0.5 um isolated lines</li>
+<li><a href="https://wiki.nanotech.ucsb.edu/w/images/0/01/SPR-220-3.0_OptimizationNew.pdf" class="internal" title="SPR-220-3.0 OptimizationNew.pdf">See SPR220-3 Data File</a></li></ul>
+</td></tr>
+<tr>
+<td><a href="https://wiki.nanotech.ucsb.edu/w/images/3/3f/SPR220-Positive-Resist-Datasheet.pdf" class="internal" title="SPR220-Positive-Resist-Datasheet.pdf">SPR220-7.0</a>
+</td>
+<td>3.5 krpm/45”
+</td>
+<td>115°C/120”
+</td>
+<td>~ 7.0 um
+</td>
+<td>4.5”
+</td>
+<td>0
+</td>
+<td>*50°C/60”<br />
+<p>115°C/90” 
+</p>
+</td>
+<td>AZ300MIF
+</td>
+<td>120"
+</td>
+<td align="left">
+<ul><li>1.0 um isolated lines; 1.25 um isolated spaces
+<ul><li>Let sample sit in air for 20 minutes before PEB, step to 50°C for 60” first, then 115°C</li></ul></li>
+<li><a href="https://wiki.nanotech.ucsb.edu/w/images/e/e5/SPR-220-7.0stepperrecipe.pdf" class="internal" title="SPR-220-7.0stepperrecipe.pdf">See SPR220-7 Data File</a></li></ul>
+</td></tr></tbody></table>
+<h2><span id="Negative_Resist_(GCA_6300)"></span><span class="mw-headline" id="Negative_Resist_.28GCA_6300.29">Negative Resist (GCA 6300)</span></h2>
+<p>Unless otherwise noted, bakes are on hot plate. All flood exposures are done in broadband light using any contact aligner. Also, because the tone is negative, a shorter first exposure time will result in more undercut, which is desirable for single-layer lift-off processes. Under these conditions more develop time will also give more undercut. 
+</p>
+<table class="wikitable" style="border: 1px solid #D0E7FF; background-color:#ffffff; text-align:center;" border="1">
+
+<tbody><tr bgcolor="#D0E7FF">
+<th width="100">Resist
+</th>
+<th width="100">Spin Cond.
+</th>
+<th width="75">Bake
+</th>
+<th width="75">Thickness
+</th>
+<th width="125">Exposure Time
+</th>
+<th width="100">Focus Offset
+</th>
+<th width="75">PEB
+</th>
+<th width="75">Flood
+</th>
+<th width="100">Developer
+</th>
+<th width="125">Developer Time
+</th>
+<th width="300">Comments
+</th></tr>
+<tr>
+<td><a href="https://wiki.nanotech.ucsb.edu/w/images/b/b0/AZ5214-Negative-Resist-Datasheet.pdf" class="internal" title="AZ5214-Negative-Resist-Datasheet.pdf">AZ5214</a>
+</td>
+<td>6 krpm/30”
+</td>
+<td>95°C/60”
+</td>
+<td>~ 1.0 um
+</td>
+<td>0.2”
+</td>
+<td>0
+</td>
+<td>110°C/60”
+</td>
+<td>60"
+</td>
+<td>AZ300MIF
+</td>
+<td>60"
+</td>
+<td align="left">
+<ul><li>0.7 um res. possible&#160;</li></ul>
+</td></tr>
+<tr>
+<td><a href="https://wiki.nanotech.ucsb.edu/w/images/8/82/AZnLOF5510-Negative-Resist-Datasheet.pdf" class="internal" title="AZnLOF5510-Negative-Resist-Datasheet.pdf">nLOF5510</a>
+</td>
+<td>3 krpm/30”
+</td>
+<td>90°C/60”
+</td>
+<td>~ 0.93 um
+</td>
+<td>0.74”
+</td>
+<td>-6
+</td>
+<td>110°C/60”
+</td>
+<td>0
+</td>
+<td>AZ300MIF
+</td>
+<td>60"
+</td>
+<td align="left">
+<ul><li>0.5 um line openings good dense or isolated</li>
+<li>Use heated 1165 stripper for removal or lift-off</li>
+<li><a href="https://wiki.nanotech.ucsb.edu/w/images/2/25/NLOF5510stepperrecipe.pdf" class="internal" title="NLOF5510stepperrecipe.pdf">See nLOF5510 data file</a></li></ul>
+</td></tr>
+<tr>
+<td><a href="https://wiki.nanotech.ucsb.edu/w/images/5/5e/AZnLOF2020-Negative-Resist-Datasheet.pdf" class="internal" title="AZnLOF2020-Negative-Resist-Datasheet.pdf">nLOF2020</a>
+</td>
+<td>4 krpm/30”
+</td>
+<td>110°C/60”
+</td>
+<td>~ 2 um
+</td>
+<td>0.55”
+</td>
+<td>-6
+</td>
+<td>110°C/60”
+</td>
+<td>0
+</td>
+<td>AZ300MIF
+</td>
+<td>90"
+</td>
+<td align="left">
+<ul><li>~ .85 um line opening/lift-off good. Isolated mesas can be smaller.</li>
+<li>Use heated 1165 stripper for removal or lift-off Sensetive to PEB temp.</li>
+<li><a href="https://wiki.nanotech.ucsb.edu/w/images/f/f1/NLOF2020stepperrecipe.pdf" class="internal" title="NLOF2020stepperrecipe.pdf">See nLOF2020 Data File</a></li></ul>
+</td></tr></tbody></table>
+<h1><span id="Stepper_2_(AutoStep_200)"></span><span class="mw-headline" id="Stepper_2_.28AutoStep_200.29"><a href="Stepper_2_(AutoStep_200).html" title="Stepper 2 (AutoStep 200)">Stepper 2 (AutoStep 200)</a></span></h1>
+<h2><span id="Positive_Resist_(AutoStep_200)"></span><span class="mw-headline" id="Positive_Resist_.28AutoStep_200.29">Positive Resist (AutoStep 200)</span></h2>
+<p>Unless otherwise noted, bakes are on hot plates. For recipes with CEM, the CEM is spun on after the first resist bake, exposure is then done, and the CEM is rinsed off with DI water before the PEB. CEM generally improves resolution and process tolerance at the expense of higher exposure time. 
+</p><p><b>NOTE</b>: The bolded exposure times were found by multiplying the exposure times from the GCA 6300 system by 0.30. They should be sued as a starting point. You will need to do an exposure array to get precise times for the Autostep system. In general, the resolution achievable is ~ 100 nm smaller for the Autostep200 system. 
+</p>
+<table class="wikitable" style="border: 1px solid #D0E7FF; background-color:#ffffff; text-align:center;" border="1">
+
+<tbody><tr bgcolor="#D0E7FF">
+<th width="100">Resist
+</th>
+<th width="100">Spin Cond.
+</th>
+<th width="75">Bake
+</th>
+<th width="75">Thickness
+</th>
+<th width="125">Exposure Time
+</th>
+<th width="100">Focus Offset
+</th>
+<th width="75">PEB
+</th>
+<th width="100">Developer
+</th>
+<th width="125">Developer Time
+</th>
+<th width="300">Comments
+</th></tr>
+<tr>
+<td><a href="https://wiki.nanotech.ucsb.edu/w/images/2/29/SPR955-Positive-Resist-Datasheet.pdf" class="internal" title="SPR955-Positive-Resist-Datasheet.pdf">SPR955CM-0.9</a>
+</td>
+<td>3 krpm/30”
+</td>
+<td>95°C/90”
+</td>
+<td>~ 0.9 um
+</td>
+<td>0.35”
+</td>
+<td>0
+</td>
+<td>110°C/90”
+</td>
+<td>AZ300MIF
+</td>
+<td>60”
+</td>
+<td align="left">
+<ul><li>0.5um dense lines</li>
+<li><a href="https://wiki.nanotech.ucsb.edu/w/images/c/c4/SPR955-0.9-AS200-stepperrecipe.pdf" class="internal" title="SPR955-0.9-AS200-stepperrecipe.pdf">See SPR955CM AS200 data file</a></li></ul>
+</td></tr>
+<tr>
+<td><a href="https://wiki.nanotech.ucsb.edu/w/images/2/29/SPR955-Positive-Resist-Datasheet.pdf" class="internal" title="SPR955-Positive-Resist-Datasheet.pdf">SPR955CM-0.9</a>
+</td>
+<td>3 krpm/30”
+</td>
+<td>95°C/90”
+</td>
+<td>~ 0.9 um
+</td>
+<td>0.8”
+</td>
+<td>0
+</td>
+<td>110°C/90”
+</td>
+<td>AZ300MIF
+</td>
+<td>60”
+</td>
+<td align="left">
+<ul><li>0.5um holes</li></ul>
+</td></tr>
+<tr>
+<td><a href="https://wiki.nanotech.ucsb.edu/w/images/2/29/SPR955-Positive-Resist-Datasheet.pdf" class="internal" title="SPR955-Positive-Resist-Datasheet.pdf">SPR955CM-1.8</a>
+</td>
+<td>4 krpm/30”
+</td>
+<td>95°C/90”
+</td>
+<td>~ 1.8 um
+</td>
+<td>0.4”
+</td>
+<td>-1
+</td>
+<td>110°C/90”
+</td>
+<td>AZ300MIF
+</td>
+<td>60”
+</td>
+<td align="left">
+<ul><li><a href="https://wiki.nanotech.ucsb.edu/w/images/a/a0/SPR955-1.8-AS200-stepperrecipe.pdf" class="internal" title="SPR955-1.8-AS200-stepperrecipe.pdf">See SPR955-1.8 AS200 data file</a></li></ul>
+</td></tr>
+<tr>
+<td>SPR950-0.8
+</td>
+<td>4 krpm/30”
+</td>
+<td>95°C/60”
+</td>
+<td>~ 0.8 um
+</td>
+<td><b>0.30”</b>
+</td>
+<td>0
+</td>
+<td>105°C/60”
+</td>
+<td>AZ300MIF
+</td>
+<td>60"
+</td>
+<td align="left">
+</td></tr>
+<tr>
+<td><a href="https://wiki.nanotech.ucsb.edu/w/images/3/3f/SPR220-Positive-Resist-Datasheet.pdf" class="internal" title="SPR220-Positive-Resist-Datasheet.pdf">SPR220-3.0</a>
+</td>
+<td>2.5 krpm/30”
+</td>
+<td>115°C/90”
+</td>
+<td>~ 2.7 um
+</td>
+<td><b>0.72”</b>
+</td>
+<td>10
+</td>
+<td>115°C/90”
+</td>
+<td>AZ300MIF
+</td>
+<td>60"
+</td>
+<td align="left">
+<ul><li>0.5 um isolated lines</li></ul>
+</td></tr>
+<tr>
+<td><a href="https://wiki.nanotech.ucsb.edu/w/images/3/3f/SPR220-Positive-Resist-Datasheet.pdf" class="internal" title="SPR220-Positive-Resist-Datasheet.pdf">SPR220-7.0</a>
+</td>
+<td>3.5 krpm/45”
+</td>
+<td>115°C/120”
+</td>
+<td>~ 7.0 um
+</td>
+<td><b>1.35"</b>
+</td>
+<td>0
+</td>
+<td>*50°C/60”<br />
+<p>115°C/90” 
+</p>
+</td>
+<td>AZ300MIF
+</td>
+<td>120"
+</td>
+<td align="left">
+<ul><li>1.0 um isolated lines; 1.25 um isolated spaces
+<ul><li>Let sample sit in air for 20 minutes before PEB, step to 50°C for 60” first, then 115°C</li></ul></li></ul>
+</td></tr>
+<tr>
+<td><a href="https://wiki.nanotech.ucsb.edu/w/images/f/fc/AXP4000pb-Datasheet.pdf" class="internal" title="AXP4000pb-Datasheet.pdf">AZ4210</a>
+</td>
+<td>step1:500rpm/5", step2:4krpm/45”
+</td>
+<td>95°C/60"
+</td>
+<td>~ 2.1 um
+</td>
+<td><b>0.75"</b>
+</td>
+<td>0
+</td>
+<td>
+</td>
+<td>AZ400K:DI=1:4
+</td>
+<td>60"
+</td>
+<td align="left">
+<ul><li>2.0 um dense holes</li></ul>
+</td></tr></tbody></table>
+<h2><span id="Negative_Resist_(AutoStep_200)"></span><span class="mw-headline" id="Negative_Resist_.28AutoStep_200.29">Negative Resist (AutoStep 200)</span></h2>
+<p>Unless otherwise noted, bakes are on hot plate. All flood exposures are done in broadband light using any contact aligner. Also, because the tone is negative, a shorter first exposure time will result in more undercut, which is desirable for single-layer lift-off processes. Under these conditions more develop time will also give more undercut. 
+</p><p><b>NOTE</b>: The bolded exposure times were found by multiplying the exposure times from the GCA 6300 system by 0.30. They should be sued as a starting point. You will need to do an exposure array to get precise times for the Autostep system. In general, the resolution achievable is ~ 100 nm smaller for the Autostep200 system. 
+</p>
+<table class="wikitable" style="border: 1px solid #D0E7FF; background-color:#ffffff; text-align:center;" border="1">
+
+<tbody><tr bgcolor="#D0E7FF">
+<th width="100">Resist
+</th>
+<th width="100">Spin Cond.
+</th>
+<th width="75">Bake
+</th>
+<th width="75">Thickness
+</th>
+<th width="125">Exposure Time
+</th>
+<th width="100">Focus Offset
+</th>
+<th width="75">PEB
+</th>
+<th width="75">Flood
+</th>
+<th width="100">Developer
+</th>
+<th width="125">Developer Time
+</th>
+<th width="300">Comments
+</th></tr>
+<tr>
+<td><a href="https://wiki.nanotech.ucsb.edu/w/images/8/82/AZnLOF5510-Negative-Resist-Datasheet.pdf" class="internal" title="AZnLOF5510-Negative-Resist-Datasheet.pdf">nLOF5510</a>
+</td>
+<td>3 krpm/30”
+</td>
+<td>90°C/60”
+</td>
+<td>~ 0.93 um
+</td>
+<td>.25”
+</td>
+<td>-1
+</td>
+<td>110°C/60”
+</td>
+<td>0
+</td>
+<td>AZ300MIF
+</td>
+<td>60”
+</td>
+<td align="left">
+<ul><li>0.4 um lines dense good</li>
+<li>Use heated 1165 stripper for removal or lift-off</li>
+<li><a href="https://wiki.nanotech.ucsb.edu/w/images/3/33/NLOF5510-AS200-stepperrecipe.pdf" class="internal" title="NLOF5510-AS200-stepperrecipe.pdf">See nLOF5510 As200 data file</a></li></ul>
+</td></tr>
+<tr>
+<td><a href="https://wiki.nanotech.ucsb.edu/w/images/b/b0/AZ5214-Negative-Resist-Datasheet.pdf" class="internal" title="AZ5214-Negative-Resist-Datasheet.pdf">AZ5214</a>
+</td>
+<td>6 krpm/30”
+</td>
+<td>95°C/60”
+</td>
+<td>~ 1.0 um
+</td>
+<td><b>0.06”</b>
+</td>
+<td>0
+</td>
+<td>110°C/60”
+</td>
+<td>60"
+</td>
+<td>AZ300MIF
+</td>
+<td>60"
+</td>
+<td align="left">
+<ul><li>0.7 um res. possible</li></ul>
+</td></tr>
+<tr>
+<td><a href="https://wiki.nanotech.ucsb.edu/w/images/5/5e/AZnLOF2020-Negative-Resist-Datasheet.pdf" class="internal" title="AZnLOF2020-Negative-Resist-Datasheet.pdf">nLOF2020</a>
+</td>
+<td>4 krpm/30”
+</td>
+<td>110°C/60”
+</td>
+<td>~ 2 um
+</td>
+<td><b>0.17”</b>
+</td>
+<td>-6
+</td>
+<td>110°C/60”
+</td>
+<td>0
+</td>
+<td>AZ300MIF
+</td>
+<td>90"
+</td>
+<td align="left">
+<ul><li>~ .85 um line opening/lift-off good. Isolated mesas can be smaller.</li>
+<li>Use heated 1165 stripper for removal or lift-off Sensetive to PEB temp.</li></ul>
+</td></tr>
+
+<tr>
+<td><a href="https://wiki.nanotech.ucsb.edu/w/images/8/8f/NR9-1000PY-revA.pdf" class="internal" title="NR9-1000PY-revA.pdf">NR9-1000PY</a>
+</td>
+<td>3 krpm/30”
+</td>
+<td>135°C/180” lid down
+</td>
+<td>~ 1.2 um
+</td>
+<td><b>0.92”</b>
+</td>
+<td>0
+</td>
+<td>115°C/120” lid down
+</td>
+<td>0
+</td>
+<td>AZ300MIF
+</td>
+<td>20"
+</td>
+<td align="left">
+<ul><li>~ .55 um line opening/lift-off good.</li>
+<li>Use heated 1165 stripper for removal 8Hrs min.</li>
+<li><a href="https://wiki.nanotech.ucsb.edu/w/images/e/e1/NR9-1000PY-AS200-stepperrecipe.pdf" class="internal" title="NR9-1000PY-AS200-stepperrecipe.pdf">See NR9-1000PY As200 data file</a></li></ul>
+</td></tr></tbody></table>
+<h1><span id="Stepper_3_(ASML_DUV)"></span><span class="mw-headline" id="Stepper_3_.28ASML_DUV.29"><a href="Stepper_3_(ASML_DUV).html" title="Stepper 3 (ASML DUV)">Stepper 3 (ASML DUV)</a></span></h1>
+<h2><span class="mw-headline" id="Anti-Reflective_Coatings">Anti-Reflective Coatings</span></h2>
+<p>Bottom Anti-reflective coatings (aka. BARC or AR Coating) are, in general, used for the ASML stepper. LOL2000 and PMGI can also be used as under layers.
+</p>
+<h3><span class="mw-headline" id="DUV-42P-6"><b><a rel="nofollow" class="external text" href="images/0/07/DUV42P-Anti-Reflective-Coating.pdf">DUV-42P-6</a></b></span></h3>
+<p><i>(replacement for AR2)</i> 
+</p>
+<ul><li>spin coat at 2500rpm for optimal anti-reflective properties (~60nm).
+<ul><li>Mistake: this was previously written as 3500rpm.</li></ul></li>
+<li>Bake at 220°C for 60s on a hotplate.</li>
+<li>This AR coating is removed via oxygen plasma.</li>
+<li>This ARC can be etched on <a rel="nofollow" class="external text" href="https://wiki.nanotech.ucsb.edu/w/index.php?title=ICP_Etching_Recipes#Photoresist_and_ARC_Etching_.28Panasonic_1.29">ICP#1</a>, <a rel="nofollow" class="external text" href="https://wiki.nanotech.ucsb.edu/w/index.php?title=ICP_Etching_Recipes#Photoresist_and_ARC_etching_.28Panasonic_2.29">ICP#2</a>, <a rel="nofollow" class="external text" href="https://wiki.nanotech.ucsb.edu/w/index.php?title=RIE_Etching_Recipes#Photoresist_and_ARC_.28RIE_5.29">RIE#5</a>, <a rel="nofollow" class="external text" href="ICP_Etching_Recipes.html#Photoresist_.26_ARC_.28Fluorine_ICP_Etcher.29">FL-ICP</a> or even <a href="Ashers_(Technics_PEII).html" title="Ashers (Technics PEII)">Technics PEii ashers</a>.</li>
+<li>Datasheet: <b><a rel="nofollow" class="external text" href="images/0/07/DUV42P-Anti-Reflective-Coating.pdf">DUV-42P-6</a></b></li></ul>
+<h3><span class="mw-headline" id="DS-K101-304"><b><a rel="nofollow" class="external text" href="images/a/af/DS-K101-304-Anti-Reflective-Coating.pdf">DS-K101-304</a></b></span></h3>
+<ul><li>spin at 5000rpm and bake at 185C for 60s.
+<ul><li>~20nm thickness</li></ul></li>
+<li>This AR coating develops away and undercuts in AZ300MIF.
+<ul><li>For isolated lines, this can cause them to lift-off by undercutting the resist.</li></ul></li>
+<li>Increase bake temperature to reduce undercut rate.
+<ul><li><a href="DS-K101-304_Bake_Temp.html" title="DS-K101-304 Bake Temp. versus Develop Rate">DS-K101-304 Bake Temp. versus Develop Rate</a> - Click for experimental data</li>
+<li>Can be used similarly to DUV42P (dry etch removal) by baking at 220°C.</li></ul></li>
+<li>Datasheet: <b><a rel="nofollow" class="external text" href="images/a/af/DS-K101-304-Anti-Reflective-Coating.pdf">DS-K101-304</a></b></li></ul>
+<h2><span id="Positive_Resist_(ASML_DUV)"></span><span class="mw-headline" id="Positive_Resist_.28ASML_DUV.29">Positive Resist (ASML DUV)</span></h2>
+<p>Please see section above for anti-reflection coatings, which are usually used with the DUV Stepper.
+</p>
+<table class="wikitable" style="border: 1px solid #D0E7FF; background-color:#ffffff; text-align:center;" border="1">
+
+<tbody><tr bgcolor="#D0E7FF">
+<th width="100">Resist
+</th>
+<th width="100">Spin Cond.
+</th>
+<th width="75">Bake
+</th>
+<th width="75">Thickness
+</th>
+<th width="125">Exposure Dose(mj)
+</th>
+<th width="100">Focus Offset
+</th>
+<th width="75">PEB
+</th>
+<th width="100">Developer
+</th>
+<th width="125">Developer Time
+</th>
+<th width="300">Comments
+</th></tr>
+<tr>
+<td>UV6-0.7 <br /> (replaced by <a href="https://wiki.nanotech.ucsb.edu/w/images/3/38/UV6-Positive-Resist-Datasheet.pdf" class="internal" title="UV6-Positive-Resist-Datasheet.pdf">UV6-0.8</a>)
+</td>
+<td>3.5 krpm/30”
+</td>
+<td>135°C/60”
+</td>
+<td>630nm
+</td>
+<td>17
+</td>
+<td>-0.2
+</td>
+<td>135°C/90”
+</td>
+<td>AZ300MIF
+</td>
+<td>45”
+</td>
+<td align="left">
+<ul><li>200nm dense line/space</li>
+<li>NA 0.57, Sigma 0.75</li>
+<li>Eo ~ 5.5mj</li>
+<li>UV6-0.7 was discontinued, we now stock UV6-0.8</li></ul>
+</td></tr>
+<tr>
+<td><a href="https://wiki.nanotech.ucsb.edu/w/images/f/ff/UV210-Positive-Resist-Datasheet.pdf" class="internal" title="UV210-Positive-Resist-Datasheet.pdf">UV210-0.3</a>
+</td>
+<td>5.0 krpm/30”
+</td>
+<td>135°C/60”
+</td>
+<td>230nm
+</td>
+<td>20
+</td>
+<td>-0.1
+</td>
+<td>135°C/90”
+</td>
+<td>AZ300MIF
+</td>
+<td>45"
+</td>
+<td align="left">
+<ul><li>150nm dense line/space</li>
+<li><b>Annular Illumination</b></li>
+<li>NA 0.63, Sigma_o 0.8, Sigma_i 0.5</li></ul>
+</td></tr>
+<tr>
+<td><a href="https://wiki.nanotech.ucsb.edu/w/images/f/ff/UV210-Positive-Resist-Datasheet.pdf" class="internal" title="UV210-Positive-Resist-Datasheet.pdf">UV210-0.3</a>
+</td>
+<td>3.0 krpm/30”
+</td>
+<td>135°C/90”
+</td>
+<td>260nm
+</td>
+<td>85
+</td>
+<td>-0.2
+</td>
+<td>135°C/90”
+</td>
+<td>AZ300MIF
+</td>
+<td>80”
+</td>
+<td align="left">
+<ul><li>170nm isolated holes</li>
+<li><b>Annular Illumination</b></li>
+<li>NA 0.63, Sigma_o 0.8, Sigma_i 0.5</li></ul>
+</td></tr></tbody></table>
+<h2><span id="Negative_Resist_(ASML_DUV)"></span><span class="mw-headline" id="Negative_Resist_.28ASML_DUV.29">Negative Resist (ASML DUV)</span></h2>
+<p>Please see section above for anti-reflection coatings, which are usually used with the DUV Stepper.
+</p>
+<table class="wikitable" style="border: 1px solid #D0E7FF; background-color:#ffffff; text-align:center;" border="1">
+
+<tbody><tr bgcolor="#D0E7FF">
+<th width="100">Resist
+</th>
+<th width="100">Spin Cond.
+</th>
+<th width="75">Bake
+</th>
+<th width="75">Thickness
+</th>
+<th width="125">Exposure Dose (mj)
+</th>
+<th width="100">Focus Offset
+</th>
+<th width="75">PEB
+</th>
+<th width="75">Flood
+</th>
+<th width="100">Developer
+</th>
+<th width="125">Developer Time
+</th>
+<th width="300">Comments
+</th></tr>
+<tr>
+<td><a href="https://wiki.nanotech.ucsb.edu/w/images/c/c9/UVN-30_-_Negative-Resist-Datasheet_-_Apr_2004.pdf" class="internal" title="UVN-30 - Negative-Resist-Datasheet - Apr 2004.pdf">UVN30-0.8</a>
+</td>
+<td>3.5 krpm/30”
+</td>
+<td>110°C/60”
+</td>
+<td>~550nm
+</td>
+<td>27
+</td>
+<td>+0.15
+</td>
+<td>105°C/60”
+</td>
+<td>Not Used
+</td>
+<td>AZ300MIF
+</td>
+<td>55-60 sec
+</td>
+<td align="left">
+<ul><li>Replaced UVN2300, not identical</li></ul>
+</td></tr></tbody></table>
+<h2><span id="Other_Lithography_Processes_(ASML_DUV)"></span><span class="mw-headline" id="Other_Lithography_Processes_.28ASML_DUV.29">Other Lithography Processes (ASML DUV)</span></h2>
+<ul><li><a href="ASML_DUV__Edge_Bead_Removal_via_Photolithography.html" title="ASML DUV: Edge Bead Removal via Photolithography">DUV Photolithographic Edge Bead Removal</a></li>
+<li><a href="Lift-Off_with_DUV_Imaging_%2b_PMGI_Underlayer.html" title="Lift-Off with DUV Imaging + PMGI Underlayer">DUV Lift-Off Process with PMGI Underlayer</a></li></ul>
+<!-- 
+NewPP limit report
+Cached time: 20220928160146
+Cache expiry: 86400
+Dynamic content: false
+Complications: []
+CPU time usage: 0.033 seconds
+Real time usage: 0.037 seconds
+Preprocessor visited node count: 176/1000000
+Post‐expand include size: 882/2097152 bytes
+Template argument size: 687/2097152 bytes
+Highest expansion depth: 3/40
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 0/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    4.120      1 -total
+ 53.69%    2.212     13 Template:Fl
+ 33.35%    1.374      1 Template:Recipes
+-->
+
+<!-- Saved in parser cache with key wikidb:pcache:idhash:825-0!canonical and timestamp 20220928160146 and revision id 159216
+ -->
+</div></div><div class="printfooter">Retrieved from "<a dir="ltr" href="https://wiki.nanotech.ucsb.edu/w/index.php?title=Stepper_Recipes&amp;oldid=159216">https://wiki.nanotech.ucsb.edu/w/index.php?title=Stepper_Recipes&amp;oldid=159216</a>"</div>
+		<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="Special_Categories.html" title="Special:Categories">Categories</a>: <ul><li><a href="Category_Recipes.html" title="Category:Recipes">Recipes</a></li><li><a href="Category_Lithography.html" class="mw-redirect" title="Category:Lithography">Lithography</a></li></ul></div></div>
+	</div>
+</div>
+
+<div id="mw-navigation">
+	<h2>Navigation menu</h2>
+	<div id="mw-head">
+		<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-personal" class="vector-menu" aria-labelledby="p-personal-label" role="navigation" 
+	 >
+	<h3 id="p-personal-label">
+		<span>Personal tools</span>
+	</h3>
+	<!-- Please do not use the .body class, it is deprecated. -->
+	<div class="body vector-menu-content">
+		<!-- Please do not use the .menu class, it is deprecated. -->
+		<ul class="vector-menu-content-list"><li id="pt-createaccount"><a href="https://wiki.nanotech.ucsb.edu/w/index.php?title=Special:CreateAccount&amp;returnto=Stepper+Recipes" title="You are encouraged to create an account and log in; however, it is not mandatory">Create account</a></li><li id="pt-login"><a href="https://wiki.nanotech.ucsb.edu/w/index.php?title=Special:UserLogin&amp;returnto=Stepper+Recipes" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o">Log in</a></li></ul>
+		
+	</div>
+</nav>
+
+
+		<div id="left-navigation">
+			<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-namespaces" class="vector-menu vector-menu-tabs vectorTabs" aria-labelledby="p-namespaces-label" role="navigation" 
+	 >
+	<h3 id="p-namespaces-label">
+		<span>Namespaces</span>
+	</h3>
+	<!-- Please do not use the .body class, it is deprecated. -->
+	<div class="body vector-menu-content">
+		<!-- Please do not use the .menu class, it is deprecated. -->
+		<ul class="vector-menu-content-list"><li id="ca-nstab-main" class="selected"><a href="Stepper_Recipes.html" title="View the content page [c]" accesskey="c">Page</a></li><li id="ca-talk" class="new"><a href="https://wiki.nanotech.ucsb.edu/w/index.php?title=Talk:Stepper_Recipes&amp;action=edit&amp;redlink=1" rel="discussion" title="Discussion about the content page (page does not exist) [t]" accesskey="t">Discussion</a></li></ul>
+		
+	</div>
+</nav>
+
+
+			<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-variants" class="vector-menu-empty emptyPortlet vector-menu vector-menu-dropdown vectorMenu" aria-labelledby="p-variants-label" role="navigation" 
+	 >
+	<input type="checkbox" class="vector-menu-checkbox vectorMenuCheckbox" aria-labelledby="p-variants-label" />
+	<h3 id="p-variants-label">
+		<span>Variants</span>
+	</h3>
+	<!-- Please do not use the .body class, it is deprecated. -->
+	<div class="body vector-menu-content">
+		<!-- Please do not use the .menu class, it is deprecated. -->
+		<ul class="menu vector-menu-content-list"></ul>
+		
+	</div>
+</nav>
+
+
+		</div>
+		<div id="right-navigation">
+			<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-views" class="vector-menu vector-menu-tabs vectorTabs" aria-labelledby="p-views-label" role="navigation" 
+	 >
+	<h3 id="p-views-label">
+		<span>Views</span>
+	</h3>
+	<!-- Please do not use the .body class, it is deprecated. -->
+	<div class="body vector-menu-content">
+		<!-- Please do not use the .menu class, it is deprecated. -->
+		<ul class="vector-menu-content-list"><li id="ca-view" class="collapsible selected"><a href="Stepper_Recipes.html">Read</a></li><li id="ca-viewsource" class="collapsible"><a href="https://wiki.nanotech.ucsb.edu/w/index.php?title=Stepper_Recipes&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e">View source</a></li><li id="ca-history" class="collapsible"><a href="https://wiki.nanotech.ucsb.edu/w/index.php?title=Stepper_Recipes&amp;action=history" title="Past revisions of this page [h]" accesskey="h">View history</a></li></ul>
+		
+	</div>
+</nav>
+
+
+			<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-cactions" class="vector-menu-empty emptyPortlet vector-menu vector-menu-dropdown vectorMenu" aria-labelledby="p-cactions-label" role="navigation" 
+	 >
+	<input type="checkbox" class="vector-menu-checkbox vectorMenuCheckbox" aria-labelledby="p-cactions-label" />
+	<h3 id="p-cactions-label">
+		<span>More</span>
+	</h3>
+	<!-- Please do not use the .body class, it is deprecated. -->
+	<div class="body vector-menu-content">
+		<!-- Please do not use the .menu class, it is deprecated. -->
+		<ul class="menu vector-menu-content-list"></ul>
+		
+	</div>
+</nav>
+
+
+			<div id="p-search" role="search">
+	<h3 >
+		<label for="searchInput">Search</label>
+	</h3>
+	<form action="https://wiki.nanotech.ucsb.edu/w/index.php" id="searchform">
+		<div id="simpleSearch">
+			<input type="search" name="search" placeholder="Search UCSB Nanofab Wiki" title="Search UCSB Nanofab Wiki [f]" accesskey="f" id="searchInput"/>
+			<input type="hidden" name="title" value="Special:Search">
+			<input type="submit" name="fulltext" value="Search" title="Search the pages for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton"/>
+			<input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchButton" class="searchButton"/>
+		</div>
+	</form>
+</div>
+
+		</div>
+	</div>
+	
+<div id="mw-panel">
+	<div id="p-logo" role="banner">
+		<a  title="Visit the main page" class="mw-wiki-logo" href="Main_Page.html"></a>
+	</div>
+	<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-InvisibleMenu" class="vector-menu-empty emptyPortlet vector-menu vector-menu-portal portal portal-first" aria-labelledby="p-InvisibleMenu-label" role="navigation" 
+	 >
+	<h3 id="p-InvisibleMenu-label">
+		<span>InvisibleMenu</span>
+	</h3>
+	<!-- Please do not use the .body class, it is deprecated. -->
+	<div class="body vector-menu-content">
+		<!-- Please do not use the .menu class, it is deprecated. -->
+		<ul class="vector-menu-content-list"></ul>
+		
+	</div>
+</nav>
+
+
+	<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-QuickLinks" class="vector-menu vector-menu-portal portal" aria-labelledby="p-QuickLinks-label" role="navigation" 
+	 >
+	<h3 id="p-QuickLinks-label">
+		<span>QuickLinks</span>
+	</h3>
+	<!-- Please do not use the .body class, it is deprecated. -->
+	<div class="body vector-menu-content">
+		<!-- Please do not use the .menu class, it is deprecated. -->
+		<ul class="vector-menu-content-list"><li id="n-Lab-Rules"><a href="Lab_Rules.html">Lab Rules</a></li><li id="n-COVID-19-Protocols"><a href="COVID-19_User_Policies.html">COVID-19 Protocols</a></li><li id="n-Common-Questions"><a href="FAQs.html">Common Questions</a></li><li id="n-Staff-List"><a href="Staff_List.html">Staff List</a></li><li id="n-Equipment-Signup"><a href="https://signupmonkey.ece.ucsb.edu/" rel="nofollow">Equipment Signup</a></li><li id="n-Chemicals-.2B-MSDS"><a href="Chemical_List.html">Chemicals + MSDS</a></li></ul>
+		
+	</div>
+</nav>
+
+<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-Equipment" class="vector-menu vector-menu-portal portal" aria-labelledby="p-Equipment-label" role="navigation" 
+	 >
+	<h3 id="p-Equipment-label">
+		<span>Equipment</span>
+	</h3>
+	<!-- Please do not use the .body class, it is deprecated. -->
+	<div class="body vector-menu-content">
+		<!-- Please do not use the .menu class, it is deprecated. -->
+		<ul class="vector-menu-content-list"><li id="n-Full-Tool-List"><a href="Tool_List.html">Full Tool List</a></li><li id="n-Lithography"><a href="Category_Lithography.html">Lithography</a></li><li id="n-Vacuum-Deposition"><a href="Category_Vacuum_Deposition.html">Vacuum Deposition</a></li><li id="n-Dry-Etch"><a href="Category_Dry_Etch.html">Dry Etch</a></li><li id="n-Wet-Processing"><a href="Category_Wet_Processing.html">Wet Processing</a></li><li id="n-Thermal-Processing"><a href="Category_Thermal_Processing.html">Thermal Processing</a></li><li id="n-Packaging"><a href="Category_Packaging.html">Packaging</a></li><li id="n-Inspection.2C-Test-.26-Characterization"><a href="Category_Inspection%2c_Test_and_Characterization.html">Inspection, Test &amp; Characterization</a></li></ul>
+		
+	</div>
+</nav>
+
+<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-Recipes and Data" class="vector-menu vector-menu-portal portal" aria-labelledby="p-Recipes and Data-label" role="navigation" 
+	 >
+	<h3 id="p-Recipes and Data-label">
+		<span>Recipes and Data</span>
+	</h3>
+	<!-- Please do not use the .body class, it is deprecated. -->
+	<div class="body vector-menu-content">
+		<!-- Please do not use the .menu class, it is deprecated. -->
+		<ul class="vector-menu-content-list"><li id="n-Lithography"><a href="Lithography_Recipes.html">Lithography</a></li><li id="n-Vacuum-Deposition"><a href="Vacuum_Deposition_Recipes.html">Vacuum Deposition</a></li><li id="n-Dry-Etching"><a href="Dry_Etching_Recipes.html">Dry Etching</a></li><li id="n-Wet-Etching"><a href="Wet_Etching_Recipes.html">Wet Etching</a></li><li id="n-Thermal-Processing"><a href="Thermal_Processing_Recipes.html">Thermal Processing</a></li><li id="n-Packaging-Tools"><a href="Packaging_Recipes.html">Packaging Tools</a></li><li id="n-Calculators.2FUtilities"><a href="Calculators_%2b_Utilities.html">Calculators/Utilities</a></li></ul>
+		
+	</div>
+</nav>
+
+<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-Facility Data" class="vector-menu vector-menu-portal portal" aria-labelledby="p-Facility Data-label" role="navigation" 
+	 >
+	<h3 id="p-Facility Data-label">
+		<span>Facility Data</span>
+	</h3>
+	<!-- Please do not use the .body class, it is deprecated. -->
+	<div class="body vector-menu-content">
+		<!-- Please do not use the .menu class, it is deprecated. -->
+		<ul class="vector-menu-content-list"><li id="n-Usage"><a href="Usage_Data_and_Statistics.html">Usage</a></li><li id="n-Research"><a href="Research.html">Research</a></li><li id="n-Tech-Talks"><a href="Tech_Talks_Seminar_Series.html">Tech Talks</a></li></ul>
+		
+	</div>
+</nav>
+
+<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-tb" class="vector-menu vector-menu-portal portal" aria-labelledby="p-tb-label" role="navigation" 
+	 >
+	<h3 id="p-tb-label">
+		<span>Tools</span>
+	</h3>
+	<!-- Please do not use the .body class, it is deprecated. -->
+	<div class="body vector-menu-content">
+		<!-- Please do not use the .menu class, it is deprecated. -->
+		<ul class="vector-menu-content-list"><li id="t-whatlinkshere"><a href="Special_WhatLinksHere/Stepper_Recipes.html" title="A list of all wiki pages that link here [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="Special_RecentChangesLinked/Stepper_Recipes.html" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-specialpages"><a href="Special_SpecialPages.html" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-print"><a href="javascript:print();" rel="alternate" title="Printable version of this page [p]" accesskey="p">Printable version</a></li><li id="t-permalink"><a href="https://wiki.nanotech.ucsb.edu/w/index.php?title=Stepper_Recipes&amp;oldid=159216" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-info"><a href="https://wiki.nanotech.ucsb.edu/w/index.php?title=Stepper_Recipes&amp;action=info" title="More information about this page">Page information</a></li></ul>
+		
+	</div>
+</nav>
+
+
+	
+</div>
+
+</div>
+
+<footer id="footer" class="mw-footer" role="contentinfo" >
+	<ul id="footer-info" >
+		<li id="footer-info-lastmod"> This page was last edited on 9 September 2021, at 17:07.</li>
+	</ul>
+	<ul id="footer-places" >
+		<li id="footer-places-privacy"><a href="UCSB_Nanofab_Wiki_Privacy_policy.html" title="UCSB Nanofab Wiki:Privacy policy">Privacy policy</a></li>
+		<li id="footer-places-about"><a href="UCSB_Nanofab_Wiki_About.html" title="UCSB Nanofab Wiki:About">About UCSB Nanofab Wiki</a></li>
+		<li id="footer-places-disclaimer"><a href="UCSB_Nanofab_Wiki_General_disclaimer.html" title="UCSB Nanofab Wiki:General disclaimer">Disclaimers</a></li>
+	</ul>
+	<ul id="footer-icons" class="noprint">
+		<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img src="../w/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/w/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /w/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31" loading="lazy"/></a></li>
+	</ul>
+	<div style="clear: both;"></div>
+</footer>
+
+
+
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.033","walltime":"0.037","ppvisitednodes":{"value":176,"limit":1000000},"postexpandincludesize":{"value":882,"limit":2097152},"templateargumentsize":{"value":687,"limit":2097152},"expansiondepth":{"value":3,"limit":40},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":0,"limit":5000000},"timingprofile":["100.00%    4.120      1 -total"," 53.69%    2.212     13 Template:Fl"," 33.35%    1.374      1 Template:Recipes"]},"cachereport":{"timestamp":"20220928160146","ttl":86400,"transientcontent":false}}});});</script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','../../www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-3048424-9', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":53});});</script></body>
+<!-- Mirrored from wiki.nanotech.ucsb.edu/wiki/Stepper_Recipes by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 28 Sep 2022 20:31:43 GMT -->
+</html>

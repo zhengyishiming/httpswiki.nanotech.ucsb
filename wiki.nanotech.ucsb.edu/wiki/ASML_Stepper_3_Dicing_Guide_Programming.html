@@ -1,0 +1,314 @@
+
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+
+<!-- Mirrored from wiki.nanotech.ucsb.edu/wiki/ASML_Stepper_3_Dicing_Guide_Programming by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 29 Sep 2022 00:30:48 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8"/>
+<title>ASML Stepper 3 Dicing Guide Programming - UCSB Nanofab Wiki</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":!1,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"e02d6f57477d0b9aa72e0a0f","wgCSPNonce":!1,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":!1,"wgNamespaceNumber":0,"wgPageName":"ASML_Stepper_3_Dicing_Guide_Programming","wgTitle":"ASML Stepper 3 Dicing Guide Programming","wgCurRevisionId":158720,"wgRevisionId":158720,"wgArticleId":63334,"wgIsArticle":!0,"wgIsRedirect":!1,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"ASML_Stepper_3_Dicing_Guide_Programming","wgRelevantArticleId":63334,"wgIsProbablyEditable":!1,"wgRelevantPageIsProbablyEditable":!1,"wgRestrictionEdit":[],"wgRestrictionMove":
+[],"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","pageVariantFallbacks":"en"},"wgEditSubmitButtonLabelPublish":!1};RLSTATE={"site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","user.options":"loading","skins.vector.styles.legacy":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready"};RLPAGEMODULES=["site","mediawiki.page.startup","mediawiki.page.ready","Skins.vector.legacy.html","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.implement("user.options@1hzgi",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});});</script>
+<link rel="stylesheet" href="https://wiki.nanotech.ucsb.edu/w/load.php?lang=en&amp;modules=ext.visualEditor.desktopArticleTarget.noscript%7Cskins.vector.styles.legacy&amp;only=styles&amp;skin=vector"/>
+<script async="" src="../w/load52c0.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=vector"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="../w/load2f5e.css?lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector"/>
+<meta name="generator" content="MediaWiki 1.35.4"/>
+<link rel="shortcut icon" href="https://wiki.nanotech.ucsb.edu/favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="https://wiki.nanotech.ucsb.edu/w/opensearch_desc.php" title="UCSB Nanofab Wiki (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://wiki.nanotech.ucsb.edu/w/api.php?action=rsd"/>
+<link rel="alternate" type="application/atom+xml" title="UCSB Nanofab Wiki Atom feed" href="https://wiki.nanotech.ucsb.edu/w/index.php?title=Special:RecentChanges&amp;feed=atom"/>
+<!--[if lt IE 9]><script src="/w/resources/lib/html5shiv/html5shiv.js"></script><![endif]-->
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-ASML_Stepper_3_Dicing_Guide_Programming rootpage-ASML_Stepper_3_Dicing_Guide_Programming skin-vector action-view skin-vector-legacy">
+<div id="mw-page-base" class="noprint"></div>
+<div id="mw-head-base" class="noprint"></div>
+<div id="content" class="mw-body" role="main">
+	<a id="top"></a>
+	<div id="siteNotice" class="mw-body-content"></div>
+	<div class="mw-indicators mw-body-content">
+	</div>
+	<h1 id="firstHeading" class="firstHeading" lang="en">ASML Stepper 3 Dicing Guide Programming</h1>
+	<div id="bodyContent" class="mw-body-content">
+		<div id="siteSub" class="noprint">From UCSB Nanofab Wiki</div>
+		<div id="contentSub"></div>
+		<div id="contentSub2"></div>
+		
+		<div id="jump-to-nav"></div>
+		<a class="mw-jump-link" href="#mw-head">Jump to navigation</a>
+		<a class="mw-jump-link" href="#searchInput">Jump to search</a>
+		<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output"><blockquote><p><i>How to program the ASML DUV Stepper #3 to place dicing guides in between die.</i></p></blockquote>
+<pre>UPDATE: doesn’t work: Ning tried this and found these patterns were too difficult to see on the disconfirm saw. Demis: new method, use ASML’s Alignment Mark distribution function to use SPM-X/Y marks as dicing guides. Carefully not to distribute too many - there is a software limit on number of exposures per Image. 
+</pre>
+<ul><li>Determine a lithography step in the fabrication process during which the addition of dicing guides (crosses) would be acceptable and visible during dicing.  There are both positive and negative versions of the Cross pattern.</li>
+<li>When programming the job, add an new Image in <code>Wafer Layout &gt; Image Definition</code> for the DicingGuides image, as so:
+<ul><li>Reticle ID: "<b>UCSB-OPC1</b>" (hyphenated)</li>
+<li>For <u>Positive PR image</u>:
+<ul><li>Image Size (Wafer): X = 0.90000; Y = 0.90000 mm</li>
+<li>Image Shift (Wafer): X = -6.750000; Y= -9.450000 mm</li>
+<li><div class="thumb tnone"><div class="thumbinner" style="width:402px;"><a href="File_UCSB_Dicing_Guides_-_IMG_1199_annotated.html" class="image"><img alt="ASML Programming: Image Definition Screen" src="../w/images/thumb/1/10/UCSB_Dicing_Guides_-_IMG_1199_annotated.jpg/400px-UCSB_Dicing_Guides_-_IMG_1199_annotated.jpg" decoding="async" width="400" height="324" class="thumbimage" srcset="/w/images/thumb/1/10/UCSB_Dicing_Guides_-_IMG_1199_annotated.jpg/600px-UCSB_Dicing_Guides_-_IMG_1199_annotated.jpg 1.5x, /w/images/1/10/UCSB_Dicing_Guides_-_IMG_1199_annotated.jpg 2x" /></a>  <div class="thumbcaption"><div class="magnify"><a href="File_UCSB_Dicing_Guides_-_IMG_1199_annotated.html" class="internal" title="Enlarge"></a></div>ASML Programming (Positive PR) Image Definition Screen</div></div></div><div class="thumb tnone"><div class="thumbinner" style="width:402px;"><a href="File_UCSB_Dicing_Guides_-_Image_Location_on_Reticle_-_800px.html" class="image"><img alt="Image Definition: Resulting location on Reticle screenshot" src="../w/images/thumb/b/b5/UCSB_Dicing_Guides_-_Image_Location_on_Reticle_-_800px.png/400px-UCSB_Dicing_Guides_-_Image_Location_on_Reticle_-_800px.png" decoding="async" width="400" height="300" class="thumbimage" srcset="/w/images/thumb/b/b5/UCSB_Dicing_Guides_-_Image_Location_on_Reticle_-_800px.png/600px-UCSB_Dicing_Guides_-_Image_Location_on_Reticle_-_800px.png 1.5x, /w/images/b/b5/UCSB_Dicing_Guides_-_Image_Location_on_Reticle_-_800px.png 2x" /></a>  <div class="thumbcaption"><div class="magnify"><a href="File_UCSB_Dicing_Guides_-_Image_Location_on_Reticle_-_800px.html" class="internal" title="Enlarge"></a></div>Image Definition (Positive PR): Location on Reticle</div></div></div><div class="thumb tnone"><div class="thumbinner" style="width:147px;"><a href="File_GlobalMulti_POS_-_Screen_Shot_2018-07-23_at_11.17.23_AM.html" class="image"><img alt="Positive PR Alignment Mark schematic" src="../w/images/e/ef/GlobalMulti_POS_-_Screen_Shot_2018-07-23_at_11.17.23_AM.png" decoding="async" width="145" height="145" class="thumbimage" /></a>  <div class="thumbcaption"><div class="magnify"><a href="File_GlobalMulti_POS_-_Screen_Shot_2018-07-23_at_11.17.23_AM.html" class="internal" title="Enlarge"></a></div>Positive PR Alignment Mark.  Will center the large Cross.</div></div></div></li></ul></li>
+<li>For <u>Negative PR Image</u>:
+<ul><li>Image Size (wafer scale): X = 0.710000&#160;; Y = 0.710000 mm</li>
+<li>Image Shift (wafer scale): X = 6.750000&#160;; Y = -9.450000 mm<div class="thumb tnone"><div class="thumbinner" style="width:117px;"><a href="File_GlobalMulti_NEG_-_Screen_Shot_2018-07-23_at_11.22.19_AM.html" class="image"><img alt="Negative PR pattern schematic" src="../w/images/5/5b/GlobalMulti_NEG_-_Screen_Shot_2018-07-23_at_11.22.19_AM.png" decoding="async" width="115" height="113" class="thumbimage" /></a>  <div class="thumbcaption"><div class="magnify"><a href="File_GlobalMulti_NEG_-_Screen_Shot_2018-07-23_at_11.22.19_AM.html" class="internal" title="Enlarge"></a></div>Negative PR pattern</div></div></div></li>
+<li><i>More info on either pattern can be <a href="ASML_Stepper_3_-_UCSB_Test_Reticles.html" title="ASML Stepper 3 - UCSB Test Reticles">found here</a>.</i></li></ul></li></ul></li></ul>
+<ul><li>Under <code>Wafer Layout &gt; Image Distribution</code>, add an <code><b>Image-to-Cell Shift</b></code> of <b>half the die X/Y size</b>, and <code>Apply</code> to all die, to place the marks at the corner of every die.
+<ul><li>The software will only let you place the die at the upper-right (<i>+X,+Y</i>) corner. To include the lower-left corners, you will need to make sure you enabled the <code>Wafer Layout &gt; Cell Structure &gt; Die Definition &gt; # of Dies &amp; Minimum per Cell</code> options too shoot partial die at the wafer edges.</li>
+<li>Make sure they don't expose over any of your other alignment marks!</li></ul></li></ul>
+<ul><li><div class="thumb tnone"><div class="thumbinner" style="width:402px;"><a href="File_UCSB_Dicing_Guides_-_Die_Location_-_800px.html" class="image"><img alt="Screenshot fo resulting die location" src="../w/images/thumb/f/f5/UCSB_Dicing_Guides_-_Die_Location_-_800px.png/400px-UCSB_Dicing_Guides_-_Die_Location_-_800px.png" decoding="async" width="400" height="300" class="thumbimage" srcset="/w/images/thumb/f/f5/UCSB_Dicing_Guides_-_Die_Location_-_800px.png/600px-UCSB_Dicing_Guides_-_Die_Location_-_800px.png 1.5x, /w/images/f/f5/UCSB_Dicing_Guides_-_Die_Location_-_800px.png 2x" /></a>  <div class="thumbcaption"><div class="magnify"><a href="File_UCSB_Dicing_Guides_-_Die_Location_-_800px.html" class="internal" title="Enlarge"></a></div>Image Distribution: Example dicing mark locations, using Image-to-Cell Shift to place die at corners.</div></div></div></li></ul>
+<!-- 
+NewPP limit report
+Cached time: 20220929002459
+Cache expiry: 86400
+Dynamic content: false
+Complications: []
+CPU time usage: 0.009 seconds
+Real time usage: 0.011 seconds
+Preprocessor visited node count: 1/1000000
+Post‐expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 1/40
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 0/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    0.000      1 -total
+-->
+
+<!-- Saved in parser cache with key wikidb:pcache:idhash:63334-0!canonical and timestamp 20220929002459 and revision id 158720
+ -->
+</div></div><div class="printfooter">Retrieved from "<a dir="ltr" href="https://wiki.nanotech.ucsb.edu/w/index.php?title=ASML_Stepper_3_Dicing_Guide_Programming&amp;oldid=158720">https://wiki.nanotech.ucsb.edu/w/index.php?title=ASML_Stepper_3_Dicing_Guide_Programming&amp;oldid=158720</a>"</div>
+		<div id="catlinks" class="catlinks catlinks-allhidden" data-mw="interface"></div>
+	</div>
+</div>
+
+<div id="mw-navigation">
+	<h2>Navigation menu</h2>
+	<div id="mw-head">
+		<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-personal" class="vector-menu" aria-labelledby="p-personal-label" role="navigation" 
+	 >
+	<h3 id="p-personal-label">
+		<span>Personal tools</span>
+	</h3>
+	<!-- Please do not use the .body class, it is deprecated. -->
+	<div class="body vector-menu-content">
+		<!-- Please do not use the .menu class, it is deprecated. -->
+		<ul class="vector-menu-content-list"><li id="pt-createaccount"><a href="https://wiki.nanotech.ucsb.edu/w/index.php?title=Special:CreateAccount&amp;returnto=ASML+Stepper+3+Dicing+Guide+Programming" title="You are encouraged to create an account and log in; however, it is not mandatory">Create account</a></li><li id="pt-login"><a href="https://wiki.nanotech.ucsb.edu/w/index.php?title=Special:UserLogin&amp;returnto=ASML+Stepper+3+Dicing+Guide+Programming" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o">Log in</a></li></ul>
+		
+	</div>
+</nav>
+
+
+		<div id="left-navigation">
+			<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-namespaces" class="vector-menu vector-menu-tabs vectorTabs" aria-labelledby="p-namespaces-label" role="navigation" 
+	 >
+	<h3 id="p-namespaces-label">
+		<span>Namespaces</span>
+	</h3>
+	<!-- Please do not use the .body class, it is deprecated. -->
+	<div class="body vector-menu-content">
+		<!-- Please do not use the .menu class, it is deprecated. -->
+		<ul class="vector-menu-content-list"><li id="ca-nstab-main" class="selected"><a href="ASML_Stepper_3_Dicing_Guide_Programming.html" title="View the content page [c]" accesskey="c">Page</a></li><li id="ca-talk" class="new"><a href="https://wiki.nanotech.ucsb.edu/w/index.php?title=Talk:ASML_Stepper_3_Dicing_Guide_Programming&amp;action=edit&amp;redlink=1" rel="discussion" title="Discussion about the content page (page does not exist) [t]" accesskey="t">Discussion</a></li></ul>
+		
+	</div>
+</nav>
+
+
+			<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-variants" class="vector-menu-empty emptyPortlet vector-menu vector-menu-dropdown vectorMenu" aria-labelledby="p-variants-label" role="navigation" 
+	 >
+	<input type="checkbox" class="vector-menu-checkbox vectorMenuCheckbox" aria-labelledby="p-variants-label" />
+	<h3 id="p-variants-label">
+		<span>Variants</span>
+	</h3>
+	<!-- Please do not use the .body class, it is deprecated. -->
+	<div class="body vector-menu-content">
+		<!-- Please do not use the .menu class, it is deprecated. -->
+		<ul class="menu vector-menu-content-list"></ul>
+		
+	</div>
+</nav>
+
+
+		</div>
+		<div id="right-navigation">
+			<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-views" class="vector-menu vector-menu-tabs vectorTabs" aria-labelledby="p-views-label" role="navigation" 
+	 >
+	<h3 id="p-views-label">
+		<span>Views</span>
+	</h3>
+	<!-- Please do not use the .body class, it is deprecated. -->
+	<div class="body vector-menu-content">
+		<!-- Please do not use the .menu class, it is deprecated. -->
+		<ul class="vector-menu-content-list"><li id="ca-view" class="collapsible selected"><a href="ASML_Stepper_3_Dicing_Guide_Programming.html">Read</a></li><li id="ca-viewsource" class="collapsible"><a href="https://wiki.nanotech.ucsb.edu/w/index.php?title=ASML_Stepper_3_Dicing_Guide_Programming&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e">View source</a></li><li id="ca-history" class="collapsible"><a href="https://wiki.nanotech.ucsb.edu/w/index.php?title=ASML_Stepper_3_Dicing_Guide_Programming&amp;action=history" title="Past revisions of this page [h]" accesskey="h">View history</a></li></ul>
+		
+	</div>
+</nav>
+
+
+			<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-cactions" class="vector-menu-empty emptyPortlet vector-menu vector-menu-dropdown vectorMenu" aria-labelledby="p-cactions-label" role="navigation" 
+	 >
+	<input type="checkbox" class="vector-menu-checkbox vectorMenuCheckbox" aria-labelledby="p-cactions-label" />
+	<h3 id="p-cactions-label">
+		<span>More</span>
+	</h3>
+	<!-- Please do not use the .body class, it is deprecated. -->
+	<div class="body vector-menu-content">
+		<!-- Please do not use the .menu class, it is deprecated. -->
+		<ul class="menu vector-menu-content-list"></ul>
+		
+	</div>
+</nav>
+
+
+			<div id="p-search" role="search">
+	<h3 >
+		<label for="searchInput">Search</label>
+	</h3>
+	<form action="https://wiki.nanotech.ucsb.edu/w/index.php" id="searchform">
+		<div id="simpleSearch">
+			<input type="search" name="search" placeholder="Search UCSB Nanofab Wiki" title="Search UCSB Nanofab Wiki [f]" accesskey="f" id="searchInput"/>
+			<input type="hidden" name="title" value="Special:Search">
+			<input type="submit" name="fulltext" value="Search" title="Search the pages for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton"/>
+			<input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchButton" class="searchButton"/>
+		</div>
+	</form>
+</div>
+
+		</div>
+	</div>
+	
+<div id="mw-panel">
+	<div id="p-logo" role="banner">
+		<a  title="Visit the main page" class="mw-wiki-logo" href="Main_Page.html"></a>
+	</div>
+	<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-InvisibleMenu" class="vector-menu-empty emptyPortlet vector-menu vector-menu-portal portal portal-first" aria-labelledby="p-InvisibleMenu-label" role="navigation" 
+	 >
+	<h3 id="p-InvisibleMenu-label">
+		<span>InvisibleMenu</span>
+	</h3>
+	<!-- Please do not use the .body class, it is deprecated. -->
+	<div class="body vector-menu-content">
+		<!-- Please do not use the .menu class, it is deprecated. -->
+		<ul class="vector-menu-content-list"></ul>
+		
+	</div>
+</nav>
+
+
+	<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-QuickLinks" class="vector-menu vector-menu-portal portal" aria-labelledby="p-QuickLinks-label" role="navigation" 
+	 >
+	<h3 id="p-QuickLinks-label">
+		<span>QuickLinks</span>
+	</h3>
+	<!-- Please do not use the .body class, it is deprecated. -->
+	<div class="body vector-menu-content">
+		<!-- Please do not use the .menu class, it is deprecated. -->
+		<ul class="vector-menu-content-list"><li id="n-Lab-Rules"><a href="Lab_Rules.html">Lab Rules</a></li><li id="n-COVID-19-Protocols"><a href="COVID-19_User_Policies.html">COVID-19 Protocols</a></li><li id="n-Common-Questions"><a href="FAQs.html">Common Questions</a></li><li id="n-Staff-List"><a href="Staff_List.html">Staff List</a></li><li id="n-Equipment-Signup"><a href="https://signupmonkey.ece.ucsb.edu/" rel="nofollow">Equipment Signup</a></li><li id="n-Chemicals-.2B-MSDS"><a href="Chemical_List.html">Chemicals + MSDS</a></li></ul>
+		
+	</div>
+</nav>
+
+<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-Equipment" class="vector-menu vector-menu-portal portal" aria-labelledby="p-Equipment-label" role="navigation" 
+	 >
+	<h3 id="p-Equipment-label">
+		<span>Equipment</span>
+	</h3>
+	<!-- Please do not use the .body class, it is deprecated. -->
+	<div class="body vector-menu-content">
+		<!-- Please do not use the .menu class, it is deprecated. -->
+		<ul class="vector-menu-content-list"><li id="n-Full-Tool-List"><a href="Tool_List.html">Full Tool List</a></li><li id="n-Lithography"><a href="Category_Lithography.html">Lithography</a></li><li id="n-Vacuum-Deposition"><a href="Category_Vacuum_Deposition.html">Vacuum Deposition</a></li><li id="n-Dry-Etch"><a href="Category_Dry_Etch.html">Dry Etch</a></li><li id="n-Wet-Processing"><a href="Category_Wet_Processing.html">Wet Processing</a></li><li id="n-Thermal-Processing"><a href="Category_Thermal_Processing.html">Thermal Processing</a></li><li id="n-Packaging"><a href="Category_Packaging.html">Packaging</a></li><li id="n-Inspection.2C-Test-.26-Characterization"><a href="Category_Inspection%2c_Test_and_Characterization.html">Inspection, Test &amp; Characterization</a></li></ul>
+		
+	</div>
+</nav>
+
+<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-Recipes and Data" class="vector-menu vector-menu-portal portal" aria-labelledby="p-Recipes and Data-label" role="navigation" 
+	 >
+	<h3 id="p-Recipes and Data-label">
+		<span>Recipes and Data</span>
+	</h3>
+	<!-- Please do not use the .body class, it is deprecated. -->
+	<div class="body vector-menu-content">
+		<!-- Please do not use the .menu class, it is deprecated. -->
+		<ul class="vector-menu-content-list"><li id="n-Lithography"><a href="Lithography_Recipes.html">Lithography</a></li><li id="n-Vacuum-Deposition"><a href="Vacuum_Deposition_Recipes.html">Vacuum Deposition</a></li><li id="n-Dry-Etching"><a href="Dry_Etching_Recipes.html">Dry Etching</a></li><li id="n-Wet-Etching"><a href="Wet_Etching_Recipes.html">Wet Etching</a></li><li id="n-Thermal-Processing"><a href="Thermal_Processing_Recipes.html">Thermal Processing</a></li><li id="n-Packaging-Tools"><a href="Packaging_Recipes.html">Packaging Tools</a></li><li id="n-Calculators.2FUtilities"><a href="Calculators_%2b_Utilities.html">Calculators/Utilities</a></li></ul>
+		
+	</div>
+</nav>
+
+<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-Facility Data" class="vector-menu vector-menu-portal portal" aria-labelledby="p-Facility Data-label" role="navigation" 
+	 >
+	<h3 id="p-Facility Data-label">
+		<span>Facility Data</span>
+	</h3>
+	<!-- Please do not use the .body class, it is deprecated. -->
+	<div class="body vector-menu-content">
+		<!-- Please do not use the .menu class, it is deprecated. -->
+		<ul class="vector-menu-content-list"><li id="n-Usage"><a href="Usage_Data_and_Statistics.html">Usage</a></li><li id="n-Research"><a href="Research.html">Research</a></li><li id="n-Tech-Talks"><a href="Tech_Talks_Seminar_Series.html">Tech Talks</a></li></ul>
+		
+	</div>
+</nav>
+
+<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-tb" class="vector-menu vector-menu-portal portal" aria-labelledby="p-tb-label" role="navigation" 
+	 >
+	<h3 id="p-tb-label">
+		<span>Tools</span>
+	</h3>
+	<!-- Please do not use the .body class, it is deprecated. -->
+	<div class="body vector-menu-content">
+		<!-- Please do not use the .menu class, it is deprecated. -->
+		<ul class="vector-menu-content-list"><li id="t-whatlinkshere"><a href="Special_WhatLinksHere/ASML_Stepper_3_Dicing_Guide_Programming.html" title="A list of all wiki pages that link here [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="Special_RecentChangesLinked/ASML_Stepper_3_Dicing_Guide_Programming.html" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-specialpages"><a href="Special_SpecialPages.html" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-print"><a href="javascript:print();" rel="alternate" title="Printable version of this page [p]" accesskey="p">Printable version</a></li><li id="t-permalink"><a href="https://wiki.nanotech.ucsb.edu/w/index.php?title=ASML_Stepper_3_Dicing_Guide_Programming&amp;oldid=158720" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-info"><a href="https://wiki.nanotech.ucsb.edu/w/index.php?title=ASML_Stepper_3_Dicing_Guide_Programming&amp;action=info" title="More information about this page">Page information</a></li></ul>
+		
+	</div>
+</nav>
+
+
+	
+</div>
+
+</div>
+
+<footer id="footer" class="mw-footer" role="contentinfo" >
+	<ul id="footer-info" >
+		<li id="footer-info-lastmod"> This page was last edited on 30 January 2021, at 11:07.</li>
+	</ul>
+	<ul id="footer-places" >
+		<li id="footer-places-privacy"><a href="UCSB_Nanofab_Wiki_Privacy_policy.html" title="UCSB Nanofab Wiki:Privacy policy">Privacy policy</a></li>
+		<li id="footer-places-about"><a href="UCSB_Nanofab_Wiki_About.html" title="UCSB Nanofab Wiki:About">About UCSB Nanofab Wiki</a></li>
+		<li id="footer-places-disclaimer"><a href="UCSB_Nanofab_Wiki_General_disclaimer.html" title="UCSB Nanofab Wiki:General disclaimer">Disclaimers</a></li>
+	</ul>
+	<ul id="footer-icons" class="noprint">
+		<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img src="../w/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/w/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /w/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31" loading="lazy"/></a></li>
+	</ul>
+	<div style="clear: both;"></div>
+</footer>
+
+
+
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.009","walltime":"0.011","ppvisitednodes":{"value":1,"limit":1000000},"postexpandincludesize":{"value":0,"limit":2097152},"templateargumentsize":{"value":0,"limit":2097152},"expansiondepth":{"value":1,"limit":40},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":0,"limit":5000000},"timingprofile":["100.00%    0.000      1 -total"]},"cachereport":{"timestamp":"20220929002459","ttl":86400,"transientcontent":false}}});});</script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','../../www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-3048424-9', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":65});});</script></body>
+<!-- Mirrored from wiki.nanotech.ucsb.edu/wiki/ASML_Stepper_3_Dicing_Guide_Programming by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 29 Sep 2022 00:30:52 GMT -->
+</html>

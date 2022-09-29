@@ -1,0 +1,944 @@
+
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+
+<!-- Mirrored from wiki.nanotech.ucsb.edu/wiki/Lithography_Recipes by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 28 Sep 2022 20:25:47 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8"/>
+<title>Lithography Recipes - UCSB Nanofab Wiki</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":!1,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"e7233dd88b0b1a6820c4f7ce","wgCSPNonce":!1,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":!1,"wgNamespaceNumber":0,"wgPageName":"Lithography_Recipes","wgTitle":"Lithography Recipes","wgCurRevisionId":160128,"wgRevisionId":160128,"wgArticleId":261,"wgIsArticle":!0,"wgIsRedirect":!1,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Processing","Lithography","Recipes"],"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"Lithography_Recipes","wgRelevantArticleId":261,"wgIsProbablyEditable":!1,"wgRelevantPageIsProbablyEditable":!1,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgVisualEditor":{
+"pageLanguageCode":"en","pageLanguageDir":"ltr","pageVariantFallbacks":"en"},"wgEditSubmitButtonLabelPublish":!1};RLSTATE={"site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","user.options":"loading","skins.vector.styles.legacy":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready"};RLPAGEMODULES=["site","mediawiki.page.startup","mediawiki.page.ready","Skins.vector.legacy.html","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.implement("user.options@1hzgi",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});});</script>
+<link rel="stylesheet" href="https://wiki.nanotech.ucsb.edu/w/load.php?lang=en&amp;modules=ext.visualEditor.desktopArticleTarget.noscript%7Cskins.vector.styles.legacy&amp;only=styles&amp;skin=vector"/>
+<script async="" src="https://wiki.nanotech.ucsb.edu/w/load.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=vector"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="https://wiki.nanotech.ucsb.edu/w/load.php?lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector"/>
+<meta name="generator" content="MediaWiki 1.35.4"/>
+<link rel="shortcut icon" href="https://wiki.nanotech.ucsb.edu/favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="https://wiki.nanotech.ucsb.edu/w/opensearch_desc.php" title="UCSB Nanofab Wiki (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://wiki.nanotech.ucsb.edu/w/api.php?action=rsd"/>
+<link rel="alternate" type="application/atom+xml" title="UCSB Nanofab Wiki Atom feed" href="https://wiki.nanotech.ucsb.edu/w/index.php?title=Special:RecentChanges&amp;feed=atom"/>
+<!--[if lt IE 9]><script src="/w/resources/lib/html5shiv/html5shiv.js"></script><![endif]-->
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Lithography_Recipes rootpage-Lithography_Recipes skin-vector action-view skin-vector-legacy">
+<div id="mw-page-base" class="noprint"></div>
+<div id="mw-head-base" class="noprint"></div>
+<div id="content" class="mw-body" role="main">
+	<a id="top"></a>
+	<div id="siteNotice" class="mw-body-content"></div>
+	<div class="mw-indicators mw-body-content">
+	</div>
+	<h1 id="firstHeading" class="firstHeading" lang="en">Lithography Recipes</h1>
+	<div id="bodyContent" class="mw-body-content">
+		<div id="siteSub" class="noprint">From UCSB Nanofab Wiki</div>
+		<div id="contentSub"></div>
+		<div id="contentSub2"></div>
+		
+		<div id="jump-to-nav"></div>
+		<a class="mw-jump-link" href="#mw-head">Jump to navigation</a>
+		<a class="mw-jump-link" href="#searchInput">Jump to search</a>
+		<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output"><table class="wikitable">
+<caption>
+</caption>
+<tbody><tr>
+<th>Table of Contents
+</th></tr>
+<tr>
+<td>
+<h3><span class="mw-headline" id="Photolithography_Processes"><b><big>Photolithography Processes</big></b></span></h3>
+<ol><li><b>UV Optical Lithography</b>
+<ul><li><a href="#PositivePR"><b>Stocked Lithography Chemical + Datasheets</b></a>
+<ul><li><i>Lists all stocked photolith. chemicals, PRs, strippers, developers, and links to the chemical's application notes/datasheet, which detail the spin curves and nominal processes.</i></li></ul></li>
+<li><a href="#Photolithography_Recipes"><b>Photo Lithography Recipe section</b></a>
+<ul><li><i>Starting recipes (spin, bake, exposure, develop etc.) for all photolith. tools.</i></li>
+<li><i>Substrate/surface materials/pattern size can affect process parameters. Users may need to run Focus/Exposure Arrays/Matrix (FEA's/FEM's) with these processes to achieve high-resolution.</i></li>
+<li><a href="Contact_Alignment_Recipes.html" title="Contact Alignment Recipes"><u>Contact Aligner Recipes</u></a>
+<ul><li><a href="Contact_Alignment_Recipes.html#Suss_Aligners_.28SUSS_MJB-3.29" title="Contact Alignment Recipes">Suss MJB Aligners</a></li>
+<li><a href="Contact_Alignment_Recipes.html#Contact_Aligner_.28SUSS_MA-6.29" title="Contact Alignment Recipes">Suss MA6</a></li></ul></li>
+<li><a href="Stepper_Recipes.html" title="Stepper Recipes"><u>Stepper Recipes</u></a>
+<ul><li><a href="Stepper_Recipes.html#Stepper_1_.28GCA_6300.29" title="Stepper Recipes">Stepper #1: GCA 6300</a> (I-Line)</li>
+<li><a href="Stepper_Recipes.html#Stepper_2_.28AutoStep_200.29" title="Stepper Recipes">Stepper #2: GCA Autostep 200</a> (I-Line)</li>
+<li><a href="Stepper_Recipes.html#Stepper_3_.28ASML_DUV.29" title="Stepper Recipes">Stepper #3: ASML PAS 5500/300</a> (DUV)</li></ul></li>
+<li><a href="Direct-Write_Lithography_Recipes.html" title="Direct-Write Lithography Recipes"><u>Direct-Write Recipes</u></a>
+<ul><li><a href="Direct-Write_Lithography_Recipes.html#Maskless_Aligner_.28Heidelberg_MLA150.29" title="Direct-Write Lithography Recipes">Heidelberg MLA150</a></li>
+<li><a href="Lithography_Recipes.html#E-Beam_Lithography_Recipes" title="Lithography Recipes">JEOL JBX-6300FS EBL</a></li>
+<li><a href="Lithography_Recipes.html#FIB_Lithography_Recipes_.28Raith_Velion.29" title="Lithography Recipes">Raith Velion FIB</a></li></ul></li></ul></li></ul></li>
+<li><a href="Lithography_Recipes.html#General_Photolithography_Techniques" title="Lithography Recipes"><b>General Photolithography Techniques</b></a>
+<ul><li><i>Techniques for improving litho. or solving common photolith. problems.</i></li></ul></li>
+<li><b><a href="Lithography_Recipes.html#Lift-Off_Recipes" title="Lithography Recipes">Lift-Off Recipes</a></b>
+<ul><li><i>Verified Recipes for lift-off using various photolith. tools</i></li>
+<li><i>General educational description of this technique and it's limitations/considerations.</i></li></ul></li>
+<li><b>E-beam Lithography</b>
+<ul><li><a href="#E-Beam_Lithography_Recipes">E-Beam Lithography Recipes</a>
+<ul><li><i>Has links to starting recipes.  Substrates and patterns play a large role in process parameters.</i></li></ul></li>
+<li><a href="#EBLPR">EBL Photoresist Datasheets</a>
+<ul><li><i>Provided for reference, also showing starting recipes and usage info.</i></li></ul></li></ul></li>
+<li><b><a href="Lithography_Recipes.html#Holography_Recipes" title="Lithography Recipes">Holography</a></b>
+<ul><li><i>For 1-D and 2-D gratings with 220nm nominal period, available on substrates up to 1 inch square.</i></li>
+<li><i>Recipes for silicon substrates are provided, and have been translated to other substrates by users.</i></li>
+<li><i>Datasheets are provided with starting recipes and usage info.</i></li></ul></li></ol>
+</td></tr>
+<tr>
+<td>
+<h3><span id="Photolithography_Chemicals/Materials"></span><span class="mw-headline" id="Photolithography_Chemicals.2FMaterials"><b><big>Photolithography Chemicals/Materials</big></b></span></h3>
+<ol><li><b><a href="#Underlayers">Underlayers</a></b>
+<ul><li><i>These are used beneath resists for both adhesive purposes and to enable bi-layer lift-off profiles for use with photoresist.</i></li>
+<li><i>Datasheets are provided.</i></li></ul></li>
+<li><b><a href="#AntiReflectionCoatings">Anti-Reflection Coatings</a></b>:
+<ul><li><a href="#Photolithography_Recipes">The Photoresist Recipes</a> section contains recipes using these materials.</li>
+<li><i>Bottom Anti-Reflection Coatings (BARC) are used in the stepper systems, underneath the resists to eliminate substrate reflections that can affect resolution and repeatability for small, near resolution limited, feature sizes.</i></li>
+<li><i>Datasheets are provided for reference on use of the materials.</i></li></ul></li>
+<li><b><a href="#ContrastEnhancement">Contrast Enhancement Materials (CEM)</a></b>
+<ul><li><a href="#Photolithography_Recipes">The Photoresist Recipes</a> section contains recipes using these materials.</li>
+<li><i>Used for resolution enhancement.  Not for use in contact aligners, typically used on I-Line Steppers.</i></li>
+<li><i>Datasheets provided with usage info.</i></li></ul></li>
+<li><b><a href="#AdhesionPromoters">Adhesion Promoters</a></b>
+<ul><li><i>These are used to improve wetting of photoresists to your substrate.</i></li>
+<li><i>Datasheets are provided on use of these materials.</i></li></ul></li>
+<li><b><a href="#SpinOnDielectrics">Low-K Spin-on Dielectrics</a></b>
+<ul><li><a href="Lithography_Recipes.html#SpinOnDielectrics" title="Lithography Recipes">Spin-On Dielectrics</a>
+<ul><li><i>Datasheets for BCB, Photo-BCB, and SOG (spin-on-glass) for reference on use.</i></li></ul></li>
+<li><a href="#Low-K_Spin-On_Dielectric_Recipes">Low-K Spin-On Dielectric Recipes</a>
+<ul><li><i>Recipes for usage of some spin-on dielectrics.</i></li></ul></li></ul></li>
+<li><b><a href="#Developers">Developers and Removers</a></b>
+<ul><li><i>Datasheets provided for reference.</i></li>
+<li><i>Remover and Photoresist Strippers are used to dissolve PR during lift-off or after etching.</i></li></ul></li></ol>
+</td></tr></tbody></table>
+<h2><span class="mw-headline" id="General_Photolithography_Techniques">General Photolithography Techniques</span></h2>
+<ul><li><a href="Photolithography_-_Improving_Adhesion_Photoresist_Adhesion.html" title="Photolithography - Improving Adhesion Photoresist Adhesion">HMDS Process for Improving Adhesion</a>
+<ul><li><i>Use these procedures if you are finding poor adhesion PR lifting-off), or for chemicals (like BHF) that attack the PR adhesion interface strongly.</i></li></ul></li>
+<li><a href="Photolithography_-_Manual_Edge-Bead_Removal_Techniques.html" title="Photolithography - Manual Edge-Bead Removal Techniques">Manual Edge-Bead Removal Techniques</a>
+<ul><li><i>Removing the edge-bead from your substrate will help with contact litho resolution and alignment.</i></li></ul></li></ul>
+<h2><span class="mw-headline" id="Photolithography_Recipes">Photolithography Recipes</span></h2>
+<ul><li><small><b>R</b>: <i>Recipe is available. Clicking this link will take you to the recipe.</i></small></li>
+<li><small><b>A</b>: <i>Material is available for use, but no recipes are provided.</i></small></li></ul>
+<p><i>Click the tool title to go to recipes for that tool.</i> 
+</p><p><i>Click the photoresist title to get the datasheet, also found in <a href="Lithography_Recipes.html#Chemicals_Stocked_.2B_Datasheets" title="Lithography Recipes">Stocked Chemicals + Datasheets</a>.</i>
+</p>
+<table class="wikitable" style="border: 1px solid #D0E7FF; background-color:#ffffff; text-align:center;" border="1">
+
+<tbody><tr>
+<th colspan="7" height="45"><div style="font-size: 150%;">Photolithography Recipes</div>
+</th></tr>
+<tr>
+<td bgcolor="#EAECF0">
+</td>
+<th colspan="2" align="center"><b><a href="Contact_Alignment_Recipes.html" title="Contact Alignment Recipes"><big>Contact Aligner Recipes</big></a></b>
+</th>
+<th colspan="3" align="center"><b><a href="Stepper_Recipes.html" title="Stepper Recipes"><big>Stepper Recipes</big></a></b>
+</th>
+<th align="center"><a href="Direct-Write_Lithography_Recipes.html" title="Direct-Write Lithography Recipes">Direct-Write Litho. Recipes</a>
+</th></tr>
+<tr>
+<th width="150" bgcolor="#D0E7FF" align="center"><b>Positive Resists</b>
+</th>
+<td width="100" bgcolor="#DAF1FF"><a href="Contact_Alignment_Recipes.html#Suss_Aligners_.28SUSS_MJB-3.29" title="Contact Alignment Recipes">SUSS MJB-3</a>
+</td>
+<td width="100" bgcolor="#DAF1FF"><a href="Contact_Alignment_Recipes.html#Contact_Aligner_.28SUSS_MA-6.29" title="Contact Alignment Recipes">SUSS MA-6</a>
+</td>
+<td width="100" bgcolor="#DAF1FF"><a href="Stepper_Recipes.html#Stepper_1_.28GCA_6300.29" title="Stepper Recipes">Stepper 1<br />(GCA 6300)</a>
+</td>
+<td width="100" bgcolor="#DAF1FF"><a href="Stepper_Recipes.html#Stepper_2_.28AutoStep_200.29" title="Stepper Recipes">Stepper 2<br />(AutoStep 200)</a>
+</td>
+<td width="100" bgcolor="#DAF1FF"><a href="Stepper_Recipes.html#Stepper_3_.28ASML_DUV.29" title="Stepper Recipes">Stepper 3<br />(ASML DUV)</a>
+</td>
+<td width="100" bgcolor="#DAF1FF"><a href="Maskless_Aligner_Recipes.html" class="mw-redirect" title="Maskless Aligner Recipes">MLA150<br />(Heidelberg)</a>
+</td></tr>
+<tr bgcolor="EEFFFF">
+<td bgcolor="#D0E7FF" align="center"><a href="File_AXP4000pb-Datasheet.html" title="File:AXP4000pb-Datasheet.pdf">AZ4110</a>
+</td>
+<td><a href="Contact_Alignment_Recipes.html#Positive_Resist_.28MJB-3.29" title="Contact Alignment Recipes">R</a>
+</td>
+<td><a href="Contact_Alignment_Recipes.html#Positive_Resist_.28MA-6.29" title="Contact Alignment Recipes">R</a>
+</td>
+<td>A
+</td>
+<td>A
+</td>
+<td>
+</td>
+<td><a href="MLA_Recipes.html#Positive_Resist_.28MLA_150.29" title="MLA Recipes">R</a>
+</td></tr>
+<tr>
+<td bgcolor="#D0E7FF" align="center"><a rel="nofollow" class="external text" href="http://wiki.nanotech.ucsb.edu/w/images/f/fc/AXP4000pb-Datasheet.pdf">AZ4210</a>
+</td>
+<td><a href="Contact_Alignment_Recipes.html#Positive_Resist_.28MJB-3.29" title="Contact Alignment Recipes">R</a>
+</td>
+<td><a href="Contact_Alignment_Recipes.html#Positive_Resist_.28MA-6.29" title="Contact Alignment Recipes">R</a>
+</td>
+<td>A
+</td>
+<td>A
+</td>
+<td>
+</td>
+<td>A
+</td></tr>
+<tr bgcolor="EEFFFF">
+<td bgcolor="#D0E7FF" align="center"><a rel="nofollow" class="external text" href="http://wiki.nanotech.ucsb.edu/w/images/f/fc/AXP4000pb-Datasheet.pdf">AZ4330RS</a>
+</td>
+<td><a href="Contact_Alignment_Recipes.html#Positive_Resist_.28MJB-3.29" title="Contact Alignment Recipes">R</a>
+</td>
+<td><a href="Contact_Alignment_Recipes.html#Positive_Resist_.28MA-6.29" title="Contact Alignment Recipes">R</a>
+</td>
+<td>A
+</td>
+<td>A
+</td>
+<td>
+</td>
+<td><a href="MLA_Recipes.html#Positive_Resist_.28MLA_150.29" title="MLA Recipes">R</a>
+</td></tr>
+<tr>
+<td bgcolor="#D0E7FF" align="center"><a rel="nofollow" class="external text" href="http://wiki.nanotech.ucsb.edu/w/images/a/a2/Az_p4620_photoresist_data_package.pdf">AZ4620</a>
+</td>
+<td>A
+</td>
+<td>A
+</td>
+<td>A
+</td>
+<td>A
+</td>
+<td>
+</td>
+<td>A
+</td></tr>
+<tr bgcolor="EEFFFF">
+<td bgcolor="#D0E7FF" align="center"><a rel="nofollow" class="external text" href="http://wiki.nanotech.ucsb.edu/w/images/8/8b/OCG825-Positive-Resist-Datasheet.pdf">OCG 825-35CS</a>
+</td>
+<td>A
+</td>
+<td>A
+</td>
+<td>A
+</td>
+<td>A
+</td>
+<td>
+</td>
+<td>A
+</td></tr>
+<tr bgcolor="EEFFFF">
+<td bgcolor="#D0E7FF" align="center"><a rel="nofollow" class="external text" href="http://wiki.nanotech.ucsb.edu/w/images/2/29/SPR955-Positive-Resist-Datasheet.pdf">SPR 955 CM-0.9</a>
+</td>
+<td>A
+</td>
+<td><a href="Contact_Alignment_Recipes.html#Positive_Resist_.28MA-6.29" title="Contact Alignment Recipes">R</a>
+</td>
+<td><a href="Stepper_Recipes.html#Positive_Resist_.28GCA_6300.29" title="Stepper Recipes">R</a>
+</td>
+<td><a href="Stepper_Recipes.html#Positive_Resist_.28AutoStep_200.29" title="Stepper Recipes">R</a>
+</td>
+<td>
+</td>
+<td><a href="MLA_Recipes.html#Positive_Resist_.28MLA_150.29" title="MLA Recipes">R</a>
+</td></tr>
+<tr>
+<td bgcolor="#D0E7FF" align="center"><a rel="nofollow" class="external text" href="http://wiki.nanotech.ucsb.edu/w/images/2/29/SPR955-Positive-Resist-Datasheet.pdf">SPR 955 CM-1.8</a>
+</td>
+<td>A
+</td>
+<td>A
+</td>
+<td><a href="Stepper_Recipes.html#Positive_Resist_.28GCA_6300.29" title="Stepper Recipes">R</a>
+</td>
+<td><a href="Stepper_Recipes.html#Positive_Resist_.28AutoStep_200.29" title="Stepper Recipes">R</a>
+</td>
+<td>
+</td>
+<td>A
+</td></tr>
+<tr bgcolor="EEFFFF">
+<td bgcolor="#D0E7FF" align="center"><a rel="nofollow" class="external text" href="http://wiki.nanotech.ucsb.edu/w/images/3/3f/SPR220-Positive-Resist-Datasheet.pdf">SPR 220-3.0</a>
+</td>
+<td><a href="Contact_Alignment_Recipes.html#Positive_Resist_.28MJB-3.29" title="Contact Alignment Recipes">R</a>
+</td>
+<td><a href="Contact_Alignment_Recipes.html#Positive_Resist_.28MA-6.29" title="Contact Alignment Recipes">R</a>
+</td>
+<td><a href="Stepper_Recipes.html#Positive_Resist_.28GCA_6300.29" title="Stepper Recipes">R</a>
+</td>
+<td><a href="Stepper_Recipes.html#Positive_Resist_.28AutoStep_200.29" title="Stepper Recipes">R</a>
+</td>
+<td>
+</td>
+<td><a href="MLA_Recipes.html#Positive_Resist_.28MLA_150.29" title="MLA Recipes">R</a>
+</td></tr>
+<tr>
+<td bgcolor="#D0E7FF" align="center"><a rel="nofollow" class="external text" href="http://wiki.nanotech.ucsb.edu/w/images/3/3f/SPR220-Positive-Resist-Datasheet.pdf">SPR 220-7.0</a>
+</td>
+<td><a href="Contact_Alignment_Recipes.html#Positive_Resist_.28MJB-3.29" title="Contact Alignment Recipes">R</a>
+</td>
+<td><a href="Contact_Alignment_Recipes.html#Positive_Resist_.28MA-6.29" title="Contact Alignment Recipes">R</a>
+</td>
+<td><a href="Stepper_Recipes.html#Positive_Resist_.28GCA_6300.29" title="Stepper Recipes">R</a>
+</td>
+<td><a href="Stepper_Recipes.html#Positive_Resist_.28AutoStep_200.29" title="Stepper Recipes">R</a>
+</td>
+<td>
+</td>
+<td>A
+</td></tr>
+<tr bgcolor="EEFFFF">
+<td bgcolor="#D0E7FF" align="center"><a rel="nofollow" class="external text" href="http://wiki.nanotech.ucsb.edu/w/images/b/be/3600_D%2C_D2v_Spin_Speed_Curve.pdf">THMR-IP3600 HP D</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>A
+</td>
+<td>A
+</td>
+<td>
+</td>
+<td><a href="MLA_Recipes.html#Positive_Resist_.28MLA_150.29" title="MLA Recipes">R</a>
+</td></tr>
+<tr>
+<td bgcolor="#D0E7FF" align="center"><a rel="nofollow" class="external text" href="http://wiki.nanotech.ucsb.edu/w/images/3/38/UV6-Positive-Resist-Datasheet.pdf">UV6-0.8</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td><a href="Stepper_Recipes.html#Positive_Resist_.28ASML_DUV.29" title="Stepper Recipes">R</a>
+</td>
+<td>
+</td></tr>
+<tr bgcolor="EEFFFF">
+<td bgcolor="#D0E7FF" align="center"><a rel="nofollow" class="external text" href="http://wiki.nanotech.ucsb.edu/w/images/f/ff/UV210-Positive-Resist-Datasheet.pdf">UV210-0.3</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td><a href="Stepper_Recipes.html#Positive_Resist_.28ASML_DUV.29" title="Stepper Recipes">R</a>
+</td>
+<td>
+</td></tr>
+<tr>
+<td bgcolor="#D0E7FF" align="center"><a rel="nofollow" class="external text" href="http://wiki.nanotech.ucsb.edu/w/images/0/07/UV26-Positive-Resist-Datasheet.pdf">UV26-2.5</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>A
+</td>
+<td>
+</td></tr>
+<tr bgcolor="EEFFFF">
+<th bgcolor="#D0E7FF" align="center"><b>Negative Resists</b>
+</th>
+<td width="100" bgcolor="#DAF1FF"><a href="Contact_Alignment_Recipes.html#Suss_Aligners_.28SUSS_MJB-3.29" title="Contact Alignment Recipes">SUSS MJB-3</a>
+</td>
+<td width="100" bgcolor="#DAF1FF"><a href="Contact_Alignment_Recipes.html#Contact_Aligner_.28SUSS_MA-6.29" title="Contact Alignment Recipes">SUSS MA-6</a>
+</td>
+<td width="100" bgcolor="#DAF1FF"><a href="Stepper_Recipes.html#Stepper_1_.28GCA_6300.29" title="Stepper Recipes">Stepper 1<br />(GCA 6300)</a>
+</td>
+<td width="100" bgcolor="#DAF1FF"><a href="Stepper_Recipes.html#Stepper_2_.28AutoStep_200.29" title="Stepper Recipes">Stepper 2<br />(AutoStep 200)</a>
+</td>
+<td width="100" bgcolor="#DAF1FF"><a href="Stepper_Recipes.html#Stepper_3_.28ASML_DUV.29" title="Stepper Recipes">Stepper 3<br />(ASML DUV)</a>
+</td>
+<td width="100" bgcolor="#DAF1FF"><a href="Maskless_Aligner_Recipes.html" class="mw-redirect" title="Maskless Aligner Recipes">MLA150<br />(Heidelberg)</a>
+</td></tr>
+<tr>
+<td bgcolor="#D0E7FF" align="center"><a rel="nofollow" class="external text" href="http://wiki.nanotech.ucsb.edu/w/images/b/b0/AZ5214-Negative-Resist-Datasheet.pdf">AZ5214-EIR</a>
+</td>
+<td><a href="Contact_Alignment_Recipes.html#Negative_Resist_.28MJB-3.29" title="Contact Alignment Recipes">R</a>
+</td>
+<td><a href="Contact_Alignment_Recipes.html#Negative_Resist_.28MA-6.29" title="Contact Alignment Recipes">R</a>
+</td>
+<td><a href="Stepper_Recipes.html#Negative_Resist_.28GCA_6300.29" title="Stepper Recipes">R</a>
+</td>
+<td><a href="Stepper_Recipes.html#Negative_Resist_.28AutoStep_200.29" title="Stepper Recipes">R</a>
+</td>
+<td>
+</td>
+<td><a href="MLA_Recipes.html#Negative_Resist_.28MLA_150.29" title="MLA Recipes">R</a>
+</td></tr>
+<tr bgcolor="EEFFFF">
+<td bgcolor="#D0E7FF" align="center"><a rel="nofollow" class="external text" href="http://wiki.nanotech.ucsb.edu/w/images/5/5e/AZnLOF2020-Negative-Resist-Datasheet.pdf">AZnLOF 2020</a>
+</td>
+<td><a href="Contact_Alignment_Recipes.html#Positive_Resist_.28MJB-3.29" title="Contact Alignment Recipes">R</a>
+</td>
+<td><a href="Contact_Alignment_Recipes.html#Negative_Resist_.28MA-6.29" title="Contact Alignment Recipes">R</a>
+</td>
+<td><a href="Stepper_Recipes.html#Negative_Resist_.28GCA_6300.29" title="Stepper Recipes">R</a>
+</td>
+<td><a href="Stepper_Recipes.html#Negative_Resist_.28AutoStep_200.29" title="Stepper Recipes">R</a>
+</td>
+<td>
+</td>
+<td><a href="MLA_Recipes.html#Negative_Resist_.28MLA_150.29" title="MLA Recipes">R</a>
+</td></tr>
+<tr>
+<td bgcolor="#D0E7FF" align="center"><a rel="nofollow" class="external text" href="http://wiki.nanotech.ucsb.edu/w/images/5/5e/AZnLOF2020-Negative-Resist-Datasheet.pdf">AZnLOF 2035</a>
+</td>
+<td bgcolor="EEFFFF">A
+</td>
+<td bgcolor="EEFFFF">A
+</td>
+<td bgcolor="EEFFFF">A
+</td>
+<td bgcolor="EEFFFF">A
+</td>
+<td bgcolor="EEFFFF">
+</td>
+<td bgcolor="EEFFFF">A
+</td></tr>
+<tr bgcolor="EEFFFF">
+<td bgcolor="#D0E7FF" align="center"><a rel="nofollow" class="external text" href="http://wiki.nanotech.ucsb.edu/w/images/5/5e/AZnLOF2020-Negative-Resist-Datasheet.pdf">AZnLOF 2070</a>
+</td>
+<td>A
+</td>
+<td>A
+</td>
+<td>A
+</td>
+<td>A
+</td>
+<td>
+</td>
+<td>A
+</td></tr>
+<tr>
+<td bgcolor="#D0E7FF" align="center"><a rel="nofollow" class="external text" href="http://wiki.nanotech.ucsb.edu/w/images/8/82/AZnLOF5510-Negative-Resist-Datasheet.pdf">AZnLOF 5510</a>
+</td>
+<td>A
+</td>
+<td>A
+</td>
+<td><a href="Stepper_Recipes.html#Negative_Resist_.28GCA_6300.29" title="Stepper Recipes">R</a>
+</td>
+<td><a href="Stepper_Recipes.html#Negative_Resist_.28AutoStep_200.29" title="Stepper Recipes">R</a>
+</td>
+<td>
+</td>
+<td>A
+</td></tr>
+<tr bgcolor="EEFFFF">
+<td bgcolor="#D0E7FF" align="center"><a rel="nofollow" class="external text" href="http://wiki.nanotech.ucsb.edu/w/images/c/c9/UVN-30_-_Negative-Resist-Datasheet_-_Apr_2004.pdf">UVN30-0.8</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td><a href="Stepper_Recipes.html#Negative_Resist_.28ASML_DUV.29" title="Stepper Recipes">R</a>
+</td>
+<td>
+</td></tr>
+<tr>
+<td bgcolor="#D0E7FF" align="center"><a rel="nofollow" class="external text" href="http://wiki.nanotech.ucsb.edu/w/images/7/78/SU-8-2015-revA.pdf">SU-8 2005,2010,2015</a>
+</td>
+<td>A
+</td>
+<td><a href="Contact_Alignment_Recipes.html#Negative_Resist_.28MA-6.29" title="Contact Alignment Recipes">R</a>
+</td>
+<td>A
+</td>
+<td>A
+</td>
+<td>
+</td>
+<td>A
+</td></tr>
+<tr bgcolor="EEFFFF">
+<td bgcolor="#D0E7FF" align="center"><a rel="nofollow" class="external text" href="http://wiki.nanotech.ucsb.edu/w/images/2/2c/SU-8-2075-revA.pdf">SU-8 2075</a>
+</td>
+<td>A
+</td>
+<td>A
+</td>
+<td>A
+</td>
+<td>A
+</td>
+<td>
+</td>
+<td><a href="MLA_Recipes.html#Negative_Resist_.28MLA_150.29" title="MLA Recipes">R</a>
+</td></tr>
+<tr>
+<td bgcolor="#D0E7FF" align="center">NR9-<a rel="nofollow" class="external text" href="http://wiki.nanotech.ucsb.edu/w/images/8/8f/NR9-1000PY-revA.pdf">1000</a>,<a rel="nofollow" class="external text" href="http://wiki.nanotech.ucsb.edu/w/images/7/71/NR9-3000PY-revA.pdf">3000</a>,<a rel="nofollow" class="external text" href="http://wiki.nanotech.ucsb.edu/w/images/f/f9/NR9-6000PY-revA.pdf">6000</a>PY
+</td>
+<td><a href="Contact_Alignment_Recipes.html#Positive_Resist_.28MJB-3.29" title="Contact Alignment Recipes">R</a>
+</td>
+<td><a href="Contact_Alignment_Recipes.html#Positive_Resist_.28MA-6.29" title="Contact Alignment Recipes">R</a>
+</td>
+<td>A
+</td>
+<td><a href="Stepper_Recipes.html#Negative_Resist_.28AutoStep_200.29" title="Stepper Recipes">R</a>
+</td>
+<td>
+</td>
+<td>A
+</td></tr>
+<tr bgcolor="EEFFFF">
+<th bgcolor="#D0E7FF" align="center"><b>Anti-Reflection Coatings</b>
+</th>
+<td width="100" bgcolor="#DAF1FF"><a href="Contact_Alignment_Recipes.html#Suss_Aligners_.28SUSS_MJB-3.29" title="Contact Alignment Recipes">SUSS MJB-3</a>
+</td>
+<td width="100" bgcolor="#DAF1FF"><a href="Contact_Alignment_Recipes.html#Contact_Aligner_.28SUSS_MA-6.29" title="Contact Alignment Recipes">SUSS MA-6</a>
+</td>
+<td width="100" bgcolor="#DAF1FF"><a href="Stepper_Recipes.html#Stepper_1_.28GCA_6300.29" title="Stepper Recipes">Stepper 1<br />(GCA 6300)</a>
+</td>
+<td width="100" bgcolor="#DAF1FF"><a href="Stepper_Recipes.html#Stepper_2_.28AutoStep_200.29" title="Stepper Recipes">Stepper 2<br />(AutoStep 200)</a>
+</td>
+<td width="100" bgcolor="#DAF1FF"><a href="Stepper_Recipes.html#Stepper_3_.28ASML_DUV.29" title="Stepper Recipes">Stepper 3<br />(ASML DUV)</a>
+</td>
+<td width="100" bgcolor="#DAF1FF"><a href="Maskless_Aligner_Recipes.html" class="mw-redirect" title="Maskless Aligner Recipes">MLA150<br />(Heidelberg)</a>
+</td></tr>
+<tr>
+<td bgcolor="#D0E7FF" align="center"><a rel="nofollow" class="external text" href="http://wiki.nanotech.ucsb.edu/w/images/3/33/XHRiC-Anti-Reflective-Coating.pdf">XHRiC-11</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>A
+</td>
+<td>A
+</td>
+<td>
+</td>
+<td>A
+</td></tr>
+<tr bgcolor="EEFFFF">
+<td bgcolor="#D0E7FF" align="center"><a rel="nofollow" class="external text" href="http://wiki.nanotech.ucsb.edu/w/images/0/07/DUV42P-Anti-Reflective-Coating.pdf">DUV42-P</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td><a href="Stepper_Recipes.html#DUV-42P" title="Stepper Recipes">R</a>
+</td>
+<td>
+</td></tr>
+<tr>
+<td bgcolor="#D0E7FF" align="center"><a rel="nofollow" class="external text" href="http://wiki.nanotech.ucsb.edu/w/images/a/af/DS-K101-304-Anti-Reflective-Coating.pdf">DS-K101-304</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td><a href="Stepper_Recipes.html#DS-K101-304" title="Stepper Recipes">R</a>
+</td>
+<td>
+</td></tr>
+<tr>
+<th bgcolor="#D0E7FF" align="center">
+</th>
+<td width="100" bgcolor="#DAF1FF"><a href="Contact_Alignment_Recipes.html#Suss_Aligners_.28SUSS_MJB-3.29" title="Contact Alignment Recipes">SUSS MJB-3</a>
+</td>
+<td width="100" bgcolor="#DAF1FF"><a href="Contact_Alignment_Recipes.html#Contact_Aligner_.28SUSS_MA-6.29" title="Contact Alignment Recipes">SUSS MA-6</a>
+</td>
+<td width="100" bgcolor="#DAF1FF"><a href="Stepper_Recipes.html#Stepper_1_.28GCA_6300.29" title="Stepper Recipes">Stepper 1<br />(GCA 6300)</a>
+</td>
+<td width="100" bgcolor="#DAF1FF"><a href="Stepper_Recipes.html#Stepper_2_.28AutoStep_200.29" title="Stepper Recipes">Stepper 2<br />(AutoStep 200)</a>
+</td>
+<td width="100" bgcolor="#DAF1FF"><a href="Stepper_Recipes.html#Stepper_3_.28ASML_DUV.29" title="Stepper Recipes">Stepper 3<br />(ASML DUV)</a>
+</td>
+<td width="100" bgcolor="#DAF1FF"><a href="Maskless_Aligner_Recipes.html" class="mw-redirect" title="Maskless Aligner Recipes">MLA150<br />(Heidelberg)</a>
+</td></tr></tbody></table>
+<h2><span class="mw-headline" id="Lift-Off_Recipes">Lift-Off Recipes</span></h2>
+<ul><li><a href="https://wiki.nanotech.ucsb.edu/w/images/b/bc/Liftoff-Techniques.pdf" class="internal" title="Liftoff-Techniques.pdf">Lift-Off Description/Tutorial</a>
+<ul><li>How it works, process limits and considerations for designing your process</li></ul></li>
+<li><a href="Lift-Off_with_I-Line_Imaging_Resist_%2b_LOL2000_Underlayer.html" title="Lift-Off with I-Line Imaging Resist + LOL2000 Underlayer">I-Line Lift-Off: Bi-Layer Process with LOL2000 Underlayer</a>
+<ul><li><i>Single Expose/Develop process for simplicity</i></li>
+<li><i>Up to ~130nm metal thickness &amp; ≥500nm-1000nm gap between metal.</i></li>
+<li><i>Can use any I-Line litho tool (GCA Stepper, Contact aligner, MLA)</i></li></ul></li>
+<li><a href="https://wiki.nanotech.ucsb.edu/w/images/4/47/Bi-LayerContactprocesswithPMGI.pdf" class="internal" title="Bi-LayerContactprocesswithPMGI.pdf">I-Line Lift-Off: Bi-Layer Process with PMGI Underlayer and Contact Aligner</a>
+<ul><li><i>Multiple processes for Metal thicknesses ~800nm to ~2.5µm</i></li>
+<li><i>Uses multiple DUV Flood exposure/develop cycles to create undercut.</i></li>
+<li><i>Can be transferred to other I-Line litho tools (Stepper, MLA etc.)</i></li></ul></li>
+<li><a href="Lift-Off_with_DUV_Imaging_%2b_PMGI_Underlayer.html" title="Lift-Off with DUV Imaging + PMGI Underlayer">DUV Lift-Off: UV6 Imaging Resist + PMGI Underlayer</a>
+<ul><li><i>Single-expose/develop process</i></li>
+<li><i>Up to ~65nm metal thickness &amp; ~350nm gap between metal</i></li>
+<li><i>Use thicker PMGI for thicker metals</i></li></ul></li></ul>
+<h2><span id="E-Beam_Lithography_Recipes_(JEOL_JBX-6300FS)"></span><span class="mw-headline" id="E-Beam_Lithography_Recipes_.28JEOL_JBX-6300FS.29"><a href="E-Beam_Lithography_System_(JEOL_JBX-6300FS).html" title="E-Beam Lithography System (JEOL JBX-6300FS)">E-Beam Lithography Recipes (JEOL JBX-6300FS)</a></span></h2>
+<ul><li>Under Development.</li></ul>
+<h2><span id="FIB_Lithography_Recipes_(Raith_Velion)"></span><span class="mw-headline" id="FIB_Lithography_Recipes_.28Raith_Velion.29"><a href="Focused_Ion-Beam_Lithography_(Raith_Velion).html" title="Focused Ion-Beam Lithography (Raith Velion)">FIB Lithography Recipes (Raith Velion)</a></span></h2>
+<p><i>To Be Added</i>
+</p>
+<h2><span id="Automated_Coat/Develop_System_Recipes_(S-Cubed_Flexi)"></span><span class="mw-headline" id="Automated_Coat.2FDevelop_System_Recipes_.28S-Cubed_Flexi.29"><a href="Automated_Coat/Develop_System_(S-Cubed_Flexi).html" title="Automated Coat/Develop System (S-Cubed Flexi)">Automated Coat/Develop System Recipes (S-Cubed Flexi)</a></span></h2>
+<p>Recipes pre-loaded on the S-Cubed Flexi automated coat/bake/develop system. Only staff may write new recipes, contact the tool supervisor for more info.
+</p><p><i>To Be Added</i>
+</p>
+<h2><span class="mw-headline" id="Holography_Recipes"><a href="Holographic_Lith/PL_Setup_(Custom).html" title="Holographic Lith/PL Setup (Custom)">Holography Recipes</a></span></h2>
+<p><i>The Holography recipes here use the BARC layer XHRiC-11 &amp; the high-res. I-Line photoresist THMR-IP3600HP-D.</i>
+</p>
+<ul><li><a href="https://wiki.nanotech.ucsb.edu/w/images/6/6d/Holography_Process_for_1D-lines_and_2D-dots_(ARC-11_%26_THMR-IP3600HP-D)-updated-4-8-2021.pdf" class="internal" title="Holography Process for 1D-lines and 2D-dots (ARC-11 &amp; THMR-IP3600HP-D)-updated-4-8-2021.pdf">Standard Holography Process - on SiO2 on Si</a></li>
+<li><a href="https://wiki.nanotech.ucsb.edu/w/images/6/61/Holography-Process-Variation-revA.pdf" class="internal" title="Holography-Process-Variation-revA.pdf">Holography Process Variations - Set-up Angle - Etching into SiO2 and Si</a></li>
+<li><a href="https://wiki.nanotech.ucsb.edu/w/images/1/1e/05-SiO2_Nano-structure_Etch.pdf" class="internal" title="05-SiO2 Nano-structure Etch.pdf">Etch SiO2 Nano-structure - Changing Side-wall Angle - Etching into Si with a different line-width</a></li>
+<li><a href="https://wiki.nanotech.ucsb.edu/w/images/3/3f/30-Redicing_Nanowire_Diameter_by_Thermal_Oxidation_and_Vapored_HF_Etch.pdf" class="internal" title="30-Redicing Nanowire Diameter by Thermal Oxidation and Vapored HF Etch.pdf">Reduce SiO2 Nanowire Diameter - Thermal Oxidation - Vapor HF Etching</a></li></ul>
+<h2><span class="mw-headline" id="Low-K_Spin-On_Dielectric_Recipes">Low-K Spin-On Dielectric Recipes</span></h2>
+<ul><li><a href="https://wiki.nanotech.ucsb.edu/w/images/e/ef/Lithography-BCB-photo-lowk-dielectric-spinon-4024-40-revA.docx" class="internal" title="Lithography-BCB-photo-lowk-dielectric-spinon-4024-40-revA.docx">Photo BCB (4024-40)</a></li>
+<li><a href="https://wiki.nanotech.ucsb.edu/w/images/7/72/BCB-cyclotene-3000-revA.pdf" class="internal" title="BCB-cyclotene-3000-revA.pdf">Standard BCB (3022-46)</a></li>
+<li><a href="https://wiki.nanotech.ucsb.edu/w/images/c/c4/512B-Application-Data-Bake-revA.pdf" class="internal" title="512B-Application-Data-Bake-revA.pdf">SOG (T512B)</a></li></ul>
+<h2><span id="Chemicals_Stocked_+_Datasheets"></span><span class="mw-headline" id="Chemicals_Stocked_.2B_Datasheets">Chemicals Stocked + Datasheets</span></h2>
+<p><i>The following is a list of the lithography chemicals we stock in the lab, with links to the datasheets for each.  The datasheets will often have important processing info such as spin-speed vs. thickness curves, typical process parameters, bake temps/times etc.</i>
+</p>
+<table>
+
+<tbody><tr valign="top">
+<td width="400">
+<dl><dt><div id="PositivePR"><big>Positive Photoresists</big></div></dt></dl>
+<p><i><b>i-line and broadband</b></i>
+</p>
+<ul><li><a href="https://wiki.nanotech.ucsb.edu/w/images/f/fc/AXP4000pb-Datasheet.pdf" class="internal" title="AXP4000pb-Datasheet.pdf">AZP4000 (AZ4110, AZ4210, AZ4330)</a></li>
+<li><a href="https://wiki.nanotech.ucsb.edu/w/images/8/8b/OCG825-Positive-Resist-Datasheet.pdf" class="internal" title="OCG825-Positive-Resist-Datasheet.pdf">OCG825</a></li>
+<li><a href="https://wiki.nanotech.ucsb.edu/w/images/3/3f/SPR220-Positive-Resist-Datasheet.pdf" class="internal" title="SPR220-Positive-Resist-Datasheet.pdf">SPR220 (SPR220-3, SPR220-7)</a></li>
+<li><a href="https://wiki.nanotech.ucsb.edu/w/images/2/29/SPR955-Positive-Resist-Datasheet.pdf" class="internal" title="SPR955-Positive-Resist-Datasheet.pdf">SPR955CM (SPR955CM-0.9, SPR955CM-1.8)</a></li>
+<li>THMR-3600HP (Thin I-Line &amp; Holography)
+<ul><li><a href="https://wiki.nanotech.ucsb.edu/w/images/3/3f/THMR_iP_3500_iP3600.pdf" class="internal" title="THMR iP 3500 iP3600.pdf">Evaluation Results: THMR-3600HP</a></li>
+<li><a href="https://wiki.nanotech.ucsb.edu/w/images/b/be/3600_D%2C_D2v_Spin_Speed_Curve.pdf" class="internal" title="3600 D, D2v Spin Speed Curve.pdf">Spin Curves for THMR-3600HP</a></li>
+<li><a href="https://wiki.nanotech.ucsb.edu/w/images/5/57/THMR-iP3600_HP_D_20140801_(B)_GHS_US.pdf" class="internal" title="THMR-iP3600 HP D 20140801 (B) GHS US.pdf">Safety Datasheet for THMR-3600HP</a></li></ul></li></ul>
+<p><i><b>DUV-248nm</b></i>
+</p>
+<ul><li><a href="https://wiki.nanotech.ucsb.edu/w/images/f/ff/UV210-Positive-Resist-Datasheet.pdf" class="internal" title="UV210-Positive-Resist-Datasheet.pdf">UV210-0.3</a></li>
+<li><a href="https://wiki.nanotech.ucsb.edu/w/images/3/38/UV6-Positive-Resist-Datasheet.pdf" class="internal" title="UV6-Positive-Resist-Datasheet.pdf">UV6-0.8</a></li>
+<li><a href="https://wiki.nanotech.ucsb.edu/w/images/0/07/UV26-Positive-Resist-Datasheet.pdf" class="internal" title="UV26-Positive-Resist-Datasheet.pdf">UV26-2.5</a></li></ul>
+<dl><dt><div id="NegativePR"><big>Negative Photoresists</big></div></dt></dl>
+<p><i><b>i-line and broadband</b></i>
+</p>
+<ul><li><a href="https://wiki.nanotech.ucsb.edu/w/images/b/b0/AZ5214-Negative-Resist-Datasheet.pdf" class="internal" title="AZ5214-Negative-Resist-Datasheet.pdf">AZ5214</a></li>
+<li><a href="https://wiki.nanotech.ucsb.edu/w/images/8/82/AZnLOF5510-Negative-Resist-Datasheet.pdf" class="internal" title="AZnLOF5510-Negative-Resist-Datasheet.pdf">AZnLOF5510</a></li>
+<li><a href="https://wiki.nanotech.ucsb.edu/w/images/5/5e/AZnLOF2020-Negative-Resist-Datasheet.pdf" class="internal" title="AZnLOF2020-Negative-Resist-Datasheet.pdf">AZnLOF2000 (AZnLOF2020, AZnLOF2035, AZnLOF2070)</a></li>
+<li><a href="https://wiki.nanotech.ucsb.edu/w/images/8/8f/NR9-1000PY-revA.pdf" class="internal" title="NR9-1000PY-revA.pdf">Futurrex NR9-1000PY(use AZ300MIF dev)</a></li>
+<li><a href="https://wiki.nanotech.ucsb.edu/w/images/7/71/NR9-3000PY-revA.pdf" class="internal" title="NR9-3000PY-revA.pdf">Futurrex NR9-3000PY(use AZ300MIF dev)</a></li>
+<li><a href="https://wiki.nanotech.ucsb.edu/w/images/f/f9/NR9-6000PY-revA.pdf" class="internal" title="NR9-6000PY-revA.pdf">Futurrex NR9-6000PY(use AZ300MIF dev)</a></li>
+<li><a href="https://wiki.nanotech.ucsb.edu/w/images/7/78/SU-8-2015-revA.pdf" class="internal" title="SU-8-2015-revA.pdf">SU-8-2005,2010, 2015</a></li>
+<li><a href="https://wiki.nanotech.ucsb.edu/w/images/2/2c/SU-8-2075-revA.pdf" class="internal" title="SU-8-2075-revA.pdf">SU-8-2075</a></li></ul>
+<p><i><b>DUV-248nm</b></i>
+</p>
+<ul><li><a href="https://wiki.nanotech.ucsb.edu/w/images/c/c9/UVN-30_-_Negative-Resist-Datasheet_-_Apr_2004.pdf" class="internal" title="UVN-30 - Negative-Resist-Datasheet - Apr 2004.pdf">UVN-30-0.8</a></li></ul>
+<dl><dt><div id="Underlayers"><big>Underlayers</big></div></dt></dl>
+<ul><li><a href="https://wiki.nanotech.ucsb.edu/w/images/e/e2/PMGI-Underlayer-Datasheet.pdf" class="internal" title="PMGI-Underlayer-Datasheet.pdf">PMGI (PMGI SF3,5,8,11,15)</a></li>
+<li><a href="https://wiki.nanotech.ucsb.edu/w/images/6/6b/LOL2000-Underlayer-Datasheet.pdf" class="internal" title="LOL2000-Underlayer-Datasheet.pdf">Shipley LOL2000</a></li></ul>
+<dl><dt><div id="EBLPR"><big>E-beam resists</big></div></dt></dl>
+<ul><li><a href="https://wiki.nanotech.ucsb.edu/w/images/c/cf/PMMA-E-Beam-Resist-Datasheet.pdf" class="internal" title="PMMA-E-Beam-Resist-Datasheet.pdf">PMMA (PMMA, P(MMA-MAA) copolymer)</a></li>
+<li><a href="https://wiki.nanotech.ucsb.edu/w/images/5/59/MaN2403-E-Beam-Resist-Datasheet.pdf" class="internal" title="MaN2403-E-Beam-Resist-Datasheet.pdf">maN 2403</a></li></ul>
+<dl><dt><div id="NanoImprinting"><big>Nanoimprinting</big></div></dt></dl>
+<ul><li><a href="https://wiki.nanotech.ucsb.edu/w/images/c/cf/NX1020-Nanoimprinting-Datasheet.pdf" class="internal" title="NX1020-Nanoimprinting-Datasheet.pdf">NX1020</a></li>
+<li><a href="https://wiki.nanotech.ucsb.edu/w/images/d/d9/MRI-7020-Nanoimprinting-Datasheet.pdf" class="internal" title="MRI-7020-Nanoimprinting-Datasheet.pdf">MRI-7020</a></li>
+<li><a href="https://wiki.nanotech.ucsb.edu/w/images/f/f9/Mr-UVCur21.pdf" class="internal" title="Mr-UVCur21.pdf">MR-UVCur21</a></li>
+<li><a href="https://wiki.nanotech.ucsb.edu/w/images/1/19/OrmoStamp-NIL-Lithography-UV-Soft-RevA.pdf" class="internal" title="OrmoStamp-NIL-Lithography-UV-Soft-RevA.pdf">Ormostamp</a></li></ul>
+</td>
+<td>
+<dl><dt><div id="ContrastEnhancement"><big>Contrast Enhancement Materials</big></div></dt></dl>
+<ul><li><a href="https://wiki.nanotech.ucsb.edu/w/images/0/04/CEM365iS-Contrast-Enhancement-Datasheet.pdf" class="internal" title="CEM365iS-Contrast-Enhancement-Datasheet.pdf">CEM365iS</a></li></ul>
+<dl><dt><div id="AntiReflectionCoatings"><big>Anti-Reflection Coatings</big></div></dt></dl>
+<ul><li><a href="https://wiki.nanotech.ucsb.edu/w/images/3/33/XHRiC-Anti-Reflective-Coating.pdf" class="internal" title="XHRiC-Anti-Reflective-Coating.pdf">XHRiC-11 (i-line)</a></li>
+<li><a href="https://wiki.nanotech.ucsb.edu/w/images/0/07/DUV42P-Anti-Reflective-Coating.pdf" class="internal" title="DUV42P-Anti-Reflective-Coating.pdf">DUV42P-6 (DUV) (For AR2 replacement)</a></li>
+<li><a href="https://wiki.nanotech.ucsb.edu/w/images/a/af/DS-K101-304-Anti-Reflective-Coating.pdf" class="internal" title="DS-K101-304-Anti-Reflective-Coating.pdf">DS-K101-304 (DUV developable BARC)</a></li></ul>
+<dl><dt><div id="AdhesionPromoters"><big>Adhesion Promoters</big></div></dt></dl>
+<ul><li>HMDS</li>
+<li>AP3000 BCB Adhesion Promoter</li>
+<li><a href="https://wiki.nanotech.ucsb.edu/w/images/2/2c/OMNICOAT-revA.pdf" class="internal" title="OMNICOAT-revA.pdf">Omnicoat, SU-8 Adhesion Promoter</a></li>
+<li><a href="https://wiki.nanotech.ucsb.edu/w/images/f/f3/OrmoPrime-NIL-Adhesion-RevA.pdf" class="internal" title="OrmoPrime-NIL-Adhesion-RevA.pdf">Ormoprime08-Ormostsmp Adhesion Promoter</a></li></ul>
+<dl><dt><div id="SpinOnDielectrics"><big>Spin-On Dielectrics</big></div></dt></dl>
+<p><i>Low-K Spin-On Dielectrics such as Benzocyclobutane and Spin-on Glass</i>
+</p>
+<ul><li><a href="https://wiki.nanotech.ucsb.edu/w/images/7/72/BCB-cyclotene-3000-revA.pdf" class="internal" title="BCB-cyclotene-3000-revA.pdf">BCB, Cyclotene 3022-46(Not Photosensitive)</a></li>
+<li><a href="https://wiki.nanotech.ucsb.edu/w/images/a/ad/BCB-cyclotene-4000-revA.pdf" class="internal" title="BCB-cyclotene-4000-revA.pdf">PhotoBCB, Cyclotene 4022-40(Negative Polarity)</a></li>
+<li><a href="https://wiki.nanotech.ucsb.edu/w/images/9/99/BCB-adhesion.pdf" class="internal" title="BCB-adhesion.pdf">BCB Adhesion Notes from Vendor</a></li>
+<li><a href="https://wiki.nanotech.ucsb.edu/w/images/c/c8/BCB-rework.pdf" class="internal" title="BCB-rework.pdf">BCB rework Notes from Vendor</a></li>
+<li><a href="https://wiki.nanotech.ucsb.edu/w/images/f/f6/512B-Datasheet-revA.pdf" class="internal" title="512B-Datasheet-revA.pdf">Spin-on-Glass, Honeywell 512B (Not Photosensitive)</a></li>
+<li><a href="https://wiki.nanotech.ucsb.edu/w/images/c/c4/512B-Application-Data-Bake-revA.pdf" class="internal" title="512B-Application-Data-Bake-revA.pdf">Honeywell 512B Apps Data</a></li></ul>
+<dl><dt><div id="Developers"><big>Developers</big></div></dt></dl>
+<ul><li><a href="https://wiki.nanotech.ucsb.edu/w/images/9/9f/AZ400K-Developer-Datasheet.pdf" class="internal" title="AZ400K-Developer-Datasheet.pdf">AZ400K (AZ400K, AZ400K1:4)</a></li>
+<li><a href="https://wiki.nanotech.ucsb.edu/w/images/f/f0/AZ300MIF-Developer-Datasheet.pdf" class="internal" title="AZ300MIF-Developer-Datasheet.pdf">AZ300MIF</a></li>
+<li>DS2100 BCB Developer</li>
+<li>SU-8 Developer</li>
+<li>101A Developer (for DUV Flood Exposed PMGI)</li></ul>
+<dl><dt><div id="PRRemovers"><big>Photoresist Removers</big></div></dt></dl>
+<ul><li><a rel="nofollow" class="external text" href="http://www.microchemicals.com/products/remover_stripper/nmp.html">AZ NMP</a>
+<ul><li><i>This replaces <a href="https://wiki.nanotech.ucsb.edu/w/images/d/dd/1165-Resist-Remover.pdf" class="internal" title="1165-Resist-Remover.pdf">1165</a></i></li></ul></li>
+<li><a href="https://wiki.nanotech.ucsb.edu/w/images/1/1b/AZ300T-Resist-Remover.pdf" class="internal" title="AZ300T-Resist-Remover.pdf">AZ300T</a></li>
+<li><a href="https://wiki.nanotech.ucsb.edu/w/images/b/b2/RemoverPG-revA.pdf" class="internal" title="RemoverPG-revA.pdf">Remover PG, SU-8 stripper</a></li>
+<li>AZ EBR ("Edge Bead Remover", PGMEA)</li></ul>
+</td></tr></tbody></table>
+<!-- 
+NewPP limit report
+Cached time: 20220928174648
+Cache expiry: 86400
+Dynamic content: false
+Complications: []
+CPU time usage: 0.055 seconds
+Real time usage: 0.061 seconds
+Preprocessor visited node count: 853/1000000
+Post‐expand include size: 8467/2097152 bytes
+Template argument size: 5120/2097152 bytes
+Highest expansion depth: 3/40
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 0/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    9.156      1 -total
+ 32.96%    3.018     53 Template:Fl
+ 23.26%    2.130     46 Template:Rl
+ 12.91%    1.182      4 Template:LithRecipe_Table
+-->
+
+<!-- Saved in parser cache with key wikidb:pcache:idhash:261-0!canonical and timestamp 20220928174648 and revision id 160128
+ -->
+</div></div><div class="printfooter">Retrieved from "<a dir="ltr" href="https://wiki.nanotech.ucsb.edu/w/index.php?title=Lithography_Recipes&amp;oldid=160128">https://wiki.nanotech.ucsb.edu/w/index.php?title=Lithography_Recipes&amp;oldid=160128</a>"</div>
+		<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="Special_Categories.html" title="Special:Categories">Categories</a>: <ul><li><a href="https://wiki.nanotech.ucsb.edu/w/index.php?title=Category:Processing&amp;action=edit&amp;redlink=1" class="new" title="Category:Processing (page does not exist)">Processing</a></li><li><a href="Category_Lithography.html" class="mw-redirect" title="Category:Lithography">Lithography</a></li><li><a href="Category_Recipes.html" title="Category:Recipes">Recipes</a></li></ul></div></div>
+	</div>
+</div>
+
+<div id="mw-navigation">
+	<h2>Navigation menu</h2>
+	<div id="mw-head">
+		<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-personal" class="vector-menu" aria-labelledby="p-personal-label" role="navigation" 
+	 >
+	<h3 id="p-personal-label">
+		<span>Personal tools</span>
+	</h3>
+	<!-- Please do not use the .body class, it is deprecated. -->
+	<div class="body vector-menu-content">
+		<!-- Please do not use the .menu class, it is deprecated. -->
+		<ul class="vector-menu-content-list"><li id="pt-createaccount"><a href="https://wiki.nanotech.ucsb.edu/w/index.php?title=Special:CreateAccount&amp;returnto=Lithography+Recipes" title="You are encouraged to create an account and log in; however, it is not mandatory">Create account</a></li><li id="pt-login"><a href="https://wiki.nanotech.ucsb.edu/w/index.php?title=Special:UserLogin&amp;returnto=Lithography+Recipes" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o">Log in</a></li></ul>
+		
+	</div>
+</nav>
+
+
+		<div id="left-navigation">
+			<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-namespaces" class="vector-menu vector-menu-tabs vectorTabs" aria-labelledby="p-namespaces-label" role="navigation" 
+	 >
+	<h3 id="p-namespaces-label">
+		<span>Namespaces</span>
+	</h3>
+	<!-- Please do not use the .body class, it is deprecated. -->
+	<div class="body vector-menu-content">
+		<!-- Please do not use the .menu class, it is deprecated. -->
+		<ul class="vector-menu-content-list"><li id="ca-nstab-main" class="selected"><a href="Lithography_Recipes.html" title="View the content page [c]" accesskey="c">Page</a></li><li id="ca-talk" class="new"><a href="https://wiki.nanotech.ucsb.edu/w/index.php?title=Talk:Lithography_Recipes&amp;action=edit&amp;redlink=1" rel="discussion" title="Discussion about the content page (page does not exist) [t]" accesskey="t">Discussion</a></li></ul>
+		
+	</div>
+</nav>
+
+
+			<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-variants" class="vector-menu-empty emptyPortlet vector-menu vector-menu-dropdown vectorMenu" aria-labelledby="p-variants-label" role="navigation" 
+	 >
+	<input type="checkbox" class="vector-menu-checkbox vectorMenuCheckbox" aria-labelledby="p-variants-label" />
+	<h3 id="p-variants-label">
+		<span>Variants</span>
+	</h3>
+	<!-- Please do not use the .body class, it is deprecated. -->
+	<div class="body vector-menu-content">
+		<!-- Please do not use the .menu class, it is deprecated. -->
+		<ul class="menu vector-menu-content-list"></ul>
+		
+	</div>
+</nav>
+
+
+		</div>
+		<div id="right-navigation">
+			<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-views" class="vector-menu vector-menu-tabs vectorTabs" aria-labelledby="p-views-label" role="navigation" 
+	 >
+	<h3 id="p-views-label">
+		<span>Views</span>
+	</h3>
+	<!-- Please do not use the .body class, it is deprecated. -->
+	<div class="body vector-menu-content">
+		<!-- Please do not use the .menu class, it is deprecated. -->
+		<ul class="vector-menu-content-list"><li id="ca-view" class="collapsible selected"><a href="Lithography_Recipes.html">Read</a></li><li id="ca-viewsource" class="collapsible"><a href="https://wiki.nanotech.ucsb.edu/w/index.php?title=Lithography_Recipes&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e">View source</a></li><li id="ca-history" class="collapsible"><a href="https://wiki.nanotech.ucsb.edu/w/index.php?title=Lithography_Recipes&amp;action=history" title="Past revisions of this page [h]" accesskey="h">View history</a></li></ul>
+		
+	</div>
+</nav>
+
+
+			<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-cactions" class="vector-menu-empty emptyPortlet vector-menu vector-menu-dropdown vectorMenu" aria-labelledby="p-cactions-label" role="navigation" 
+	 >
+	<input type="checkbox" class="vector-menu-checkbox vectorMenuCheckbox" aria-labelledby="p-cactions-label" />
+	<h3 id="p-cactions-label">
+		<span>More</span>
+	</h3>
+	<!-- Please do not use the .body class, it is deprecated. -->
+	<div class="body vector-menu-content">
+		<!-- Please do not use the .menu class, it is deprecated. -->
+		<ul class="menu vector-menu-content-list"></ul>
+		
+	</div>
+</nav>
+
+
+			<div id="p-search" role="search">
+	<h3 >
+		<label for="searchInput">Search</label>
+	</h3>
+	<form action="https://wiki.nanotech.ucsb.edu/w/index.php" id="searchform">
+		<div id="simpleSearch">
+			<input type="search" name="search" placeholder="Search UCSB Nanofab Wiki" title="Search UCSB Nanofab Wiki [f]" accesskey="f" id="searchInput"/>
+			<input type="hidden" name="title" value="Special:Search">
+			<input type="submit" name="fulltext" value="Search" title="Search the pages for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton"/>
+			<input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchButton" class="searchButton"/>
+		</div>
+	</form>
+</div>
+
+		</div>
+	</div>
+	
+<div id="mw-panel">
+	<div id="p-logo" role="banner">
+		<a  title="Visit the main page" class="mw-wiki-logo" href="Main_Page.html"></a>
+	</div>
+	<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-InvisibleMenu" class="vector-menu-empty emptyPortlet vector-menu vector-menu-portal portal portal-first" aria-labelledby="p-InvisibleMenu-label" role="navigation" 
+	 >
+	<h3 id="p-InvisibleMenu-label">
+		<span>InvisibleMenu</span>
+	</h3>
+	<!-- Please do not use the .body class, it is deprecated. -->
+	<div class="body vector-menu-content">
+		<!-- Please do not use the .menu class, it is deprecated. -->
+		<ul class="vector-menu-content-list"></ul>
+		
+	</div>
+</nav>
+
+
+	<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-QuickLinks" class="vector-menu vector-menu-portal portal" aria-labelledby="p-QuickLinks-label" role="navigation" 
+	 >
+	<h3 id="p-QuickLinks-label">
+		<span>QuickLinks</span>
+	</h3>
+	<!-- Please do not use the .body class, it is deprecated. -->
+	<div class="body vector-menu-content">
+		<!-- Please do not use the .menu class, it is deprecated. -->
+		<ul class="vector-menu-content-list"><li id="n-Lab-Rules"><a href="Lab_Rules.html">Lab Rules</a></li><li id="n-COVID-19-Protocols"><a href="COVID-19_User_Policies.html">COVID-19 Protocols</a></li><li id="n-Common-Questions"><a href="FAQs.html">Common Questions</a></li><li id="n-Staff-List"><a href="Staff_List.html">Staff List</a></li><li id="n-Equipment-Signup"><a href="https://signupmonkey.ece.ucsb.edu/" rel="nofollow">Equipment Signup</a></li><li id="n-Chemicals-.2B-MSDS"><a href="Chemical_List.html">Chemicals + MSDS</a></li></ul>
+		
+	</div>
+</nav>
+
+<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-Equipment" class="vector-menu vector-menu-portal portal" aria-labelledby="p-Equipment-label" role="navigation" 
+	 >
+	<h3 id="p-Equipment-label">
+		<span>Equipment</span>
+	</h3>
+	<!-- Please do not use the .body class, it is deprecated. -->
+	<div class="body vector-menu-content">
+		<!-- Please do not use the .menu class, it is deprecated. -->
+		<ul class="vector-menu-content-list"><li id="n-Full-Tool-List"><a href="Tool_List.html">Full Tool List</a></li><li id="n-Lithography"><a href="Category_Lithography.html">Lithography</a></li><li id="n-Vacuum-Deposition"><a href="Category_Vacuum_Deposition.html">Vacuum Deposition</a></li><li id="n-Dry-Etch"><a href="Category_Dry_Etch.html">Dry Etch</a></li><li id="n-Wet-Processing"><a href="Category_Wet_Processing.html">Wet Processing</a></li><li id="n-Thermal-Processing"><a href="Category_Thermal_Processing.html">Thermal Processing</a></li><li id="n-Packaging"><a href="Category_Packaging.html">Packaging</a></li><li id="n-Inspection.2C-Test-.26-Characterization"><a href="Category_Inspection%2c_Test_and_Characterization.html">Inspection, Test &amp; Characterization</a></li></ul>
+		
+	</div>
+</nav>
+
+<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-Recipes and Data" class="vector-menu vector-menu-portal portal" aria-labelledby="p-Recipes and Data-label" role="navigation" 
+	 >
+	<h3 id="p-Recipes and Data-label">
+		<span>Recipes and Data</span>
+	</h3>
+	<!-- Please do not use the .body class, it is deprecated. -->
+	<div class="body vector-menu-content">
+		<!-- Please do not use the .menu class, it is deprecated. -->
+		<ul class="vector-menu-content-list"><li id="n-Lithography"><a href="Lithography_Recipes.html">Lithography</a></li><li id="n-Vacuum-Deposition"><a href="Vacuum_Deposition_Recipes.html">Vacuum Deposition</a></li><li id="n-Dry-Etching"><a href="Dry_Etching_Recipes.html">Dry Etching</a></li><li id="n-Wet-Etching"><a href="Wet_Etching_Recipes.html">Wet Etching</a></li><li id="n-Thermal-Processing"><a href="Thermal_Processing_Recipes.html">Thermal Processing</a></li><li id="n-Packaging-Tools"><a href="Packaging_Recipes.html">Packaging Tools</a></li><li id="n-Calculators.2FUtilities"><a href="Calculators_%2b_Utilities.html">Calculators/Utilities</a></li></ul>
+		
+	</div>
+</nav>
+
+<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-Facility Data" class="vector-menu vector-menu-portal portal" aria-labelledby="p-Facility Data-label" role="navigation" 
+	 >
+	<h3 id="p-Facility Data-label">
+		<span>Facility Data</span>
+	</h3>
+	<!-- Please do not use the .body class, it is deprecated. -->
+	<div class="body vector-menu-content">
+		<!-- Please do not use the .menu class, it is deprecated. -->
+		<ul class="vector-menu-content-list"><li id="n-Usage"><a href="Usage_Data_and_Statistics.html">Usage</a></li><li id="n-Research"><a href="Research.html">Research</a></li><li id="n-Tech-Talks"><a href="Tech_Talks_Seminar_Series.html">Tech Talks</a></li></ul>
+		
+	</div>
+</nav>
+
+<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-tb" class="vector-menu vector-menu-portal portal" aria-labelledby="p-tb-label" role="navigation" 
+	 >
+	<h3 id="p-tb-label">
+		<span>Tools</span>
+	</h3>
+	<!-- Please do not use the .body class, it is deprecated. -->
+	<div class="body vector-menu-content">
+		<!-- Please do not use the .menu class, it is deprecated. -->
+		<ul class="vector-menu-content-list"><li id="t-whatlinkshere"><a href="Special_WhatLinksHere/Lithography_Recipes.html" title="A list of all wiki pages that link here [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="Special_RecentChangesLinked/Lithography_Recipes.html" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-specialpages"><a href="Special_SpecialPages.html" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-print"><a href="javascript:print();" rel="alternate" title="Printable version of this page [p]" accesskey="p">Printable version</a></li><li id="t-permalink"><a href="https://wiki.nanotech.ucsb.edu/w/index.php?title=Lithography_Recipes&amp;oldid=160128" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-info"><a href="https://wiki.nanotech.ucsb.edu/w/index.php?title=Lithography_Recipes&amp;action=info" title="More information about this page">Page information</a></li></ul>
+		
+	</div>
+</nav>
+
+
+	
+</div>
+
+</div>
+
+<footer id="footer" class="mw-footer" role="contentinfo" >
+	<ul id="footer-info" >
+		<li id="footer-info-lastmod"> This page was last edited on 7 July 2022, at 15:48.</li>
+	</ul>
+	<ul id="footer-places" >
+		<li id="footer-places-privacy"><a href="UCSB_Nanofab_Wiki_Privacy_policy.html" title="UCSB Nanofab Wiki:Privacy policy">Privacy policy</a></li>
+		<li id="footer-places-about"><a href="UCSB_Nanofab_Wiki_About.html" title="UCSB Nanofab Wiki:About">About UCSB Nanofab Wiki</a></li>
+		<li id="footer-places-disclaimer"><a href="UCSB_Nanofab_Wiki_General_disclaimer.html" title="UCSB Nanofab Wiki:General disclaimer">Disclaimers</a></li>
+	</ul>
+	<ul id="footer-icons" class="noprint">
+		<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img src="../w/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/w/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /w/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31" loading="lazy"/></a></li>
+	</ul>
+	<div style="clear: both;"></div>
+</footer>
+
+
+
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.055","walltime":"0.061","ppvisitednodes":{"value":853,"limit":1000000},"postexpandincludesize":{"value":8467,"limit":2097152},"templateargumentsize":{"value":5120,"limit":2097152},"expansiondepth":{"value":3,"limit":40},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":0,"limit":5000000},"timingprofile":["100.00%    9.156      1 -total"," 32.96%    3.018     53 Template:Fl"," 23.26%    2.130     46 Template:Rl"," 12.91%    1.182      4 Template:LithRecipe_Table"]},"cachereport":{"timestamp":"20220928174648","ttl":86400,"transientcontent":false}}});});</script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','../../www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-3048424-9', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":51});});</script></body>
+<!-- Mirrored from wiki.nanotech.ucsb.edu/wiki/Lithography_Recipes by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 28 Sep 2022 20:25:51 GMT -->
+</html>

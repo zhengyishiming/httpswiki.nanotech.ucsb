@@ -1,0 +1,371 @@
+
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+
+<!-- Mirrored from wiki.nanotech.ucsb.edu/wiki/Programming_a_Job by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 29 Sep 2022 00:20:03 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8"/>
+<title>Programming a Job - UCSB Nanofab Wiki</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":!1,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"df3b470d208916ae3bf9de77","wgCSPNonce":!1,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":!1,"wgNamespaceNumber":0,"wgPageName":"Programming_a_Job","wgTitle":"Programming a Job","wgCurRevisionId":157236,"wgRevisionId":157236,"wgArticleId":63560,"wgIsArticle":!0,"wgIsRedirect":!1,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"Programming_a_Job","wgRelevantArticleId":63560,"wgIsProbablyEditable":!1,"wgRelevantPageIsProbablyEditable":!1,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":
+"ltr","pageVariantFallbacks":"en"},"wgEditSubmitButtonLabelPublish":!1};RLSTATE={"site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","user.options":"loading","skins.vector.styles.legacy":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready"};RLPAGEMODULES=["site","mediawiki.page.startup","mediawiki.page.ready","Skins.vector.legacy.html","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.implement("user.options@1hzgi",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});});</script>
+<link rel="stylesheet" href="https://wiki.nanotech.ucsb.edu/w/load.php?lang=en&amp;modules=ext.visualEditor.desktopArticleTarget.noscript%7Cskins.vector.styles.legacy&amp;only=styles&amp;skin=vector"/>
+<script async="" src="https://wiki.nanotech.ucsb.edu/w/load.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=vector"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="https://wiki.nanotech.ucsb.edu/w/load.php?lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector"/>
+<meta name="generator" content="MediaWiki 1.35.4"/>
+<link rel="shortcut icon" href="https://wiki.nanotech.ucsb.edu/favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="https://wiki.nanotech.ucsb.edu/w/opensearch_desc.php" title="UCSB Nanofab Wiki (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://wiki.nanotech.ucsb.edu/w/api.php?action=rsd"/>
+<link rel="alternate" type="application/atom+xml" title="UCSB Nanofab Wiki Atom feed" href="https://wiki.nanotech.ucsb.edu/w/index.php?title=Special:RecentChanges&amp;feed=atom"/>
+<!--[if lt IE 9]><script src="/w/resources/lib/html5shiv/html5shiv.js"></script><![endif]-->
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Programming_a_Job rootpage-Programming_a_Job skin-vector action-view skin-vector-legacy">
+<div id="mw-page-base" class="noprint"></div>
+<div id="mw-head-base" class="noprint"></div>
+<div id="content" class="mw-body" role="main">
+	<a id="top"></a>
+	<div id="siteNotice" class="mw-body-content"></div>
+	<div class="mw-indicators mw-body-content">
+	</div>
+	<h1 id="firstHeading" class="firstHeading" lang="en">Programming a Job</h1>
+	<div id="bodyContent" class="mw-body-content">
+		<div id="siteSub" class="noprint">From UCSB Nanofab Wiki</div>
+		<div id="contentSub"></div>
+		<div id="contentSub2"></div>
+		
+		<div id="jump-to-nav"></div>
+		<a class="mw-jump-link" href="#mw-head">Jump to navigation</a>
+		<a class="mw-jump-link" href="#searchInput">Jump to search</a>
+		<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output"><h2><span class="mw-headline" id="JOB_Programming_-_FULL"><b>JOB Programming - FULL</b></span></h2>
+<p>This section describes how to set up a job to do a step and repeat exposure of your patterns. A more detailed description is given in the Reticle Handbook(White binder\Biljana's desk).&#160;Jobs are created using the command <b>SPEC</b>. First information about the array steps, alignment offsets, and general job is asked for. Passes are attached to each job to apply parameters unique to each pass specified. You can have up to 6 passes in one job. In this way all exposure information for a complete mask set can be specified all in one job.&#160; Following is the procedure for setting up a job and passes.
+</p><p><b>Note:</b> If at any point you wish to stop and start over with the job description hit CTRL C followed by A and ENTER on the keyboard to abort the SPEC command.&#160; An abort of this type will result in no saved information.&#160; Also when an asterisk * is displayed, this indicates the default value. If you hit enter for a reply to a question asked by the computer in setting up or editing any job if will be used whatever default value was.&#160; If a numeric value is asked for hitting enter will leave the value previously specified, if that exists.&#160; Also, if you put in an incorrect value and wish to go back a step press "Shift +?” and ENTER. If you want to go back more then one step, keep pressing "Shift+?" and Enter until you go back at the step you want to correct.
+</p>
+<ol><li>Type <b>SPEC</b> at the colon sign, hit enter.</li>
+<li>Enter the "<b>JOBNAME</b>" This could be 1-9 alphanumeric characters long name.</li>
+<li><b>METRIC or ENGLISH UNITS?</b> (*M, E). Hit enter (*M is default value).</li>
+<li><b>JOB COMMENT</b>: Input a job comment (for example:  “TEST123 process”).</li>
+<li><b>TOLERANCE</b> (1,2,*3,4,5,6). Set tolerance to 1. Default value is 3.Please use 1-the time required to stop and settle the stage to tolerable degree of vibration.</li>
+<li><b>SCALE CORRECTIONS</b>: Hit Enter for scale corrections. (It will be only needed if wafer shrinkage or expansion has occurred in a previous process step)</li>
+<li><b>ORTHOGONALITY:</b> Hit enter for orthogonality, with no value.</li>
+<li><b>WAFER DIAMETER</b>&#160;: Enter the wafer diameter in mm.&#160; This defines the maximum area in which exposure can occur.&#160; If you have a square or non-circular piece, you will need to specify a diameter that includes the entire square, not the length of a square.</li>
+<li><b>&lt;&lt;ARRAY PARAMETERS&gt;&gt;</b></li>
+<li><b>STEP SIZE:</b></li>
+<li><b><u>X step</u></b>: Enter the <u>step size</u> in X in mm at the wafer plane (5X reduction at the wafer level). Step size is [die size+gap between dies].</li>
+<li><b>*C-OUNT, S-PAN or A-LL</b>: Use <b>“C”</b> for specifying the number of columns to expose, "S" for spanning certain width in X-direction, and "A" to fill in all area in X direction to the edge of a circular wafer.&#160;For square pieces you will always use <b>“C”</b>.&#160; For quarter wafers, you will most likely use <b>“C”</b> and make the job array look square.&#160;You will then use dropouts in each pass to specify more complicated array shapes.</li>
+<li>When “C” is entered, you need to enter the number of columns desired (for X), and number of rows (for Y).</li>
+<li>Repeat 11 through 13 for the <u><b>Y step</b></u>.</li>
+<li><b>TRANSLATE ORIGIN</b>: Keep this (x=0,y=0). It is generally used only if the wafer is off-center. This is useful information for piece substrates. When aligning first time, record the coordinate of corner that you are aligning to. You can enter this info(x,y) as your translate origin in your job. If you are consistent and always load your piece at the same location on the chuck, this will help you to spend less time in aligning.</li>
+<li><b>DISPLAY? (Y/N*)</b>: If you select "Y"  you will see see an “*” cartoon of the exposure array. The final array will be centered on the wafer.</li>
+<li><b>LAYOUT? (Y/N*)</b>: Layout will give you a display of the number of rows and columns and the distance from die (1,1) to the array center, taking origin translation into account.&#160;Usually this is not looked at.&#160;Hit enter to pass this up.</li>
+<li><b>ADJUST? (Y/N*)</b>: If you wish to adjust the numbers of rows and columns you can do this at the Adjust prompt.&#160; Usually, you can hit enter to skip this.</li>
+<li><b>&lt;&lt;ALIGNMENT PARAMETERS&gt;&gt;</b></li>
+<li><b>STANDARD KEYS? (Y/*N)</b>:&#160;If you choose <b>"Y"</b>,  then the die used for right and left alignment is chosen automatically by the system.&#160; This is good if you have a wafer larger than 38.1mm in the X direction and both alignment marks are exactly 38.1mm apart. If you do not meet these conditions (most jobs do not), you will need to choose <b>"N"</b>.</li>
+<li>If <b>“N”</b> is chosen you will need to enter the row and column of <u>the right alignment die</u>.</li>
+<li><b><u>RIGHT ALIGNMENT DIE CENTER:</u></b></li>
+<li>R: (Row# of the right alignment die),</li>
+<li>C: (Column# of the right alignment die).</li>
+<li>For example if you have 10X10 exposures, the right alignment die could be (R=10,C=10) and the left alignment die (R=10,C=1).</li>
+<li><u><b>For wafers</b></u>: We usually select right and left alignment die bellow the center of wafer, and on the same row.  It is practical to select left and right alignment die to be in the last row. This helps to quickly find alignment die, and do alignment.</li>
+<li><u><b>For pieces</b></u>: We usually select right and left alignment die to be in the last row.</li>
+<li><b>RIGHT KEY OFFSET</b>:  The key offset is distance from the die (mask, main cell) center to the alignment mark center on the first layer (or the layer you will be aligning to).&#160; Enter the number for  X, and Y in (mm) at the wafer plane.&#160; See picture below for sign convention of an alignment mark placed in <u>quadrant 1 on the mask</u>. The picture assumes normal Cartesian coordinates with the center-lines crossing at (0,0) and the mask is chrome-side down and oriented as it would be on the stepper. (This is the same orientation that you will have when viewing your L Edit file).</li>
+<li><b>SIGN CONVENTION for alignment <u>key offset</u> on mask</b> (main cell)- insert the photo</li>
+<li><b><u>LEFT ALIGNMENT DIE CENTER</u></b>: Repeat 22 through 29 for the left alignment die. Left and Right Key Offset are always the same, except for jobs with one single exposure (one die), where left and right key offset are different!</li>
+<li><b>EPI SHIFT</b>: Skip through epi shift. Hit enter.</li>
+<li>&lt;&lt;<b>PASS</b>&gt;&gt;</li>
+<li>Now you are ready to enter information specific to this pass. This is unique information about the layer being exposed.</li>
+<li><b>NAME</b>: Enter the pass name of the layer you are exposing.&#160;The pass name can be 1 to 9 alphanumeric characters long.&#160; (i.e. 1, 2 or "mesa", "trench" etc.). Job must have at least one pass. When you expose a job, you will specify it as:  <b>EX JOBNAME\PASS</b>.&#160;( example: EX TEST123\1)</li>
+<li><b>PASS COMMENT</b>: Next enter a pass comment, something like " Exposing first layer or Exposing trench" etc. This is not mandatory, but it is useful.</li>
+<li><b>EXPOSURE (sec)</b>: Enter exposure time for a resist coated on your wafer.</li>
+<li><b>FOCUS OFFSET[-50-&gt;+50]</b>: Enter focus for a resist coated on your wafer.</li>
+<li>The best exposure time and\or focus for each resist should be optimized. We have some data available on WIKI available for Si wafers</li>
+<li><b>USE LOCAL ALIGNMENT</b>?(Y/*N):  Enter <b>"Y"</b> or <b>"N"</b> for local alignment.</li>
+<li>If this is <u><b>a first pass</b></u> (there is no any pattern on your wafer), you need to select in here <b>"N"</b>.</li>
+<li><b>PASS SHIFT</b>: Pass shift is a distance from the center of mask plate to the center of layer being exposed. Pass shift is used to shift exposure in the pass by a set amount.&#160;If you have multiple layers on a single mask, and only one layer is of interest (this pattern is off-center),&#160;you would enter the correct offset to ensure pattern alignment. <u>See picture below</u> for sign convention for pass shifts( X,Y) to place pattern into center of wafer.&#160;Enter Pass shift (X,Y) in mm at the wafer plane. This is usually number with 4 decimal points (for example&#160;: x= - 4.2550, y= 4.5000). See picture below for sign convention of pass shift for a pattern placed in <u>quadrant 1</u>.&#160;The picture assumes normal Cartesian coordinates with the center lines crossing at (0,0 ) and the mask is chrome-side down and oriented as it would be on the stepper.</li>
+<li><b>A-RRAY OR P-LUG</b>:  When "A" is entered all sites previously specified will be exposed except dropouts specified later. When P is entered, enter the row and column numbers of die you wish to be exposed.&#160; Enter D at the R prompt to display the currently selected die.&#160;Press return with a blank entry at the R prompt when finished.</li>
+<li><b>DROPOUTS</b>: In the dropout section, sites or entire rows or columns can be removed from the exposure.&#160;At the prompt: R enter the row you want to drop. (for example R:1). At the C prompt, enter the columns you want to drop. ( C: 1, C:10). If you want to remove the whole row,  you can do this using a dash in between (i.e.3-10). Enter D at the R prompt to view the die that will be exposed.&#160; Enter V at the R prompt to see a list of dropouts.&#160;Enter&#160;? at the R prompt to put back in the last die that was dropped out.&#160; Again hit return with no entry at the R prompt to exit.</li>
+<li><b>SAVE PASS? (*Y/N)</b>:  Answer "Y" to save this pass.</li>
+<li>If other passes are desired, at the name prompt, enter the name of the new next pass</li>
+<li>If this is <b><u>a second pass</u></b> or any other pass you should repeat steps from (32-44). If the pass information is mostly the same as a previous pass, hit "Y"at the COPY prompt, and enter the name of the pass to be copied and change the info regarding exposure time and focus. If the pass is different, say "N"  at the "COPY" prompt.  Follow instructions to finish writing a new pass. At the end save pass.</li>
+<li>If this is <b><u>a second pass</u></b> or any other pass that has a critical alignment (max 0.15um alignment layer to layer), you need to use local alignment mark (DFAS). This would require writing a pass (usually called "mapping pass"). In this case you need follow next steps:</li>
+<li>&lt;&lt;<b>PASS</b>&gt;&gt;</li>
+<li><b>NAME</b>: Enter the pass name for mapping. You need to give this pass a name that will be related to mapping, something like " LOCAL" or "DFAS". When you expose a job, you will specify it as <b>MAP JOBNAME\MAPPING PASS, PASS</b>. (For example: <b>MAP TEST123\LOCAL, 2</b>. Jobname&#160;: TEST123, mapping pass: LOCAL, pass=2. Using command MAP will align layer #2 to layer #1 with ~0.15um registration). The name of a mapping pass can be 1 to 9 alphanumeric characters long.</li>
+<li><b>COPY (Y/*N)</b>: Enter "N"</li>
+<li><b>PASS COMMENT</b>: Next enter a pass comment, something like "mapping pass". This is not mandatory, but it is useful.</li>
+<li><b>EXPOSURE( SEC)</b>: hit enter, no value</li>
+<li><b>FOCUS OFFSET [-50-&gt;+50]</b>: hit enter, no value</li>
+<li><b>USE LOCAL ALIGNMENT?(Y/*N)</b>:  Enter <b>"Y"</b> for local alignment (DFAS) that needs to be already on a layer that is being used for aligning.</li>
+<li><b>REVERT TO P-REVIUOS ALIGNMENT OR G-LOBAL</b>: P (enter <b>P</b>)</li>
+<li><b>NUMBER OF SITES PER DXD ALIGNMENT</b>: 1</li>
+<li><b>DIE ALIGNMENT (FZT) OFFSET</b>: Die Alignment offset is the distance from die(main cell) center to the local alignment mark center  (DFAS) on the first layer or the layer you will be aligning to). Enter the alignment mark position in X, and Y in (mm) at the wafer plane.&#160; <u>See picture above</u> for sign convention of the global alignment mark being placed next to global alignment mark in <u>quadrant 1</u> on the mask. The picture assumes normal Cartesian coordinates with the center-lines crossing at (0,0) and the mask is chrome-side down and oriented as it would be on the stepper. (This is the same orientation that you will have when viewing your L Edit file). You should run a test sample to determine how well the DFAS system is performing for your mask set and process. You may need a small offset in X, and Y coordinates.</li>
+<li><b>PASS SHIFT</b>: Enter values for X, and Y . For mapping pass usually pass shift for X, and Y is (0,0)</li>
+<li><b>A-RRAY OR P-LUG:</b> A ( Enter in here <b>"P"</b> ). By selecting "P" we want to select dies to be used for mapping. Usually we do not use all dies for mapping, just in each row several dies. <b>Mapping requires</b> at least <b>4 dies</b> to be used for mapping.</li>
+<li><b>PLUGS</b>: At the R prompt, enter the R# you want to use for mapping ( for example R:1)</li>
+<li><b>Y-OFFSET</b>: Hit enter</li>
+<li>At the C prompt, enter the C# you want to use for mapping ( for example C:1)</li>
+<li><b>X-OFFSET</b>: Hit enter</li>
+<li>When finished , enter D at the R prompt. This will display dies that are selected for mapping.</li>
+<li><b>SAVE PASS</b>? (*Y/N). Select "Y".</li>
+<li><b>WRITE TO DISK</b>? (*Y/N). Select "Y".</li>
+<li>Before running the job, you should EDIT the job to make sure all info is correct.</li>
+<li><b>EDITING AN EXISTING JOB</b>: Use the EDIT command followed by the file name. (Example: EDIT test123)</li>
+<li>Scroll through job and all passes and change any desired parameters.</li>
+<li>Don’t forget to save the changes.</li>
+<li>You are ready.</li></ol>
+<!-- 
+NewPP limit report
+Cached time: 20220928203325
+Cache expiry: 86400
+Dynamic content: false
+Complications: []
+CPU time usage: 0.006 seconds
+Real time usage: 0.006 seconds
+Preprocessor visited node count: 2/1000000
+Post‐expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 2/40
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 0/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    0.000      1 -total
+-->
+
+<!-- Saved in parser cache with key wikidb:pcache:idhash:63560-0!canonical and timestamp 20220928203325 and revision id 157236
+ -->
+</div></div><div class="printfooter">Retrieved from "<a dir="ltr" href="https://wiki.nanotech.ucsb.edu/w/index.php?title=Programming_a_Job&amp;oldid=157236">https://wiki.nanotech.ucsb.edu/w/index.php?title=Programming_a_Job&amp;oldid=157236</a>"</div>
+		<div id="catlinks" class="catlinks catlinks-allhidden" data-mw="interface"></div>
+	</div>
+</div>
+
+<div id="mw-navigation">
+	<h2>Navigation menu</h2>
+	<div id="mw-head">
+		<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-personal" class="vector-menu" aria-labelledby="p-personal-label" role="navigation" 
+	 >
+	<h3 id="p-personal-label">
+		<span>Personal tools</span>
+	</h3>
+	<!-- Please do not use the .body class, it is deprecated. -->
+	<div class="body vector-menu-content">
+		<!-- Please do not use the .menu class, it is deprecated. -->
+		<ul class="vector-menu-content-list"><li id="pt-createaccount"><a href="https://wiki.nanotech.ucsb.edu/w/index.php?title=Special:CreateAccount&amp;returnto=Programming+a+Job" title="You are encouraged to create an account and log in; however, it is not mandatory">Create account</a></li><li id="pt-login"><a href="https://wiki.nanotech.ucsb.edu/w/index.php?title=Special:UserLogin&amp;returnto=Programming+a+Job" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o">Log in</a></li></ul>
+		
+	</div>
+</nav>
+
+
+		<div id="left-navigation">
+			<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-namespaces" class="vector-menu vector-menu-tabs vectorTabs" aria-labelledby="p-namespaces-label" role="navigation" 
+	 >
+	<h3 id="p-namespaces-label">
+		<span>Namespaces</span>
+	</h3>
+	<!-- Please do not use the .body class, it is deprecated. -->
+	<div class="body vector-menu-content">
+		<!-- Please do not use the .menu class, it is deprecated. -->
+		<ul class="vector-menu-content-list"><li id="ca-nstab-main" class="selected"><a href="Programming_a_Job.html" title="View the content page [c]" accesskey="c">Page</a></li><li id="ca-talk" class="new"><a href="https://wiki.nanotech.ucsb.edu/w/index.php?title=Talk:Programming_a_Job&amp;action=edit&amp;redlink=1" rel="discussion" title="Discussion about the content page (page does not exist) [t]" accesskey="t">Discussion</a></li></ul>
+		
+	</div>
+</nav>
+
+
+			<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-variants" class="vector-menu-empty emptyPortlet vector-menu vector-menu-dropdown vectorMenu" aria-labelledby="p-variants-label" role="navigation" 
+	 >
+	<input type="checkbox" class="vector-menu-checkbox vectorMenuCheckbox" aria-labelledby="p-variants-label" />
+	<h3 id="p-variants-label">
+		<span>Variants</span>
+	</h3>
+	<!-- Please do not use the .body class, it is deprecated. -->
+	<div class="body vector-menu-content">
+		<!-- Please do not use the .menu class, it is deprecated. -->
+		<ul class="menu vector-menu-content-list"></ul>
+		
+	</div>
+</nav>
+
+
+		</div>
+		<div id="right-navigation">
+			<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-views" class="vector-menu vector-menu-tabs vectorTabs" aria-labelledby="p-views-label" role="navigation" 
+	 >
+	<h3 id="p-views-label">
+		<span>Views</span>
+	</h3>
+	<!-- Please do not use the .body class, it is deprecated. -->
+	<div class="body vector-menu-content">
+		<!-- Please do not use the .menu class, it is deprecated. -->
+		<ul class="vector-menu-content-list"><li id="ca-view" class="collapsible selected"><a href="Programming_a_Job.html">Read</a></li><li id="ca-viewsource" class="collapsible"><a href="https://wiki.nanotech.ucsb.edu/w/index.php?title=Programming_a_Job&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e">View source</a></li><li id="ca-history" class="collapsible"><a href="https://wiki.nanotech.ucsb.edu/w/index.php?title=Programming_a_Job&amp;action=history" title="Past revisions of this page [h]" accesskey="h">View history</a></li></ul>
+		
+	</div>
+</nav>
+
+
+			<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-cactions" class="vector-menu-empty emptyPortlet vector-menu vector-menu-dropdown vectorMenu" aria-labelledby="p-cactions-label" role="navigation" 
+	 >
+	<input type="checkbox" class="vector-menu-checkbox vectorMenuCheckbox" aria-labelledby="p-cactions-label" />
+	<h3 id="p-cactions-label">
+		<span>More</span>
+	</h3>
+	<!-- Please do not use the .body class, it is deprecated. -->
+	<div class="body vector-menu-content">
+		<!-- Please do not use the .menu class, it is deprecated. -->
+		<ul class="menu vector-menu-content-list"></ul>
+		
+	</div>
+</nav>
+
+
+			<div id="p-search" role="search">
+	<h3 >
+		<label for="searchInput">Search</label>
+	</h3>
+	<form action="https://wiki.nanotech.ucsb.edu/w/index.php" id="searchform">
+		<div id="simpleSearch">
+			<input type="search" name="search" placeholder="Search UCSB Nanofab Wiki" title="Search UCSB Nanofab Wiki [f]" accesskey="f" id="searchInput"/>
+			<input type="hidden" name="title" value="Special:Search">
+			<input type="submit" name="fulltext" value="Search" title="Search the pages for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton"/>
+			<input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchButton" class="searchButton"/>
+		</div>
+	</form>
+</div>
+
+		</div>
+	</div>
+	
+<div id="mw-panel">
+	<div id="p-logo" role="banner">
+		<a  title="Visit the main page" class="mw-wiki-logo" href="Main_Page.html"></a>
+	</div>
+	<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-InvisibleMenu" class="vector-menu-empty emptyPortlet vector-menu vector-menu-portal portal portal-first" aria-labelledby="p-InvisibleMenu-label" role="navigation" 
+	 >
+	<h3 id="p-InvisibleMenu-label">
+		<span>InvisibleMenu</span>
+	</h3>
+	<!-- Please do not use the .body class, it is deprecated. -->
+	<div class="body vector-menu-content">
+		<!-- Please do not use the .menu class, it is deprecated. -->
+		<ul class="vector-menu-content-list"></ul>
+		
+	</div>
+</nav>
+
+
+	<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-QuickLinks" class="vector-menu vector-menu-portal portal" aria-labelledby="p-QuickLinks-label" role="navigation" 
+	 >
+	<h3 id="p-QuickLinks-label">
+		<span>QuickLinks</span>
+	</h3>
+	<!-- Please do not use the .body class, it is deprecated. -->
+	<div class="body vector-menu-content">
+		<!-- Please do not use the .menu class, it is deprecated. -->
+		<ul class="vector-menu-content-list"><li id="n-Lab-Rules"><a href="Lab_Rules.html">Lab Rules</a></li><li id="n-COVID-19-Protocols"><a href="COVID-19_User_Policies.html">COVID-19 Protocols</a></li><li id="n-Common-Questions"><a href="FAQs.html">Common Questions</a></li><li id="n-Staff-List"><a href="Staff_List.html">Staff List</a></li><li id="n-Equipment-Signup"><a href="https://signupmonkey.ece.ucsb.edu/" rel="nofollow">Equipment Signup</a></li><li id="n-Chemicals-.2B-MSDS"><a href="Chemical_List.html">Chemicals + MSDS</a></li></ul>
+		
+	</div>
+</nav>
+
+<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-Equipment" class="vector-menu vector-menu-portal portal" aria-labelledby="p-Equipment-label" role="navigation" 
+	 >
+	<h3 id="p-Equipment-label">
+		<span>Equipment</span>
+	</h3>
+	<!-- Please do not use the .body class, it is deprecated. -->
+	<div class="body vector-menu-content">
+		<!-- Please do not use the .menu class, it is deprecated. -->
+		<ul class="vector-menu-content-list"><li id="n-Full-Tool-List"><a href="Tool_List.html">Full Tool List</a></li><li id="n-Lithography"><a href="Category_Lithography.html">Lithography</a></li><li id="n-Vacuum-Deposition"><a href="Category_Vacuum_Deposition.html">Vacuum Deposition</a></li><li id="n-Dry-Etch"><a href="Category_Dry_Etch.html">Dry Etch</a></li><li id="n-Wet-Processing"><a href="Category_Wet_Processing.html">Wet Processing</a></li><li id="n-Thermal-Processing"><a href="Category_Thermal_Processing.html">Thermal Processing</a></li><li id="n-Packaging"><a href="Category_Packaging.html">Packaging</a></li><li id="n-Inspection.2C-Test-.26-Characterization"><a href="Category_Inspection%2c_Test_and_Characterization.html">Inspection, Test &amp; Characterization</a></li></ul>
+		
+	</div>
+</nav>
+
+<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-Recipes and Data" class="vector-menu vector-menu-portal portal" aria-labelledby="p-Recipes and Data-label" role="navigation" 
+	 >
+	<h3 id="p-Recipes and Data-label">
+		<span>Recipes and Data</span>
+	</h3>
+	<!-- Please do not use the .body class, it is deprecated. -->
+	<div class="body vector-menu-content">
+		<!-- Please do not use the .menu class, it is deprecated. -->
+		<ul class="vector-menu-content-list"><li id="n-Lithography"><a href="Lithography_Recipes.html">Lithography</a></li><li id="n-Vacuum-Deposition"><a href="Vacuum_Deposition_Recipes.html">Vacuum Deposition</a></li><li id="n-Dry-Etching"><a href="Dry_Etching_Recipes.html">Dry Etching</a></li><li id="n-Wet-Etching"><a href="Wet_Etching_Recipes.html">Wet Etching</a></li><li id="n-Thermal-Processing"><a href="Thermal_Processing_Recipes.html">Thermal Processing</a></li><li id="n-Packaging-Tools"><a href="Packaging_Recipes.html">Packaging Tools</a></li><li id="n-Calculators.2FUtilities"><a href="Calculators_%2b_Utilities.html">Calculators/Utilities</a></li></ul>
+		
+	</div>
+</nav>
+
+<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-Facility Data" class="vector-menu vector-menu-portal portal" aria-labelledby="p-Facility Data-label" role="navigation" 
+	 >
+	<h3 id="p-Facility Data-label">
+		<span>Facility Data</span>
+	</h3>
+	<!-- Please do not use the .body class, it is deprecated. -->
+	<div class="body vector-menu-content">
+		<!-- Please do not use the .menu class, it is deprecated. -->
+		<ul class="vector-menu-content-list"><li id="n-Usage"><a href="Usage_Data_and_Statistics.html">Usage</a></li><li id="n-Research"><a href="Research.html">Research</a></li><li id="n-Tech-Talks"><a href="Tech_Talks_Seminar_Series.html">Tech Talks</a></li></ul>
+		
+	</div>
+</nav>
+
+<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-tb" class="vector-menu vector-menu-portal portal" aria-labelledby="p-tb-label" role="navigation" 
+	 >
+	<h3 id="p-tb-label">
+		<span>Tools</span>
+	</h3>
+	<!-- Please do not use the .body class, it is deprecated. -->
+	<div class="body vector-menu-content">
+		<!-- Please do not use the .menu class, it is deprecated. -->
+		<ul class="vector-menu-content-list"><li id="t-whatlinkshere"><a href="Special_WhatLinksHere/Programming_a_Job.html" title="A list of all wiki pages that link here [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="Special_RecentChangesLinked/Programming_a_Job.html" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-specialpages"><a href="Special_SpecialPages.html" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-print"><a href="javascript:print();" rel="alternate" title="Printable version of this page [p]" accesskey="p">Printable version</a></li><li id="t-permalink"><a href="https://wiki.nanotech.ucsb.edu/w/index.php?title=Programming_a_Job&amp;oldid=157236" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-info"><a href="https://wiki.nanotech.ucsb.edu/w/index.php?title=Programming_a_Job&amp;action=info" title="More information about this page">Page information</a></li></ul>
+		
+	</div>
+</nav>
+
+
+	
+</div>
+
+</div>
+
+<footer id="footer" class="mw-footer" role="contentinfo" >
+	<ul id="footer-info" >
+		<li id="footer-info-lastmod"> This page was last edited on 20 March 2020, at 10:36.</li>
+	</ul>
+	<ul id="footer-places" >
+		<li id="footer-places-privacy"><a href="UCSB_Nanofab_Wiki_Privacy_policy.html" title="UCSB Nanofab Wiki:Privacy policy">Privacy policy</a></li>
+		<li id="footer-places-about"><a href="UCSB_Nanofab_Wiki_About.html" title="UCSB Nanofab Wiki:About">About UCSB Nanofab Wiki</a></li>
+		<li id="footer-places-disclaimer"><a href="UCSB_Nanofab_Wiki_General_disclaimer.html" title="UCSB Nanofab Wiki:General disclaimer">Disclaimers</a></li>
+	</ul>
+	<ul id="footer-icons" class="noprint">
+		<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img src="../w/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/w/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /w/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31" loading="lazy"/></a></li>
+	</ul>
+	<div style="clear: both;"></div>
+</footer>
+
+
+
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.006","walltime":"0.006","ppvisitednodes":{"value":2,"limit":1000000},"postexpandincludesize":{"value":0,"limit":2097152},"templateargumentsize":{"value":0,"limit":2097152},"expansiondepth":{"value":2,"limit":40},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":0,"limit":5000000},"timingprofile":["100.00%    0.000      1 -total"]},"cachereport":{"timestamp":"20220928203325","ttl":86400,"transientcontent":false}}});});</script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','../../www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-3048424-9', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":67});});</script></body>
+<!-- Mirrored from wiki.nanotech.ucsb.edu/wiki/Programming_a_Job by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 29 Sep 2022 00:20:04 GMT -->
+</html>

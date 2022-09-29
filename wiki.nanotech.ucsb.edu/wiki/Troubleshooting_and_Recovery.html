@@ -1,0 +1,349 @@
+
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+
+<!-- Mirrored from wiki.nanotech.ucsb.edu/wiki/Troubleshooting_and_Recovery by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 29 Sep 2022 00:20:05 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8"/>
+<title>Troubleshooting and Recovery - UCSB Nanofab Wiki</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":!1,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"ed4b44de4c09b056fdf85f87","wgCSPNonce":!1,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":!1,"wgNamespaceNumber":0,"wgPageName":"Troubleshooting_and_Recovery","wgTitle":"Troubleshooting and Recovery","wgCurRevisionId":158903,"wgRevisionId":158903,"wgArticleId":63566,"wgIsArticle":!0,"wgIsRedirect":!1,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"Troubleshooting_and_Recovery","wgRelevantArticleId":63566,"wgIsProbablyEditable":!1,"wgRelevantPageIsProbablyEditable":!1,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgVisualEditor":{
+"pageLanguageCode":"en","pageLanguageDir":"ltr","pageVariantFallbacks":"en"},"wgEditSubmitButtonLabelPublish":!1};RLSTATE={"site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","user.options":"loading","skins.vector.styles.legacy":"ready","mediawiki.toc.styles":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready"};RLPAGEMODULES=["site","mediawiki.page.startup","mediawiki.page.ready","mediawiki.toc","Skins.vector.legacy.html","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.implement("user.options@1hzgi",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});});</script>
+<link rel="stylesheet" href="https://wiki.nanotech.ucsb.edu/w/load.php?lang=en&amp;modules=ext.visualEditor.desktopArticleTarget.noscript%7Cmediawiki.toc.styles%7Cskins.vector.styles.legacy&amp;only=styles&amp;skin=vector"/>
+<script async="" src="https://wiki.nanotech.ucsb.edu/w/load.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=vector"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="https://wiki.nanotech.ucsb.edu/w/load.php?lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector"/>
+<meta name="generator" content="MediaWiki 1.35.4"/>
+<link rel="shortcut icon" href="https://wiki.nanotech.ucsb.edu/favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="https://wiki.nanotech.ucsb.edu/w/opensearch_desc.php" title="UCSB Nanofab Wiki (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://wiki.nanotech.ucsb.edu/w/api.php?action=rsd"/>
+<link rel="alternate" type="application/atom+xml" title="UCSB Nanofab Wiki Atom feed" href="https://wiki.nanotech.ucsb.edu/w/index.php?title=Special:RecentChanges&amp;feed=atom"/>
+<!--[if lt IE 9]><script src="/w/resources/lib/html5shiv/html5shiv.js"></script><![endif]-->
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Troubleshooting_and_Recovery rootpage-Troubleshooting_and_Recovery skin-vector action-view skin-vector-legacy">
+<div id="mw-page-base" class="noprint"></div>
+<div id="mw-head-base" class="noprint"></div>
+<div id="content" class="mw-body" role="main">
+	<a id="top"></a>
+	<div id="siteNotice" class="mw-body-content"></div>
+	<div class="mw-indicators mw-body-content">
+	</div>
+	<h1 id="firstHeading" class="firstHeading" lang="en">Troubleshooting and Recovery</h1>
+	<div id="bodyContent" class="mw-body-content">
+		<div id="siteSub" class="noprint">From UCSB Nanofab Wiki</div>
+		<div id="contentSub"></div>
+		<div id="contentSub2"></div>
+		
+		<div id="jump-to-nav"></div>
+		<a class="mw-jump-link" href="#mw-head">Jump to navigation</a>
+		<a class="mw-jump-link" href="#searchInput">Jump to search</a>
+		<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output"><div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" /><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#What_to_do_in_case_of_computer_.28monitor.29_freeze-up."><span class="tocnumber">1</span> <span class="toctext"><b>What to do in case of computer (monitor) freeze-up.</b></span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#What_to_do_if_the_local_alignment_or_wafer_exposure_mapping_hangs_up_on_the_upper_monitor."><span class="tocnumber">2</span> <span class="toctext"><b>What to do if the local alignment or wafer exposure mapping hangs up on the upper monitor.</b></span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#What_to_do_in_case_of_unplanned_power_outage."><span class="tocnumber">3</span> <span class="toctext"><b>What to do in case of unplanned power outage</b>.</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Errors_job_related"><span class="tocnumber">4</span> <span class="toctext">Errors job related</span></a></li>
+</ul>
+</div>
+
+<h3><span id="What_to_do_in_case_of_computer_(monitor)_freeze-up."></span><span class="mw-headline" id="What_to_do_in_case_of_computer_.28monitor.29_freeze-up."><b>What to do in case of computer (monitor) freeze-up.</b></span></h3>
+<p>Reboot – When terminal keyboard ( main keyboard- add photo) locks up, etc.
+</p><p>1. If the terminal keyboard (main keyboard) is not responding, first make sure the <b>NO SCRL</b> key was not pressed on the keyboard (add photo). This gives the appearance that the keyboard is locked up but the screen has just been paused.
+</p><p>2. On the terminal keyboard (main keyboard) press type <b>Ctrl</b> + <b>]</b> &#160; &#160;  (Press <b>Ctrl</b> first then <b>]</b>&#160; )&#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160;  
+</p><p>This exits the terminal and returns control to the MOP PC(#1).- add photo
+</p><p>3. Pullout the PC keyboard (upper keyboard, add photo) and press button <b>Scroll Lock</b> twice. This toggles the KVM switch from the Smart Set PC (#2) to the MOP PC (#1).
+</p><p>4. Using the mouse (next to upper keyboard) , select ALT + X to exit (bottom off the screen). You can also type ALT + X on the keyboard. A window will open (on the top monitor, add photo) asking to power down the Stepper, click OK. The PC will exit to DOS.
+</p><p>5. At this point you can either restart the software from DOS or turn the MOP PC (#1) off and on (add photo). To restart from DOS, enter <b>stepper</b> at the DOS prompt.
+</p><p>6. The main menu for the MOP PC (#1) should appear on the top monitor once the software/PC boots up. Pullout the PC keyboard (upper keyboard) and using the mouse, select <b>Operate Stepper</b> -&gt; <b>Start</b>. Put the keyboard away.
+</p><p>7. At the prompt on the lower monitor, using the main keyboard, enter <b>the time and date as specified</b> (10:25 19-NOV-02). Press Enter ( the return key)
+</p><p>8. LOG IN [10,1], type ORIG . The stage will find its origin and then go back to the load position
+</p><p>9. LOG OUT.
+</p>
+<h3><span class="mw-headline" id="What_to_do_if_the_local_alignment_or_wafer_exposure_mapping_hangs_up_on_the_upper_monitor."><b>What to do if the local alignment or wafer exposure mapping hangs up on the upper monitor.</b></span></h3>
+<p>1) Reset lower Advent computer (#2)- add photo and wait for reboot.
+</p>
+<h3><span class="mw-headline" id="What_to_do_in_case_of_unplanned_power_outage."><b>What to do in case of unplanned power outage</b>.</span></h3>
+<p>1) CR Staff will take care of the system in the morning.
+</p>
+<h3><span class="mw-headline" id="Errors_job_related">Errors job related</span></h3>
+<p><b>What to do for alignment error.</b>
+</p><p>1) Verify that <b>correct alignment key offset</b> is being used
+</p><p>2) Verify that <b>the mask</b> is aligned
+</p><p>3) Verify that the baseline is correct (check values in MODE against the last calibration in the calibration notebook)
+</p><p>4) If you have DFAS alignment marks, perform a MAP job to verify alignment.
+</p><p><b>What to do for focus resolution problems</b>.
+</p><p>1) Verify <b>system focus</b> using the MODE command
+</p><p>2) Perform a focus optimization job (using command <b>EXPO</b> <b>job name</b>). Use F- to vary focus, enter exposure time. You need to enter the increment step. Use one of your jobs that is already written. Use the same type of wafer that you will be using for your real job (substrate type, and thickness).  If you need to optimize both (exposure time and focus), you will use the same command <b>EXPO</b> <b><i>job nam</i>e</b>, and will enter starting exposure time, and focus, and increment step for both.
+</p><p>3) Verify that your wafer is not bowed (i.e. under stress from some process)
+</p><p><b>What to do in case of mask vacuum problem</b>.
+</p><p>1) Check that small pump is running in back of system. Make sure vacuum level is above 20” Hg.
+</p><p>2) Push foot down onto mask with hand so that the vacuum holds the mask.
+</p><p><b>What to do in case of focus getting stuck and system hanging up</b>.
+</p><p>1) Adjust manual focus knob so that a negative number appears on voltmeter ( add photo).
+</p><p>2) Note die on computer screen that was exposed. Abort using Ctrl-C followed by A. Edit the program and drop out the problem die. If you have exposed some die already, you may want to drop them out too for the second run.
+</p><p><b>What to do in case of the stage limit going too far</b> (red stage limit light will be lit inside the stepper chamber next to the joystick.
+</p><p>1) Press the lit limit switch to release the stage.
+</p><p><b>Reporting the error/issue</b>
+</p><p>Who to call if you cannot undo the problem or need some help with Stepper
+</p><p>1) Biljana Stamenic ( if it is related to the job or stepper use)
+</p><p>2) Lee Sawyer (if there is the issue with the tool, something not working/broken)
+</p><p>2) Mike Silva (if neither Lee or Biljana can be reached)
+</p><p>3) NOTE: Leave a note that stepper is down. E-mail nanofab@ece.ucsb.edu to report a problem.
+</p>
+<!-- 
+NewPP limit report
+Cached time: 20220928164548
+Cache expiry: 86400
+Dynamic content: false
+Complications: []
+CPU time usage: 0.004 seconds
+Real time usage: 0.004 seconds
+Preprocessor visited node count: 12/1000000
+Post‐expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 2/40
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 0/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    0.000      1 -total
+-->
+
+<!-- Saved in parser cache with key wikidb:pcache:idhash:63566-0!canonical and timestamp 20220928164548 and revision id 158903
+ -->
+</div></div><div class="printfooter">Retrieved from "<a dir="ltr" href="https://wiki.nanotech.ucsb.edu/w/index.php?title=Troubleshooting_and_Recovery&amp;oldid=158903">https://wiki.nanotech.ucsb.edu/w/index.php?title=Troubleshooting_and_Recovery&amp;oldid=158903</a>"</div>
+		<div id="catlinks" class="catlinks catlinks-allhidden" data-mw="interface"></div>
+	</div>
+</div>
+
+<div id="mw-navigation">
+	<h2>Navigation menu</h2>
+	<div id="mw-head">
+		<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-personal" class="vector-menu" aria-labelledby="p-personal-label" role="navigation" 
+	 >
+	<h3 id="p-personal-label">
+		<span>Personal tools</span>
+	</h3>
+	<!-- Please do not use the .body class, it is deprecated. -->
+	<div class="body vector-menu-content">
+		<!-- Please do not use the .menu class, it is deprecated. -->
+		<ul class="vector-menu-content-list"><li id="pt-createaccount"><a href="https://wiki.nanotech.ucsb.edu/w/index.php?title=Special:CreateAccount&amp;returnto=Troubleshooting+and+Recovery" title="You are encouraged to create an account and log in; however, it is not mandatory">Create account</a></li><li id="pt-login"><a href="https://wiki.nanotech.ucsb.edu/w/index.php?title=Special:UserLogin&amp;returnto=Troubleshooting+and+Recovery" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o">Log in</a></li></ul>
+		
+	</div>
+</nav>
+
+
+		<div id="left-navigation">
+			<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-namespaces" class="vector-menu vector-menu-tabs vectorTabs" aria-labelledby="p-namespaces-label" role="navigation" 
+	 >
+	<h3 id="p-namespaces-label">
+		<span>Namespaces</span>
+	</h3>
+	<!-- Please do not use the .body class, it is deprecated. -->
+	<div class="body vector-menu-content">
+		<!-- Please do not use the .menu class, it is deprecated. -->
+		<ul class="vector-menu-content-list"><li id="ca-nstab-main" class="selected"><a href="Troubleshooting_and_Recovery.html" title="View the content page [c]" accesskey="c">Page</a></li><li id="ca-talk" class="new"><a href="https://wiki.nanotech.ucsb.edu/w/index.php?title=Talk:Troubleshooting_and_Recovery&amp;action=edit&amp;redlink=1" rel="discussion" title="Discussion about the content page (page does not exist) [t]" accesskey="t">Discussion</a></li></ul>
+		
+	</div>
+</nav>
+
+
+			<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-variants" class="vector-menu-empty emptyPortlet vector-menu vector-menu-dropdown vectorMenu" aria-labelledby="p-variants-label" role="navigation" 
+	 >
+	<input type="checkbox" class="vector-menu-checkbox vectorMenuCheckbox" aria-labelledby="p-variants-label" />
+	<h3 id="p-variants-label">
+		<span>Variants</span>
+	</h3>
+	<!-- Please do not use the .body class, it is deprecated. -->
+	<div class="body vector-menu-content">
+		<!-- Please do not use the .menu class, it is deprecated. -->
+		<ul class="menu vector-menu-content-list"></ul>
+		
+	</div>
+</nav>
+
+
+		</div>
+		<div id="right-navigation">
+			<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-views" class="vector-menu vector-menu-tabs vectorTabs" aria-labelledby="p-views-label" role="navigation" 
+	 >
+	<h3 id="p-views-label">
+		<span>Views</span>
+	</h3>
+	<!-- Please do not use the .body class, it is deprecated. -->
+	<div class="body vector-menu-content">
+		<!-- Please do not use the .menu class, it is deprecated. -->
+		<ul class="vector-menu-content-list"><li id="ca-view" class="collapsible selected"><a href="Troubleshooting_and_Recovery.html">Read</a></li><li id="ca-viewsource" class="collapsible"><a href="https://wiki.nanotech.ucsb.edu/w/index.php?title=Troubleshooting_and_Recovery&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e">View source</a></li><li id="ca-history" class="collapsible"><a href="https://wiki.nanotech.ucsb.edu/w/index.php?title=Troubleshooting_and_Recovery&amp;action=history" title="Past revisions of this page [h]" accesskey="h">View history</a></li></ul>
+		
+	</div>
+</nav>
+
+
+			<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-cactions" class="vector-menu-empty emptyPortlet vector-menu vector-menu-dropdown vectorMenu" aria-labelledby="p-cactions-label" role="navigation" 
+	 >
+	<input type="checkbox" class="vector-menu-checkbox vectorMenuCheckbox" aria-labelledby="p-cactions-label" />
+	<h3 id="p-cactions-label">
+		<span>More</span>
+	</h3>
+	<!-- Please do not use the .body class, it is deprecated. -->
+	<div class="body vector-menu-content">
+		<!-- Please do not use the .menu class, it is deprecated. -->
+		<ul class="menu vector-menu-content-list"></ul>
+		
+	</div>
+</nav>
+
+
+			<div id="p-search" role="search">
+	<h3 >
+		<label for="searchInput">Search</label>
+	</h3>
+	<form action="https://wiki.nanotech.ucsb.edu/w/index.php" id="searchform">
+		<div id="simpleSearch">
+			<input type="search" name="search" placeholder="Search UCSB Nanofab Wiki" title="Search UCSB Nanofab Wiki [f]" accesskey="f" id="searchInput"/>
+			<input type="hidden" name="title" value="Special:Search">
+			<input type="submit" name="fulltext" value="Search" title="Search the pages for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton"/>
+			<input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchButton" class="searchButton"/>
+		</div>
+	</form>
+</div>
+
+		</div>
+	</div>
+	
+<div id="mw-panel">
+	<div id="p-logo" role="banner">
+		<a  title="Visit the main page" class="mw-wiki-logo" href="Main_Page.html"></a>
+	</div>
+	<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-InvisibleMenu" class="vector-menu-empty emptyPortlet vector-menu vector-menu-portal portal portal-first" aria-labelledby="p-InvisibleMenu-label" role="navigation" 
+	 >
+	<h3 id="p-InvisibleMenu-label">
+		<span>InvisibleMenu</span>
+	</h3>
+	<!-- Please do not use the .body class, it is deprecated. -->
+	<div class="body vector-menu-content">
+		<!-- Please do not use the .menu class, it is deprecated. -->
+		<ul class="vector-menu-content-list"></ul>
+		
+	</div>
+</nav>
+
+
+	<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-QuickLinks" class="vector-menu vector-menu-portal portal" aria-labelledby="p-QuickLinks-label" role="navigation" 
+	 >
+	<h3 id="p-QuickLinks-label">
+		<span>QuickLinks</span>
+	</h3>
+	<!-- Please do not use the .body class, it is deprecated. -->
+	<div class="body vector-menu-content">
+		<!-- Please do not use the .menu class, it is deprecated. -->
+		<ul class="vector-menu-content-list"><li id="n-Lab-Rules"><a href="Lab_Rules.html">Lab Rules</a></li><li id="n-COVID-19-Protocols"><a href="COVID-19_User_Policies.html">COVID-19 Protocols</a></li><li id="n-Common-Questions"><a href="FAQs.html">Common Questions</a></li><li id="n-Staff-List"><a href="Staff_List.html">Staff List</a></li><li id="n-Equipment-Signup"><a href="https://signupmonkey.ece.ucsb.edu/" rel="nofollow">Equipment Signup</a></li><li id="n-Chemicals-.2B-MSDS"><a href="Chemical_List.html">Chemicals + MSDS</a></li></ul>
+		
+	</div>
+</nav>
+
+<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-Equipment" class="vector-menu vector-menu-portal portal" aria-labelledby="p-Equipment-label" role="navigation" 
+	 >
+	<h3 id="p-Equipment-label">
+		<span>Equipment</span>
+	</h3>
+	<!-- Please do not use the .body class, it is deprecated. -->
+	<div class="body vector-menu-content">
+		<!-- Please do not use the .menu class, it is deprecated. -->
+		<ul class="vector-menu-content-list"><li id="n-Full-Tool-List"><a href="Tool_List.html">Full Tool List</a></li><li id="n-Lithography"><a href="Category_Lithography.html">Lithography</a></li><li id="n-Vacuum-Deposition"><a href="Category_Vacuum_Deposition.html">Vacuum Deposition</a></li><li id="n-Dry-Etch"><a href="Category_Dry_Etch.html">Dry Etch</a></li><li id="n-Wet-Processing"><a href="Category_Wet_Processing.html">Wet Processing</a></li><li id="n-Thermal-Processing"><a href="Category_Thermal_Processing.html">Thermal Processing</a></li><li id="n-Packaging"><a href="Category_Packaging.html">Packaging</a></li><li id="n-Inspection.2C-Test-.26-Characterization"><a href="Category_Inspection%2c_Test_and_Characterization.html">Inspection, Test &amp; Characterization</a></li></ul>
+		
+	</div>
+</nav>
+
+<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-Recipes and Data" class="vector-menu vector-menu-portal portal" aria-labelledby="p-Recipes and Data-label" role="navigation" 
+	 >
+	<h3 id="p-Recipes and Data-label">
+		<span>Recipes and Data</span>
+	</h3>
+	<!-- Please do not use the .body class, it is deprecated. -->
+	<div class="body vector-menu-content">
+		<!-- Please do not use the .menu class, it is deprecated. -->
+		<ul class="vector-menu-content-list"><li id="n-Lithography"><a href="Lithography_Recipes.html">Lithography</a></li><li id="n-Vacuum-Deposition"><a href="Vacuum_Deposition_Recipes.html">Vacuum Deposition</a></li><li id="n-Dry-Etching"><a href="Dry_Etching_Recipes.html">Dry Etching</a></li><li id="n-Wet-Etching"><a href="Wet_Etching_Recipes.html">Wet Etching</a></li><li id="n-Thermal-Processing"><a href="Thermal_Processing_Recipes.html">Thermal Processing</a></li><li id="n-Packaging-Tools"><a href="Packaging_Recipes.html">Packaging Tools</a></li><li id="n-Calculators.2FUtilities"><a href="Calculators_%2b_Utilities.html">Calculators/Utilities</a></li></ul>
+		
+	</div>
+</nav>
+
+<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-Facility Data" class="vector-menu vector-menu-portal portal" aria-labelledby="p-Facility Data-label" role="navigation" 
+	 >
+	<h3 id="p-Facility Data-label">
+		<span>Facility Data</span>
+	</h3>
+	<!-- Please do not use the .body class, it is deprecated. -->
+	<div class="body vector-menu-content">
+		<!-- Please do not use the .menu class, it is deprecated. -->
+		<ul class="vector-menu-content-list"><li id="n-Usage"><a href="Usage_Data_and_Statistics.html">Usage</a></li><li id="n-Research"><a href="Research.html">Research</a></li><li id="n-Tech-Talks"><a href="Tech_Talks_Seminar_Series.html">Tech Talks</a></li></ul>
+		
+	</div>
+</nav>
+
+<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-tb" class="vector-menu vector-menu-portal portal" aria-labelledby="p-tb-label" role="navigation" 
+	 >
+	<h3 id="p-tb-label">
+		<span>Tools</span>
+	</h3>
+	<!-- Please do not use the .body class, it is deprecated. -->
+	<div class="body vector-menu-content">
+		<!-- Please do not use the .menu class, it is deprecated. -->
+		<ul class="vector-menu-content-list"><li id="t-whatlinkshere"><a href="Special_WhatLinksHere/Troubleshooting_and_Recovery.html" title="A list of all wiki pages that link here [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="Special_RecentChangesLinked/Troubleshooting_and_Recovery.html" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-specialpages"><a href="Special_SpecialPages.html" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-print"><a href="javascript:print();" rel="alternate" title="Printable version of this page [p]" accesskey="p">Printable version</a></li><li id="t-permalink"><a href="https://wiki.nanotech.ucsb.edu/w/index.php?title=Troubleshooting_and_Recovery&amp;oldid=158903" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-info"><a href="https://wiki.nanotech.ucsb.edu/w/index.php?title=Troubleshooting_and_Recovery&amp;action=info" title="More information about this page">Page information</a></li></ul>
+		
+	</div>
+</nav>
+
+
+	
+</div>
+
+</div>
+
+<footer id="footer" class="mw-footer" role="contentinfo" >
+	<ul id="footer-info" >
+		<li id="footer-info-lastmod"> This page was last edited on 7 May 2021, at 09:47.</li>
+	</ul>
+	<ul id="footer-places" >
+		<li id="footer-places-privacy"><a href="UCSB_Nanofab_Wiki_Privacy_policy.html" title="UCSB Nanofab Wiki:Privacy policy">Privacy policy</a></li>
+		<li id="footer-places-about"><a href="UCSB_Nanofab_Wiki_About.html" title="UCSB Nanofab Wiki:About">About UCSB Nanofab Wiki</a></li>
+		<li id="footer-places-disclaimer"><a href="UCSB_Nanofab_Wiki_General_disclaimer.html" title="UCSB Nanofab Wiki:General disclaimer">Disclaimers</a></li>
+	</ul>
+	<ul id="footer-icons" class="noprint">
+		<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img src="../w/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/w/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /w/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31" loading="lazy"/></a></li>
+	</ul>
+	<div style="clear: both;"></div>
+</footer>
+
+
+
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.004","walltime":"0.004","ppvisitednodes":{"value":12,"limit":1000000},"postexpandincludesize":{"value":0,"limit":2097152},"templateargumentsize":{"value":0,"limit":2097152},"expansiondepth":{"value":2,"limit":40},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":0,"limit":5000000},"timingprofile":["100.00%    0.000      1 -total"]},"cachereport":{"timestamp":"20220928164548","ttl":86400,"transientcontent":false}}});});</script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','../../www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-3048424-9', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":47});});</script></body>
+<!-- Mirrored from wiki.nanotech.ucsb.edu/wiki/Troubleshooting_and_Recovery by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 29 Sep 2022 00:20:06 GMT -->
+</html>

@@ -1,0 +1,386 @@
+
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+
+<!-- Mirrored from wiki.nanotech.ucsb.edu/wiki/ASML_Stepper_3_Standard_Operating_Procedure by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 29 Sep 2022 00:14:10 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8"/>
+<title>ASML Stepper 3 Standard Operating Procedure - UCSB Nanofab Wiki</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":!1,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"22b12153bac915670530a680","wgCSPNonce":!1,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":!1,"wgNamespaceNumber":0,"wgPageName":"ASML_Stepper_3_Standard_Operating_Procedure","wgTitle":"ASML Stepper 3 Standard Operating Procedure","wgCurRevisionId":160248,"wgRevisionId":160248,"wgArticleId":63295,"wgIsArticle":!0,"wgIsRedirect":!1,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"ASML_Stepper_3_Standard_Operating_Procedure","wgRelevantArticleId":63295,"wgIsProbablyEditable":!1,"wgRelevantPageIsProbablyEditable":!1,"wgRestrictionEdit":[],
+"wgRestrictionMove":[],"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","pageVariantFallbacks":"en"},"wgEditSubmitButtonLabelPublish":!1};RLSTATE={"site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","user.options":"loading","skins.vector.styles.legacy":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready"};RLPAGEMODULES=["site","mediawiki.page.startup","mediawiki.page.ready","Skins.vector.legacy.html","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.implement("user.options@1hzgi",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});});</script>
+<link rel="stylesheet" href="https://wiki.nanotech.ucsb.edu/w/load.php?lang=en&amp;modules=ext.visualEditor.desktopArticleTarget.noscript%7Cskins.vector.styles.legacy&amp;only=styles&amp;skin=vector"/>
+<script async="" src="https://wiki.nanotech.ucsb.edu/w/load.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=vector"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="https://wiki.nanotech.ucsb.edu/w/load.php?lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector"/>
+<meta name="generator" content="MediaWiki 1.35.4"/>
+<link rel="shortcut icon" href="https://wiki.nanotech.ucsb.edu/favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="https://wiki.nanotech.ucsb.edu/w/opensearch_desc.php" title="UCSB Nanofab Wiki (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://wiki.nanotech.ucsb.edu/w/api.php?action=rsd"/>
+<link rel="alternate" type="application/atom+xml" title="UCSB Nanofab Wiki Atom feed" href="https://wiki.nanotech.ucsb.edu/w/index.php?title=Special:RecentChanges&amp;feed=atom"/>
+<!--[if lt IE 9]><script src="/w/resources/lib/html5shiv/html5shiv.js"></script><![endif]-->
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-ASML_Stepper_3_Standard_Operating_Procedure rootpage-ASML_Stepper_3_Standard_Operating_Procedure skin-vector action-view skin-vector-legacy">
+<div id="mw-page-base" class="noprint"></div>
+<div id="mw-head-base" class="noprint"></div>
+<div id="content" class="mw-body" role="main">
+	<a id="top"></a>
+	<div id="siteNotice" class="mw-body-content"></div>
+	<div class="mw-indicators mw-body-content">
+	</div>
+	<h1 id="firstHeading" class="firstHeading" lang="en">ASML Stepper 3 Standard Operating Procedure</h1>
+	<div id="bodyContent" class="mw-body-content">
+		<div id="siteSub" class="noprint">From UCSB Nanofab Wiki</div>
+		<div id="contentSub"></div>
+		<div id="contentSub2"></div>
+		
+		<div id="jump-to-nav"></div>
+		<a class="mw-jump-link" href="#mw-head">Jump to navigation</a>
+		<a class="mw-jump-link" href="#searchInput">Jump to search</a>
+		<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output"><p><b>Regular Procedures for ASML Deep-UV Stepper #3</b>
+</p>
+<h2><span class="mw-headline" id="Normal_User_Procedures">Normal User Procedures</span></h2>
+<ul><li><ul><li><i>BEFORE starting your job</i>, check the <b>Warnings</b> window for any errors, and deal with them first.
+<ul><li>You may need to press the <i>[F4] Front</i> keyboard key to bring the window forward.</li>
+<li>See the "<a href="ASML_Stepper_3_Error_Recovery%2c_Troubleshooting_and_Calibration.html#Important_Warnings" title="ASML Stepper 3 Error Recovery, Troubleshooting and Calibration">Errors: Warnings</a>" section for how to deal with these.</li></ul></li></ul></li></ul>
+<ol><li>Cleaning the back-sides of wafers:&#160; <b><u>Very important</u></b>
+<ol><li>Make sure all work surfaces/spin chucks/hot plates are cleaned!&#160; Don’t use wipes, place baked wafers directly on cleaned steel surfaces.</li>
+<li>Cleaning residue of DUV42P or DSK101 (BARC’s):&#160; This technique is much better than trying to wipe.&#160; Use clean gloves and hold the wafer edges with your hands. &#160;
+<ol><li>After spin coating, BEFORE baking, place wafer upside down in POLOS spinner using non-contact chuck. &#160;</li>
+<li>Set spin speed to 2000rpm.&#160; Program “backside”.</li>
+<li>Spin wafer, wait until at top speed.</li>
+<li>Squirt “Remover PG” 10sec, then Acetone 3 seconds, then ISO for 3 sec.</li>
+<li>Spin Dry while blowing with N2.&#160; Wait ~5sec before stopping spin.</li>
+<li>Remove wafer and do bake as normal.</li></ol></li>
+<li>Cleaning residues of DUV PR’s such as: UV210, UV6, UVN2300:
+<ol><li>After baking, place wafer face-down in POLOS spinner using non-contact chuck.</li>
+<li>Set spin speed to 2000rpm. &#160; Program “backside”</li>
+<li>Spin wafer, wait until at top speed.</li>
+<li>Squirt Acetone on sample back for 3 seconds.&#160; Followed by ISO for 3 sec.</li>
+<li>Spin Dry while blowing with N2.</li></ol></li>
+<li>Bring wafers and ASML cassette to Solvent bench, ensure surfaces are clean from solvents.</li>
+<li>Check back-side of wafer thoroughly for particulates before loading into system!&#160; If you see particulates, try to blow then off with high N2 flow first. You may need to get physical with a razor blade to remove stubborn particles.
+<ol><li>Do this in the solvent bench where HEPA filters keep the air cleaner.</li></ol></li></ol></li>
+<li>Reticle Unloading&#160; and Loading
+<ol><li>(Mat Hdl) Material Handler (button near top right of software window)
+<ol><li>Remove reticles from machine</li>
+<li>Exchange reticle box</li>
+<li>Unlock box3</li></ol></li>
+<li>Physically Remove desired reticle pod(s), green “3” indicator at box should be lit and all reticles should be lifted up into pod.</li>
+<li>Use manual box opener to open reticle box.&#160; Move arm slowly. &#160;</li>
+<li>Remove Pod Lid</li>
+<li>Remove (or add) reticle to pod. &#160;
+<ol><li>Two stars on reticle should be in front</li>
+<li>Chrome (dark) side down</li></ol></li>
+<li>Place Pod lid back on</li>
+<li>Close Pod using arm, move arm slowly</li>
+<li>Place Pod back in stepper</li>
+<li>Read desired pods</li>
+<li>Go back to main menu once mask barcodes are all showing on screen</li></ol></li>
+<li>Wafer Load
+<ol><li>Open lid, Remove cassette</li>
+<li>(make sure backs of wafers are extremely clean!&#160; No Particles! No residues!&#160; Be extra careful and attentive to this detail!&#160; See above cleaning procedure) &#160;</li>
+<li>Place wafers in slots</li>
+<li>Place cassette back.&#160; Make sure cassette is pulled back snugly in place</li>
+<li>Close Lid.</li></ol></li>
+<li>Running a Job – Normal operation
+<ol><li>Batch Control &gt; Task Streaming</li>
+<li>Wait until wafers are read by machine</li>
+<li>Task: Batch &gt; (Append)</li>
+<li>Enter Batch ID first, Hit Return to apply change</li>
+<li>Press Select Button under Job Name and navigate to your job</li>
+<li>Click on Layer ID to get a list of layers you can expose: Select layer you want</li>
+<li>Enter number of wafers in Batch Size</li>
+<li>Batch Type is “P” for production run (see below for doing a FEM)</li>
+<li>Verify Energy, Focus Offset, Ilumination Mode, NA, Sigma and change as desired</li>
+<li>Hit Action &gt; (Apply) button to register all changes</li>
+<li>Press (Accept) Button at Top</li>
+<li>Press Queue &gt; (Continue) Button to execute batch.</li>
+<li>If Batch has general failure:
+<ol><li>Click the (HELP) button on error window and photograph the error chain - send to supervisor if needed.</li>
+<li>Choose “clear litho cluster” option to remove all wafers to output Port.</li></ol></li></ol></li></ol>
+<h3><span id="Running_a_focus_and/or_exposure_matrix"></span><span class="mw-headline" id="Running_a_focus_and.2For_exposure_matrix">Running a focus and/or exposure matrix</span></h3>
+<p><i>Focus-Exposure Matrix/Arrays (FEM or FEA) are used to determine the proper exposure dose &amp; focus offset for your lithography.  Especially important for high-resolution layers. Make sure your entire litho process remains constant (spins, bakes, develop times etc.) between the FEA and your real sample lithos.</i>
+</p>
+<ol><li><i>Optional</i>: Copy you job to a new job file with the layers/images you want to shoot, but which does not fill the entire wafer to the edges - it instead has only a ~6x6-cm wide array of die (set in the <i><b>Wafer Layout &gt; Image Distribution</b></i> section of your program).  This ensures that our SEMs can view the full array (The extreme edges of a 4-inch wafer are not possible to image on our SEMs due to motor limits) and simplifies calculations while inspecting the exposed wafer.</li>
+<li>Follow "<i>Running a Job</i>" procedure above, until Step 7</li>
+<li>Under <b>Batch Type</b>:
+<ol><li>Choose <b>E</b> for exposure snake (with flat down, first exposure lower left increments to the right, snakes in serpentine manner around entire wafer).&#160;&#160; Enter starting exposure in mJ (bottom-left die) and incremental exposure in mJ (increments up).</li>
+<li>Choose <b>F</b> for focus snake (with flat down, first exposure lower left increments to the right, snakes around entire array).&#160;&#160; Enter starting focus offset (bottom-left die) and incremental focus for the snake (increments up).</li>
+<li>Choose <b>M</b> for Focus-Exposure-Matrix (FEM).&#160;&#160;Center cell 0,0 is the nominal Exposure Energy and Focus value you enter.&#160;&#160;The array is incremented up and down from the nominal value.&#160;By default, exposure Energy varies by columns, Focus by Rows.  See schematic below.</li></ol></li>
+<li>Verify non-varied parameters as well as Ilumination Mode, NA, Sigma and change as desired.</li>
+<li>Hit <b>Action: (Apply)</b> button to register all changes
+<ol><li>Check ALL the Images in the job!  Use the <b>(Preset)</b> button to apply to all Images in the job.</li></ol></li>
+<li>Press <b>Accept</b> Button at Top</li>
+<li>Press <b>Continue</b> Button to execute batch.</li>
+<li>When the batch is complete, select the batch in the Task ist, and click <b>Batch:</b> <b>(Report)</b>.  The <b>"Test Exposure Data"</b> section of the report shows the exposure params for each die location.  This is very useful during your inspection, and it is recommended that you bring a photograph or copy of this exposure matrix table with you when inspecting on the microscope/SEM.</li></ol>
+<h4><span class="mw-headline" id="Tips_for_FEM_analysis">Tips for FEM analysis</span></h4>
+<p>You need to find the <b>center of the <i>Viable Process Window</i></b> - meaning you need to see the BAD dose (too high + too low) and BAD focus (too high + too low) then choose a Dose+Focus in the <i>middle</i> of this range.  This allows your process to work even if the focus or some other process varies.  
+</p><p>You'll need to decide what "good enough" looks like on your feature inspection - this is your process <i><b>tolerance</b></i>.  For example instead of looking for "<i>the feature that is exactly 300nm wide</i>", you may want to look for Dose/Focus where "<i>the feature is between 250-350nm, or 300nm±50nm</i>". 
+</p><p>A <b>common mistake is to look for "<i>the best die</i>"</b> - but this one good die could be (and often is) at the edge of the working process window, so a small focus variation (wafer thickness or lab temperature) will put your process outside the process window - you'll have chosen a very tight process that easily goes out of spec with random fluctuation in the process.
+</p>
+<table>
+<tbody><tr>
+<th><div class="thumb tnone"><div class="thumbinner" style="width:302px;"><a href="File_Stepper_3_-_FEM_Energy_Meander_Schematic.html" class="image"><img alt="Stepper 3 - FEM Energy Meander Schematic" src="../w/images/thumb/5/56/Stepper_3_-_FEM_Energy_Meander_Schematic.png/300px-Stepper_3_-_FEM_Energy_Meander_Schematic.png" decoding="async" width="300" height="335" class="thumbimage" srcset="/w/images/thumb/5/56/Stepper_3_-_FEM_Energy_Meander_Schematic.png/450px-Stepper_3_-_FEM_Energy_Meander_Schematic.png 1.5x, /w/images/thumb/5/56/Stepper_3_-_FEM_Energy_Meander_Schematic.png/599px-Stepper_3_-_FEM_Energy_Meander_Schematic.png 2x" /></a>  <div class="thumbcaption"><div class="magnify"><a href="File_Stepper_3_-_FEM_Energy_Meander_Schematic.html" class="internal" title="Enlarge"></a></div>Ordering of Energy/Focus for "Meander" mode.</div></div></div>
+</th>
+<th><div class="thumb tnone"><div class="thumbinner" style="width:302px;"><a href="File_Stepper_3_-_FEM_Matrix_Schematic.html" class="image"><img alt="Stepper 3 - FEM Matrix Schematic" src="../w/images/thumb/5/55/Stepper_3_-_FEM_Matrix_Schematic.png/300px-Stepper_3_-_FEM_Matrix_Schematic.png" decoding="async" width="300" height="375" class="thumbimage" srcset="/w/images/thumb/5/55/Stepper_3_-_FEM_Matrix_Schematic.png/450px-Stepper_3_-_FEM_Matrix_Schematic.png 1.5x, /w/images/thumb/5/55/Stepper_3_-_FEM_Matrix_Schematic.png/600px-Stepper_3_-_FEM_Matrix_Schematic.png 2x" /></a>  <div class="thumbcaption"><div class="magnify"><a href="File_Stepper_3_-_FEM_Matrix_Schematic.html" class="internal" title="Enlarge"></a></div>Ordering of Exposure Energy/Focus for "Matrix" mode.</div></div></div>
+</th>
+<th>
+</th></tr></tbody></table>
+<!-- 
+NewPP limit report
+Cached time: 20220927214953
+Cache expiry: 86400
+Dynamic content: false
+Complications: []
+CPU time usage: 0.008 seconds
+Real time usage: 0.009 seconds
+Preprocessor visited node count: 10/1000000
+Post‐expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 2/40
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 0/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    0.000      1 -total
+-->
+
+<!-- Saved in parser cache with key wikidb:pcache:idhash:63295-0!canonical and timestamp 20220927214953 and revision id 160248
+ -->
+</div></div><div class="printfooter">Retrieved from "<a dir="ltr" href="https://wiki.nanotech.ucsb.edu/w/index.php?title=ASML_Stepper_3_Standard_Operating_Procedure&amp;oldid=160248">https://wiki.nanotech.ucsb.edu/w/index.php?title=ASML_Stepper_3_Standard_Operating_Procedure&amp;oldid=160248</a>"</div>
+		<div id="catlinks" class="catlinks catlinks-allhidden" data-mw="interface"></div>
+	</div>
+</div>
+
+<div id="mw-navigation">
+	<h2>Navigation menu</h2>
+	<div id="mw-head">
+		<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-personal" class="vector-menu" aria-labelledby="p-personal-label" role="navigation" 
+	 >
+	<h3 id="p-personal-label">
+		<span>Personal tools</span>
+	</h3>
+	<!-- Please do not use the .body class, it is deprecated. -->
+	<div class="body vector-menu-content">
+		<!-- Please do not use the .menu class, it is deprecated. -->
+		<ul class="vector-menu-content-list"><li id="pt-createaccount"><a href="https://wiki.nanotech.ucsb.edu/w/index.php?title=Special:CreateAccount&amp;returnto=ASML+Stepper+3+Standard+Operating+Procedure" title="You are encouraged to create an account and log in; however, it is not mandatory">Create account</a></li><li id="pt-login"><a href="https://wiki.nanotech.ucsb.edu/w/index.php?title=Special:UserLogin&amp;returnto=ASML+Stepper+3+Standard+Operating+Procedure" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o">Log in</a></li></ul>
+		
+	</div>
+</nav>
+
+
+		<div id="left-navigation">
+			<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-namespaces" class="vector-menu vector-menu-tabs vectorTabs" aria-labelledby="p-namespaces-label" role="navigation" 
+	 >
+	<h3 id="p-namespaces-label">
+		<span>Namespaces</span>
+	</h3>
+	<!-- Please do not use the .body class, it is deprecated. -->
+	<div class="body vector-menu-content">
+		<!-- Please do not use the .menu class, it is deprecated. -->
+		<ul class="vector-menu-content-list"><li id="ca-nstab-main" class="selected"><a href="ASML_Stepper_3_Standard_Operating_Procedure.html" title="View the content page [c]" accesskey="c">Page</a></li><li id="ca-talk" class="new"><a href="https://wiki.nanotech.ucsb.edu/w/index.php?title=Talk:ASML_Stepper_3_Standard_Operating_Procedure&amp;action=edit&amp;redlink=1" rel="discussion" title="Discussion about the content page (page does not exist) [t]" accesskey="t">Discussion</a></li></ul>
+		
+	</div>
+</nav>
+
+
+			<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-variants" class="vector-menu-empty emptyPortlet vector-menu vector-menu-dropdown vectorMenu" aria-labelledby="p-variants-label" role="navigation" 
+	 >
+	<input type="checkbox" class="vector-menu-checkbox vectorMenuCheckbox" aria-labelledby="p-variants-label" />
+	<h3 id="p-variants-label">
+		<span>Variants</span>
+	</h3>
+	<!-- Please do not use the .body class, it is deprecated. -->
+	<div class="body vector-menu-content">
+		<!-- Please do not use the .menu class, it is deprecated. -->
+		<ul class="menu vector-menu-content-list"></ul>
+		
+	</div>
+</nav>
+
+
+		</div>
+		<div id="right-navigation">
+			<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-views" class="vector-menu vector-menu-tabs vectorTabs" aria-labelledby="p-views-label" role="navigation" 
+	 >
+	<h3 id="p-views-label">
+		<span>Views</span>
+	</h3>
+	<!-- Please do not use the .body class, it is deprecated. -->
+	<div class="body vector-menu-content">
+		<!-- Please do not use the .menu class, it is deprecated. -->
+		<ul class="vector-menu-content-list"><li id="ca-view" class="collapsible selected"><a href="ASML_Stepper_3_Standard_Operating_Procedure.html">Read</a></li><li id="ca-viewsource" class="collapsible"><a href="https://wiki.nanotech.ucsb.edu/w/index.php?title=ASML_Stepper_3_Standard_Operating_Procedure&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e">View source</a></li><li id="ca-history" class="collapsible"><a href="https://wiki.nanotech.ucsb.edu/w/index.php?title=ASML_Stepper_3_Standard_Operating_Procedure&amp;action=history" title="Past revisions of this page [h]" accesskey="h">View history</a></li></ul>
+		
+	</div>
+</nav>
+
+
+			<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-cactions" class="vector-menu-empty emptyPortlet vector-menu vector-menu-dropdown vectorMenu" aria-labelledby="p-cactions-label" role="navigation" 
+	 >
+	<input type="checkbox" class="vector-menu-checkbox vectorMenuCheckbox" aria-labelledby="p-cactions-label" />
+	<h3 id="p-cactions-label">
+		<span>More</span>
+	</h3>
+	<!-- Please do not use the .body class, it is deprecated. -->
+	<div class="body vector-menu-content">
+		<!-- Please do not use the .menu class, it is deprecated. -->
+		<ul class="menu vector-menu-content-list"></ul>
+		
+	</div>
+</nav>
+
+
+			<div id="p-search" role="search">
+	<h3 >
+		<label for="searchInput">Search</label>
+	</h3>
+	<form action="https://wiki.nanotech.ucsb.edu/w/index.php" id="searchform">
+		<div id="simpleSearch">
+			<input type="search" name="search" placeholder="Search UCSB Nanofab Wiki" title="Search UCSB Nanofab Wiki [f]" accesskey="f" id="searchInput"/>
+			<input type="hidden" name="title" value="Special:Search">
+			<input type="submit" name="fulltext" value="Search" title="Search the pages for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton"/>
+			<input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchButton" class="searchButton"/>
+		</div>
+	</form>
+</div>
+
+		</div>
+	</div>
+	
+<div id="mw-panel">
+	<div id="p-logo" role="banner">
+		<a  title="Visit the main page" class="mw-wiki-logo" href="Main_Page.html"></a>
+	</div>
+	<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-InvisibleMenu" class="vector-menu-empty emptyPortlet vector-menu vector-menu-portal portal portal-first" aria-labelledby="p-InvisibleMenu-label" role="navigation" 
+	 >
+	<h3 id="p-InvisibleMenu-label">
+		<span>InvisibleMenu</span>
+	</h3>
+	<!-- Please do not use the .body class, it is deprecated. -->
+	<div class="body vector-menu-content">
+		<!-- Please do not use the .menu class, it is deprecated. -->
+		<ul class="vector-menu-content-list"></ul>
+		
+	</div>
+</nav>
+
+
+	<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-QuickLinks" class="vector-menu vector-menu-portal portal" aria-labelledby="p-QuickLinks-label" role="navigation" 
+	 >
+	<h3 id="p-QuickLinks-label">
+		<span>QuickLinks</span>
+	</h3>
+	<!-- Please do not use the .body class, it is deprecated. -->
+	<div class="body vector-menu-content">
+		<!-- Please do not use the .menu class, it is deprecated. -->
+		<ul class="vector-menu-content-list"><li id="n-Lab-Rules"><a href="Lab_Rules.html">Lab Rules</a></li><li id="n-COVID-19-Protocols"><a href="COVID-19_User_Policies.html">COVID-19 Protocols</a></li><li id="n-Common-Questions"><a href="FAQs.html">Common Questions</a></li><li id="n-Staff-List"><a href="Staff_List.html">Staff List</a></li><li id="n-Equipment-Signup"><a href="https://signupmonkey.ece.ucsb.edu/" rel="nofollow">Equipment Signup</a></li><li id="n-Chemicals-.2B-MSDS"><a href="Chemical_List.html">Chemicals + MSDS</a></li></ul>
+		
+	</div>
+</nav>
+
+<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-Equipment" class="vector-menu vector-menu-portal portal" aria-labelledby="p-Equipment-label" role="navigation" 
+	 >
+	<h3 id="p-Equipment-label">
+		<span>Equipment</span>
+	</h3>
+	<!-- Please do not use the .body class, it is deprecated. -->
+	<div class="body vector-menu-content">
+		<!-- Please do not use the .menu class, it is deprecated. -->
+		<ul class="vector-menu-content-list"><li id="n-Full-Tool-List"><a href="Tool_List.html">Full Tool List</a></li><li id="n-Lithography"><a href="Category_Lithography.html">Lithography</a></li><li id="n-Vacuum-Deposition"><a href="Category_Vacuum_Deposition.html">Vacuum Deposition</a></li><li id="n-Dry-Etch"><a href="Category_Dry_Etch.html">Dry Etch</a></li><li id="n-Wet-Processing"><a href="Category_Wet_Processing.html">Wet Processing</a></li><li id="n-Thermal-Processing"><a href="Category_Thermal_Processing.html">Thermal Processing</a></li><li id="n-Packaging"><a href="Category_Packaging.html">Packaging</a></li><li id="n-Inspection.2C-Test-.26-Characterization"><a href="Category_Inspection%2c_Test_and_Characterization.html">Inspection, Test &amp; Characterization</a></li></ul>
+		
+	</div>
+</nav>
+
+<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-Recipes and Data" class="vector-menu vector-menu-portal portal" aria-labelledby="p-Recipes and Data-label" role="navigation" 
+	 >
+	<h3 id="p-Recipes and Data-label">
+		<span>Recipes and Data</span>
+	</h3>
+	<!-- Please do not use the .body class, it is deprecated. -->
+	<div class="body vector-menu-content">
+		<!-- Please do not use the .menu class, it is deprecated. -->
+		<ul class="vector-menu-content-list"><li id="n-Lithography"><a href="Lithography_Recipes.html">Lithography</a></li><li id="n-Vacuum-Deposition"><a href="Vacuum_Deposition_Recipes.html">Vacuum Deposition</a></li><li id="n-Dry-Etching"><a href="Dry_Etching_Recipes.html">Dry Etching</a></li><li id="n-Wet-Etching"><a href="Wet_Etching_Recipes.html">Wet Etching</a></li><li id="n-Thermal-Processing"><a href="Thermal_Processing_Recipes.html">Thermal Processing</a></li><li id="n-Packaging-Tools"><a href="Packaging_Recipes.html">Packaging Tools</a></li><li id="n-Calculators.2FUtilities"><a href="Calculators_%2b_Utilities.html">Calculators/Utilities</a></li></ul>
+		
+	</div>
+</nav>
+
+<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-Facility Data" class="vector-menu vector-menu-portal portal" aria-labelledby="p-Facility Data-label" role="navigation" 
+	 >
+	<h3 id="p-Facility Data-label">
+		<span>Facility Data</span>
+	</h3>
+	<!-- Please do not use the .body class, it is deprecated. -->
+	<div class="body vector-menu-content">
+		<!-- Please do not use the .menu class, it is deprecated. -->
+		<ul class="vector-menu-content-list"><li id="n-Usage"><a href="Usage_Data_and_Statistics.html">Usage</a></li><li id="n-Research"><a href="Research.html">Research</a></li><li id="n-Tech-Talks"><a href="Tech_Talks_Seminar_Series.html">Tech Talks</a></li></ul>
+		
+	</div>
+</nav>
+
+<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-tb" class="vector-menu vector-menu-portal portal" aria-labelledby="p-tb-label" role="navigation" 
+	 >
+	<h3 id="p-tb-label">
+		<span>Tools</span>
+	</h3>
+	<!-- Please do not use the .body class, it is deprecated. -->
+	<div class="body vector-menu-content">
+		<!-- Please do not use the .menu class, it is deprecated. -->
+		<ul class="vector-menu-content-list"><li id="t-whatlinkshere"><a href="Special_WhatLinksHere/ASML_Stepper_3_Standard_Operating_Procedure.html" title="A list of all wiki pages that link here [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="Special_RecentChangesLinked/ASML_Stepper_3_Standard_Operating_Procedure.html" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-specialpages"><a href="Special_SpecialPages.html" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-print"><a href="javascript:print();" rel="alternate" title="Printable version of this page [p]" accesskey="p">Printable version</a></li><li id="t-permalink"><a href="https://wiki.nanotech.ucsb.edu/w/index.php?title=ASML_Stepper_3_Standard_Operating_Procedure&amp;oldid=160248" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-info"><a href="https://wiki.nanotech.ucsb.edu/w/index.php?title=ASML_Stepper_3_Standard_Operating_Procedure&amp;action=info" title="More information about this page">Page information</a></li></ul>
+		
+	</div>
+</nav>
+
+
+	
+</div>
+
+</div>
+
+<footer id="footer" class="mw-footer" role="contentinfo" >
+	<ul id="footer-info" >
+		<li id="footer-info-lastmod"> This page was last edited on 24 August 2022, at 16:26.</li>
+	</ul>
+	<ul id="footer-places" >
+		<li id="footer-places-privacy"><a href="UCSB_Nanofab_Wiki_Privacy_policy.html" title="UCSB Nanofab Wiki:Privacy policy">Privacy policy</a></li>
+		<li id="footer-places-about"><a href="UCSB_Nanofab_Wiki_About.html" title="UCSB Nanofab Wiki:About">About UCSB Nanofab Wiki</a></li>
+		<li id="footer-places-disclaimer"><a href="UCSB_Nanofab_Wiki_General_disclaimer.html" title="UCSB Nanofab Wiki:General disclaimer">Disclaimers</a></li>
+	</ul>
+	<ul id="footer-icons" class="noprint">
+		<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img src="../w/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/w/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /w/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31" loading="lazy"/></a></li>
+	</ul>
+	<div style="clear: both;"></div>
+</footer>
+
+
+
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.008","walltime":"0.009","ppvisitednodes":{"value":10,"limit":1000000},"postexpandincludesize":{"value":0,"limit":2097152},"templateargumentsize":{"value":0,"limit":2097152},"expansiondepth":{"value":2,"limit":40},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":0,"limit":5000000},"timingprofile":["100.00%    0.000      1 -total"]},"cachereport":{"timestamp":"20220927214953","ttl":86400,"transientcontent":false}}});});</script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','../../www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-3048424-9', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":52});});</script></body>
+<!-- Mirrored from wiki.nanotech.ucsb.edu/wiki/ASML_Stepper_3_Standard_Operating_Procedure by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 29 Sep 2022 00:14:14 GMT -->
+</html>
